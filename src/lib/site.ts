@@ -141,7 +141,7 @@ export const faq = [
   },
   {
     q: "Wat kost het?",
-    a: "Fedde start vanaf 500 euro excl. btw per maand, alles inbegrepen. Custom dashboards en werk op maat starten vanaf 1500 euro excl. btw.",
+    a: "Fedde start vanaf 500 euro excl. btw per maand. Token usage en het Claude-abonnement komen er nog bij. Custom dashboards en werk op maat starten vanaf 1500 euro excl. btw.",
   },
   {
     q: "En als het niks oplevert?",

@@ -16,7 +16,7 @@ export function Pricing() {
       <div className="container-x">
         <Reveal className="mx-auto max-w-[720px] text-center">
           <p className="eyebrow">Prijzen</p>
-          <h2 className="display-2 mt-4">Eén bedrag. Alles inbegrepen.</h2>
+          <h2 className="display-2 mt-4">Eén vast bedrag per maand.</h2>
         </Reveal>
 
         <div className="mx-auto mt-14 grid max-w-[980px] grid-cols-1 gap-4 lg:grid-cols-5">
@@ -32,7 +32,7 @@ export function Pricing() {
                     </span>
                     <span className="text-[15px] text-muted-fg">/ maand</span>
                   </div>
-                  <div className="mt-1 text-[13px] text-muted-fg">excl. btw · alles inbegrepen</div>
+                  <div className="mt-1 text-[13px] text-muted-fg">excl. btw · excl. token usage en Claude-abonnement</div>
                 </div>
                 <a href={BOOKING_URL} className="btn-primary">
                   Plan een kennismaking
@@ -53,7 +53,8 @@ export function Pricing() {
               </ul>
 
               <p className="mt-6 text-[14px] text-muted-fg">
-                Custom dashboards en werk op maat vanaf{" "}
+                Token usage en het Claude-abonnement komen er nog bij. Custom
+                dashboards en werk op maat vanaf{" "}
                 <span className="font-600 text-foreground">€ 1.500</span> excl. btw.
               </p>
             </div>
