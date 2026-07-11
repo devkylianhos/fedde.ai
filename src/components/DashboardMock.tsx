@@ -38,12 +38,12 @@ function Stat({
 
 export function DashboardMock() {
   return (
-    <div className="overflow-hidden rounded-[24px] border border-border bg-white shadow-[0_30px_80px_-30px_rgba(8,11,18,0.25)]">
+    <div className="overflow-hidden rounded-[28px] border border-border bg-white shadow-[0_34px_70px_-28px_rgba(35,32,27,0.28)]">
       {/* window chrome */}
       <div className="flex items-center gap-2 border-b border-border px-4 py-3">
-        <span className="h-3 w-3 rounded-full bg-[#e5e9f2]" />
-        <span className="h-3 w-3 rounded-full bg-[#e5e9f2]" />
-        <span className="h-3 w-3 rounded-full bg-[#e5e9f2]" />
+        <span className="h-3 w-3 rounded-full bg-[#eee5d8]" />
+        <span className="h-3 w-3 rounded-full bg-[#eee5d8]" />
+        <span className="h-3 w-3 rounded-full bg-[#eee5d8]" />
         <span className="ml-3 text-[12px] font-500 text-muted-fg">
           Fedde · dashboard
         </span>
@@ -69,7 +69,7 @@ export function DashboardMock() {
           </div>
           <div className="flex h-24 items-end gap-2">
             {[42, 58, 49, 66, 61, 78, 92].map((h, i) => (
-              <div key={i} className="flex-1 rounded-t-md" style={{ height: `${h}%`, background: i === 6 ? "#0088ff" : "rgba(0,136,255,0.22)" }} />
+              <div key={i} className="flex-1 rounded-t-md" style={{ height: `${h}%`, background: i === 6 ? "var(--accent)" : "rgba(45,91,255,0.18)" }} />
             ))}
           </div>
         </div>

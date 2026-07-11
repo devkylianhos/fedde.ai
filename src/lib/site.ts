@@ -10,15 +10,6 @@ export const nav = [
   { label: "Prijzen", href: "#prijzen" },
 ];
 
-/* Typewriter rotation under the hero headline */
-export const heroPhrases = [
-  "runt mijn webshop",
-  "schrijft mijn SEO-blogs",
-  "handelt mijn retouren af",
-  "houdt mijn dashboard bij",
-  "haalt reviews binnen",
-];
-
 /* Zeven diensten */
 export const services = [
   {

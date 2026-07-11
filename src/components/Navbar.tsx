@@ -8,46 +8,46 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
-      <nav
-        className="flex w-full max-w-[1120px] items-center justify-between rounded-full bg-white/90 px-5 py-2.5 backdrop-blur-md transition-shadow"
-        style={{
-          boxShadow: scrolled
-            ? "0 8px 30px rgba(8,11,18,0.10), 0 1px 0 rgba(255,255,255,0.9) inset"
-            : "0 2px 14px rgba(8,11,18,0.06)",
-        }}
-      >
-        <a href="#top" className="flex items-center gap-2">
+    <header
+      className="fixed inset-x-0 top-0 z-50 transition-all"
+      style={{
+        background: scrolled ? "rgba(250, 246, 240, 0.92)" : "transparent",
+        backdropFilter: scrolled ? "blur(10px)" : "none",
+        borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
+      }}
+    >
+      <div className="container-x flex h-[72px] items-center justify-between">
+        <a href="#top" className="flex items-center gap-2.5">
           <BrandMark />
-          <span className="font-display text-[19px] font-600 tracking-tight" style={{ fontWeight: 600 }}>
-            Fedde
+          <span className="font-display text-[20px] font-700" style={{ fontWeight: 700 }}>
+            fedde
           </span>
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="font-display text-[17px] font-600 text-foreground/90 transition-colors hover:text-accent"
-              style={{ fontWeight: 600 }}
+              className="text-[15px] font-500 text-muted-fg transition-colors hover:text-foreground"
+              style={{ fontWeight: 500 }}
             >
               {item.label}
             </a>
           ))}
-        </div>
+        </nav>
 
         <a href={BOOKING_URL} className="btn-primary sm">
-          Plan een call
+          Plan een kennismaking
         </a>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 }

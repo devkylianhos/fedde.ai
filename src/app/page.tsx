@@ -17,9 +17,9 @@ export default function Home() {
       <Hero />
       <IntegrationsStats />
       <Services />
+      <Week />
       <Showcase />
       <Trust />
-      <Week />
       <Pricing />
       <Faq />
       <CtaBand />

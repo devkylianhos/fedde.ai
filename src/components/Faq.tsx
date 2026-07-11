@@ -10,33 +10,36 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-20 sm:py-28">
       <div className="container-x">
-        <Reveal className="mx-auto max-w-[720px] text-center">
-          <p className="eyebrow">Veelgestelde vragen</p>
-          <h2 className="display-2 mt-4">Je hebt vragen. Logisch.</h2>
+        <Reveal className="mx-auto max-w-[620px] text-center">
+          <span className="eyebrow">Veelgestelde vragen</span>
+          <h2 className="display-2 mt-5">Je hebt vragen. Logisch.</h2>
         </Reveal>
 
-        <div className="mx-auto mt-14 max-w-[780px]">
+        <div className="mx-auto mt-12 flex max-w-[720px] flex-col gap-3">
           {faq.map((item, i) => {
             const isOpen = open === i;
             return (
               <div
                 key={item.q}
-                className="border-b border-border first:border-t"
+                className={cn(
+                  "rounded-[22px] border bg-white transition-colors",
+                  isOpen ? "border-accent/30" : "border-border",
+                )}
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-6 py-6 text-left"
+                  className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display text-[20px] leading-[1.3]" style={{ fontWeight: 500 }}>
+                  <span className="font-display text-[18px] leading-snug" style={{ fontWeight: 600 }}>
                     {item.q}
                   </span>
                   <span
                     className={cn(
-                      "grid h-8 w-8 flex-none place-items-center rounded-full border border-border transition-transform duration-300",
-                      isOpen && "rotate-45 border-accent bg-accent text-white",
+                      "grid h-8 w-8 flex-none place-items-center rounded-full bg-accent-soft text-accent transition-transform duration-300",
+                      isOpen && "rotate-45",
                     )}
                   >
                     <Plus size={16} />
@@ -47,7 +50,7 @@ export function Faq() {
                   style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >
                   <div className="overflow-hidden">
-                    <p className="pb-6 pr-14 text-[16px] leading-[1.6] text-muted-fg">
+                    <p className="px-6 pb-5 pr-14 text-[15px] leading-relaxed text-muted-fg">
                       {item.a}
                     </p>
                   </div>

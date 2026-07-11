@@ -1,31 +1,24 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Fedde design system — cloned from Clark (site-next-mu-one)
-   Exact tokens extracted via agent-browser
+   Fedde design system — warm en menselijk
+   Eigen identiteit: creme, ronde vormen, Bricolage Grotesque
    ============================================================ */
 
 :root {
-  --background: #f4f6fb;      /* rgb(244,246,251) */
-  --foreground: #080b12;      /* rgb(8,11,18)     */
-  --muted-fg: #33394a;        /* rgb(51,57,74)    */
-  --muted-fg-2: #6b7280;
+  --background: #faf6f0;      /* warme creme */
+  --foreground: #23201b;      /* warm bijna-zwart */
+  --muted-fg: #6b6157;        /* warm grijsbruin */
   --card: #ffffff;
-  --border: #dfe3ee;          /* rgb(223,227,238) */
-  --accent: #0088ff;          /* rgb(0,136,255)   */
-  --accent-dark: #006dcc;     /* rgb(0,109,204)   */
-  --accent-soft: rgba(0, 136, 255, 0.1);
+  --border: #eae1d6;          /* zandkleurige rand */
+  --sand: #f2ebe1;            /* getinte sectieband */
+  --accent: #2d5bff;          /* vriendelijk helder blauw */
+  --accent-dark: #1e3fcc;
+  --accent-soft: rgba(45, 91, 255, 0.08);
+  --amber: #e89b3c;           /* warm secundair accent */
+  --amber-soft: rgba(232, 155, 60, 0.16);
 
-  /* spacing scale from --s1..--s7 */
-  --s1: 4px;
-  --s2: 8px;
-  --s3: 12px;
-  --s4: 24px;
-  --s5: 40px;
-  --s6: 64px;
-  --s7: 96px;
-
-  --maxw: 1200px;
+  --maxw: 1160px;
   --gutter: 24px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -36,18 +29,21 @@
   --color-muted-fg: var(--muted-fg);
   --color-card: var(--card);
   --color-border: var(--border);
+  --color-sand: var(--sand);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-accent-soft: var(--accent-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
 
-  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
 
-  --radius-sm: 4px;
-  --radius: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 }
 
 body {
@@ -55,35 +51,41 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.011em;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 700;
   color: var(--foreground);
-  letter-spacing: -0.02em;
-  line-height: 1.02;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
 }
 
-/* Serif display scale (from extraction) */
-.display-1 { font-size: clamp(52px, 8vw, 90px); line-height: 1; letter-spacing: -0.02em; }
-.display-2 { font-size: clamp(38px, 5.2vw, 60px); line-height: 1.04; letter-spacing: -0.015em; }
-.display-3 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.015em; }
+/* Display-schaal — vriendelijk, niet monumentaal */
+.display-1 { font-size: clamp(42px, 6.2vw, 72px); line-height: 1.04; }
+.display-2 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.06; }
+.display-3 { font-size: clamp(24px, 3vw, 34px); line-height: 1.12; }
 
 .eyebrow {
-  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 600;
   font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 9999px;
+  padding: 6px 14px;
+}
+.eyebrow.warm {
+  color: #a05e12;
+  background: var(--amber-soft);
 }
 
 .lead {
-  font-size: 20px;
-  line-height: 31px;
-  letter-spacing: -0.176px;
+  font-size: 19px;
+  line-height: 1.6;
   color: var(--muted-fg);
 }
 
@@ -94,7 +96,7 @@ h1, h2, h3, h4 {
   padding-inline: var(--gutter);
 }
 
-/* Glossy blue pill button — exact clone of Clark primary CTA */
+/* Knoppen — vol en rond, geen glans */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -102,24 +104,20 @@ h1, h2, h3, h4 {
   gap: 8px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 19px;
-  letter-spacing: -0.19px;
+  font-size: 17px;
   color: #fff;
   border-radius: 9999px;
-  padding: 16px 32px;
-  background-image: linear-gradient(var(--accent-dark), var(--accent));
-  box-shadow:
-    rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset,
-    rgba(0, 136, 255, 0.24) 0px 6px 18px 0px;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  padding: 15px 30px;
+  background: var(--accent);
+  box-shadow: 0 10px 24px -10px rgba(45, 91, 255, 0.5);
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset,
-    rgba(0, 136, 255, 0.35) 0px 10px 26px 0px;
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -10px rgba(45, 91, 255, 0.55);
 }
-.btn-primary.sm { padding: 11px 22px; font-size: 16px; }
+.btn-primary.sm { padding: 10px 20px; font-size: 15px; }
 
 .btn-secondary {
   display: inline-flex;
@@ -128,40 +126,23 @@ h1, h2, h3, h4 {
   gap: 8px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 19px;
-  letter-spacing: -0.19px;
+  font-size: 17px;
   color: var(--foreground);
   border-radius: 9999px;
-  padding: 16px 32px;
+  padding: 15px 30px;
   background: var(--card);
   border: 1px solid var(--border);
-  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
 }
-.btn-secondary:hover { transform: translateY(-1px); border-color: #c3cadd; }
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: #d8ccbc;
+  background: #fffdfa;
+}
 
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 24px;
-}
-
-/* marquee */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.animate-marquee { animation: marquee 34s linear infinite; }
-
-/* blinking caret for typewriter */
-@keyframes caret { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-.caret {
-  display: inline-block;
-  width: 3px;
-  height: 0.82em;
-  margin-left: 6px;
-  background: var(--accent);
-  border-radius: 2px;
-  transform: translateY(0.08em);
-  animation: caret 1s step-end infinite;
+  border-radius: 28px;
+  padding: 28px;
 }

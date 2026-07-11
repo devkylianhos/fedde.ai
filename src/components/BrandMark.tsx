@@ -1,6 +1,5 @@
-export function BrandMark({ size = 26 }: { size?: number }) {
-  // Abstract blue "agent" spark — same visual weight as the inspiration's mark,
-  // built as pure SVG so it needs no generated image.
+export function BrandMark({ size = 28 }: { size?: number }) {
+  // Ronde, vriendelijke F-badge in het nieuwe warme blauw.
   return (
     <svg
       width={size}
@@ -10,17 +9,12 @@ export function BrandMark({ size = 26 }: { size?: number }) {
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <defs>
-        <linearGradient id="fedde-g" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0088FF" />
-          <stop offset="1" stopColor="#006DCC" />
-        </linearGradient>
-      </defs>
+      <rect x="1" y="1" width="30" height="30" rx="10" fill="#2d5bff" />
       <path
-        d="M16 3c1.6 4.7 4.3 7.4 9 9-4.7 1.6-7.4 4.3-9 9-1.6-4.7-4.3-7.4-9-9 4.7-1.6 7.4-4.3 9-9Z"
-        fill="url(#fedde-g)"
+        d="M11 23V9h11v3.4h-7.1v2.9h6v3.3h-6V23H11Z"
+        fill="#fff"
       />
-      <circle cx="24.5" cy="24.5" r="3.5" fill="#0088FF" />
+      <circle cx="25" cy="7" r="4" fill="#e89b3c" stroke="#faf6f0" strokeWidth="1.5" />
     </svg>
   );
 }
