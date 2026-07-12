@@ -5,7 +5,7 @@ const stats = [
   { value: "7", label: "diensten in 1 agent" },
   { value: "1 week", label: "tot je live bent" },
   { value: "24/7", label: "gehost en bewaakt" },
-  { value: "€ 500", label: "per maand, excl. gebruikskosten" },
+  { value: "€ 250", label: "per maand in de beta, excl. gebruikskosten" },
 ];
 
 export function IntegrationsStats() {

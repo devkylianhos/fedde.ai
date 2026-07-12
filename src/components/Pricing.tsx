@@ -1,16 +1,18 @@
 import { Reveal } from "./Reveal";
-import { BOOKING_URL } from "@/lib/site";
+import { BOOKING_URL, BETA_SEATS_TOTAL, BETA_SEATS_TAKEN } from "@/lib/site";
 import { Check, BadgeEuro } from "lucide-react";
 
-const included = [
+const betaIncluded = [
   "Je eigen Fedde, 24/7 in een afgeschermde omgeving",
   "Persoonlijke onboarding, koppelingen met je samen gezet",
-  "Dashboard en alle zeven diensten",
-  "Alles gelogd en omkeerbaar",
+  "Dashboard, alle zeven diensten en alles wat we hierna bouwen",
+  "Nieuwe skills die elders werken, komen ook bij jou binnen",
   "Maandelijks opzegbaar. Je data gaat met je mee.",
 ];
 
 export function Pricing() {
+  const seatsLeft = BETA_SEATS_TOTAL - BETA_SEATS_TAKEN;
+
   return (
     <section id="prijzen" className="py-20 sm:py-28">
       <div className="container-x">
@@ -19,25 +21,32 @@ export function Pricing() {
           <h2 className="display-2 mt-5">Eén vast bedrag per maand.</h2>
         </Reveal>
 
-        <div className="mx-auto mt-12 grid max-w-[900px] grid-cols-1 gap-4 md:grid-cols-[1.25fr_1fr]">
-          {/* hoofdkaart */}
+        <div className="mx-auto mt-12 grid max-w-[1040px] grid-cols-1 gap-4 lg:grid-cols-[1.25fr_1fr]">
+          {/* betakaart, uitgelicht */}
           <Reveal>
-            <div className="card h-full">
-              <div className="text-[14px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
-                Fedde
+            <div
+              className="relative h-full rounded-[28px] border-2 bg-white p-7 sm:p-8"
+              style={{ borderColor: "var(--accent)" }}
+            >
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="eyebrow">Beta · {BETA_SEATS_TOTAL} plekken · alles erin</span>
               </div>
-              <div className="mt-2 flex items-baseline gap-2">
-                <span className="font-display text-[52px] leading-none" style={{ fontWeight: 700 }}>
-                  € 500
+
+              <div className="mt-5 flex items-baseline gap-2">
+                <span className="font-display text-[56px] leading-none" style={{ fontWeight: 700 }}>
+                  € 250
                 </span>
                 <span className="text-[15px] text-muted-fg">/ maand</span>
               </div>
               <div className="mt-1.5 text-[13px] text-muted-fg">
-                excl. btw · excl. token usage en Claude-abonnement
+                excl. btw · excl. token usage en Claude-abonnement ·{" "}
+                <span className="font-600 text-foreground" style={{ fontWeight: 600 }}>
+                  deze prijs blijft staan zolang je blijft
+                </span>
               </div>
 
               <ul className="mt-7 space-y-3">
-                {included.map((item) => (
+                {betaIncluded.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-0.5 grid h-5 w-5 flex-none place-items-center rounded-full bg-accent-soft text-accent">
                       <Check size={13} />
@@ -47,42 +56,81 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <a href={BOOKING_URL} className="btn-primary mt-8 w-full">
-                Plan een kennismaking
-              </a>
-            </div>
-          </Reveal>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href={BOOKING_URL} className="btn-primary">
+                  Meld je aan voor een betaplek
+                </a>
+                <a
+                  href={BOOKING_URL}
+                  className="text-center text-[15px] font-600 text-accent hover:text-accent-dark sm:text-left"
+                  style={{ fontWeight: 600 }}
+                >
+                  Liever eerst praten? Plan een call
+                </a>
+              </div>
 
-          {/* maatwerkkaart */}
-          <Reveal delay={0.08}>
-            <div className="flex h-full flex-col rounded-[28px] bg-sand p-7">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white text-accent">
-                <BadgeEuro size={21} />
-              </span>
-              <h3 className="mt-5 font-display text-[21px]" style={{ fontWeight: 700 }}>
-                Werk op maat
-              </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-muted-fg">
-                Custom dashboards en maatwerk bovenop je agent, gebouwd op jouw
-                shop en jouw processen.
-              </p>
-              <div className="mt-auto pt-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="font-display text-[30px] leading-none" style={{ fontWeight: 700 }}>
-                    vanaf € 1.500
-                  </span>
+              <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+                {/* plekken-balkje */}
+                <div className="flex h-2 flex-1 overflow-hidden rounded-full bg-sand">
+                  <div
+                    className="rounded-full bg-accent"
+                    style={{ width: `${(BETA_SEATS_TAKEN / BETA_SEATS_TOTAL) * 100}%` }}
+                  />
                 </div>
-                <div className="mt-1 text-[13px] text-muted-fg">excl. btw, eenmalig</div>
+                <span className="text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
+                  nog {seatsLeft} van {BETA_SEATS_TOTAL} plekken vrij
+                </span>
               </div>
             </div>
           </Reveal>
+
+          {/* rechterkolom: prijs na de beta + maatwerk */}
+          <div className="flex flex-col gap-4">
+            <Reveal delay={0.08}>
+              <div className="card">
+                <div className="text-[14px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
+                  Na de beta
+                </div>
+                <div className="mt-2 flex items-baseline gap-2">
+                  <span className="font-display text-[34px] leading-none" style={{ fontWeight: 700 }}>
+                    € 500
+                  </span>
+                  <span className="text-[14px] text-muted-fg">/ maand</span>
+                </div>
+                <p className="mt-3 text-[14px] leading-relaxed text-muted-fg">
+                  Dezelfde agent, dezelfde diensten. Wie in de beta instapt, houdt
+                  de betaprijs.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.14}>
+              <div className="flex flex-1 flex-col rounded-[28px] bg-sand p-7">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white text-accent">
+                  <BadgeEuro size={20} />
+                </span>
+                <h3 className="mt-4 font-display text-[19px]" style={{ fontWeight: 700 }}>
+                  Werk op maat
+                </h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-muted-fg">
+                  Custom dashboards en maatwerk bovenop je agent.
+                </p>
+                <div className="mt-auto pt-4">
+                  <span className="font-display text-[24px] leading-none" style={{ fontWeight: 700 }}>
+                    vanaf € 1.500
+                  </span>
+                  <div className="mt-1 text-[13px] text-muted-fg">excl. btw, eenmalig</div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
 
         {/* garantiebanner */}
         {/* TODO: alleen tonen als je dit kunt waarmaken */}
-        <Reveal delay={0.14}>
+        <Reveal delay={0.18}>
           <div
-            className="mx-auto mt-4 flex max-w-[900px] flex-col items-start gap-3 rounded-[28px] px-7 py-6 sm:flex-row sm:items-center"
+            className="mx-auto mt-4 flex max-w-[1040px] flex-col items-start gap-3 rounded-[28px] px-7 py-6 sm:flex-row sm:items-center"
             style={{ background: "var(--amber-soft)" }}
           >
             <span

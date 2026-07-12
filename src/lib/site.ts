@@ -3,6 +3,10 @@
 
 export const BOOKING_URL = "https://cal.com/fedde/kennismaking"; // TODO: echte boekingslink
 
+/* Betaplekken — houd dit eerlijk bij terwijl je verkoopt */
+export const BETA_SEATS_TOTAL = 10;
+export const BETA_SEATS_TAKEN = 0; // TODO: bijwerken per verkochte plek
+
 export const nav = [
   { label: "Diensten", href: "#diensten" },
   { label: "Hoe het werkt", href: "#hoe-het-werkt" },
@@ -132,7 +136,7 @@ export const faq = [
   },
   {
     q: "Wat kost het?",
-    a: "Fedde start vanaf 500 euro excl. btw per maand. Token usage en het Claude-abonnement komen er nog bij. Custom dashboards en werk op maat starten vanaf 1500 euro excl. btw.",
+    a: "Tijdens de beta betaal je 250 euro excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Daarna wordt de instap 500 euro excl. btw per maand. Token usage en het Claude-abonnement komen er nog bij. Custom dashboards en werk op maat starten vanaf 1500 euro excl. btw.",
   },
   {
     q: "En als het niks oplevert?",

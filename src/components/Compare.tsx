@@ -86,7 +86,7 @@ export function Compare() {
                 losse facturen, per uur en per tool
               </span>
               <span className="font-display text-[17px] text-accent" style={{ fontWeight: 700 }}>
-                € 500 per maand
+                vanaf € 250 per maand
               </span>
             </div>
           </div>
