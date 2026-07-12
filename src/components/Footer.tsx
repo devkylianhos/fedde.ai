@@ -48,6 +48,11 @@ export function Footer() {
                   hallo@fedde.ai
                 </a>
               </li>
+              <li>
+                <a href="/app" className="text-[15px] text-foreground/80 hover:text-accent">
+                  Inloggen
+                </a>
+              </li>
             </ul>
           </div>
 
