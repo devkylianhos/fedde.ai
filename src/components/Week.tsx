@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { ScrollSpine } from "./ScrollSpine";
 import { week, BOOKING_URL } from "@/lib/site";
 
 const badges = ["1", "2-4", "4", "5", "∞"];
@@ -19,10 +20,7 @@ export function Week() {
 
           {/* verticale stappen met lijn */}
           <div className="relative mt-14">
-            <div
-              aria-hidden
-              className="absolute bottom-6 left-[27px] top-6 w-px bg-border"
-            />
+            <ScrollSpine className="absolute bottom-6 left-[27px] top-6" />
             <div className="flex flex-col gap-5">
               {week.map((step, i) => (
                 <Reveal key={step.title} delay={Math.min(i * 0.06, 0.24)}>

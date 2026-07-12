@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { ScrollSpine } from "./ScrollSpine";
 import {
   RotateCcw,
   PenLine,
@@ -78,7 +79,7 @@ export function DayFeed() {
 
           {/* feed rechts */}
           <div className="relative">
-            <div aria-hidden className="absolute bottom-8 left-[26px] top-8 w-px bg-border" />
+            <ScrollSpine className="absolute bottom-8 left-[26px] top-8" />
             <div className="flex flex-col gap-4">
               {feed.map((item, i) => {
                 const Icon = item.icon;
