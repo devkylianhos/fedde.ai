@@ -49,6 +49,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/launch" className="text-[15px] text-foreground/80 hover:text-accent">
+                  Launch
+                </a>
+              </li>
+              <li>
                 <a href="/app" className="text-[15px] text-foreground/80 hover:text-accent">
                   Inloggen
                 </a>
