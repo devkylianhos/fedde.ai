@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Fedde design system — warm en menselijk
-   Eigen identiteit: creme, ronde vormen, Bricolage Grotesque
+   Fedde design system — helder en editorial
+   Richting overgenomen van multica.ai (eigen invulling):
+   Instrument Serif display + Inter, blauw luchtpaneel in de hero,
+   koel zinc-palet, subtiele gelaagde schaduwen, radius 12/20.
    ============================================================ */
 
 :root {
-  --background: #faf6f0;      /* warme creme */
-  --foreground: #23201b;      /* warm bijna-zwart */
-  --muted-fg: #6b6157;        /* warm grijsbruin */
+  --background: #fafafa;        /* zinc-50 canvas */
+  --foreground: #18181b;        /* zinc-900 */
+  --muted-fg: #52525b;          /* zinc-600 */
   --card: #ffffff;
-  --border: #eae1d6;          /* zandkleurige rand */
-  --sand: #f2ebe1;            /* getinte sectieband */
-  --accent: #2d5bff;          /* vriendelijk helder blauw */
-  --accent-dark: #1e3fcc;
-  --accent-soft: rgba(45, 91, 255, 0.08);
-  --amber: #e89b3c;           /* warm secundair accent */
-  --amber-soft: rgba(232, 155, 60, 0.16);
+  --border: #e7e7ea;            /* zinc-200 */
+  --sand: #f1f1f3;              /* koele getinte band (naam blijft voor compat) */
+  --accent: #2563eb;            /* helder koningsblauw */
+  --accent-dark: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --amber: #d97706;             /* alleen voor statusbadges */
+  --amber-soft: rgba(217, 119, 6, 0.12);
+
+  /* het lucht-canvas van de hero en de CTA-band */
+  --sky-top: #3b82f6;
+  --sky-mid: #2f6fe8;
+  --sky-deep: #1e4fd6;
 
   --maxw: 1160px;
   --gutter: 24px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  --shadow-surface: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 1px rgba(15, 23, 42, 0.03);
+  --shadow-floating: 0 16px 40px rgba(15, 23, 42, 0.14), 0 3px 10px rgba(15, 23, 42, 0.08);
 }
 
 @theme inline {
@@ -36,14 +46,14 @@
   --color-amber: var(--amber);
   --color-amber-soft: var(--amber-soft);
 
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), Georgia, serif;
 
   --radius-sm: 8px;
-  --radius: 12px;
-  --radius-md: 16px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
 }
 
 body {
@@ -53,98 +63,152 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+/* Instrument Serif bestaat alleen in gewicht 400; dit normaliseert ook
+   oudere inline font-weights op koppen zodat er geen nep-vet ontstaat. */
+h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--foreground);
-  letter-spacing: -0.025em;
-  line-height: 1.05;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
 }
 
-/* Display-schaal — vriendelijk, niet monumentaal */
-.display-1 { font-size: clamp(42px, 6.2vw, 72px); line-height: 1.04; }
-.display-2 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.06; }
-.display-3 { font-size: clamp(24px, 3vw, 34px); line-height: 1.12; }
+@layer components {
+  /* Display-schaal — groot en editorial */
+  .display-1 { font-size: clamp(48px, 7.4vw, 96px); line-height: 0.98; letter-spacing: -0.035em; }
+  .display-2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; }
+  .display-3 { font-size: clamp(26px, 3.2vw, 38px); line-height: 1.08; letter-spacing: -0.02em; }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 9999px;
-  padding: 6px 14px;
-}
-.eyebrow.warm {
-  color: #a05e12;
-  background: var(--amber-soft);
-}
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 6px 12px;
+  }
+  .eyebrow.warm {
+    color: #92580a;
+    background: var(--amber-soft);
+  }
 
-.lead {
-  font-size: 19px;
-  line-height: 1.6;
-  color: var(--muted-fg);
-}
+  .lead {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--muted-fg);
+  }
 
-.container-x {
-  width: 100%;
-  max-width: var(--maxw);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
-}
+  .container-x {
+    width: 100%;
+    max-width: var(--maxw);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
 
-/* Knoppen — vol en rond, geen glans */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 17px;
-  color: #fff;
-  border-radius: 9999px;
-  padding: 15px 30px;
-  background: var(--accent);
-  box-shadow: 0 10px 24px -10px rgba(45, 91, 255, 0.5);
-  transition: transform 0.14s var(--ease), background 0.18s var(--ease), box-shadow 0.18s var(--ease);
-}
-.btn-primary:hover {
-  background: var(--accent-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px -10px rgba(45, 91, 255, 0.55);
-}
-.btn-primary.sm { padding: 10px 20px; font-size: 15px; }
+  /* Lucht-canvas: het geschilderde-hemel-gevoel in puur CSS */
+  .sky-panel {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(52% 44% at 18% 96%, rgba(255, 205, 178, 0.5) 0%, rgba(255, 205, 178, 0) 62%),
+      radial-gradient(46% 40% at 86% 90%, rgba(244, 178, 200, 0.38) 0%, rgba(244, 178, 200, 0) 60%),
+      radial-gradient(70% 55% at 68% 12%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 55%),
+      linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 55%, var(--sky-deep) 100%);
+  }
 
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--foreground);
-  border-radius: 9999px;
-  padding: 15px 30px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  transition: transform 0.14s var(--ease), border-color 0.18s var(--ease), background 0.18s var(--ease);
-}
-.btn-secondary:hover {
-  transform: translateY(-2px);
-  border-color: #d8ccbc;
-  background: #fffdfa;
-}
+  /* Knoppen — hoekiger en direct, Inter in plaats van serif */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 12px;
+    padding: 13px 22px;
+    background: var(--accent);
+    box-shadow: var(--shadow-surface);
+    transition: transform 0.14s var(--ease), background 0.18s var(--ease), box-shadow 0.18s var(--ease);
+  }
+  .btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.5);
+  }
+  .btn-primary.sm { padding: 9px 16px; font-size: 14px; }
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 28px;
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--foreground);
+    border-radius: 12px;
+    padding: 13px 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-surface);
+    transition: transform 0.14s var(--ease), border-color 0.18s var(--ease), background 0.18s var(--ease);
+  }
+  .btn-secondary:hover {
+    transform: translateY(-1px);
+    border-color: #d4d4d8;
+    background: #fcfcfd;
+  }
+
+  /* Witte knop voor op het blauwe luchtpaneel */
+  .btn-inverse {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: #0a0d12;
+    border-radius: 12px;
+    padding: 13px 22px;
+    background: #fff;
+    transition: transform 0.14s var(--ease), box-shadow 0.18s var(--ease);
+  }
+  .btn-inverse:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -10px rgba(15, 23, 42, 0.45);
+  }
+
+  .btn-ghost-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 12px;
+    padding: 13px 22px;
+    background: rgba(255, 255, 255, 0.16);
+    transition: transform 0.14s var(--ease), background 0.18s var(--ease);
+  }
+  .btn-ghost-light:hover { background: rgba(255, 255, 255, 0.24); transform: translateY(-1px); }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-surface);
+  }
+
 }
 
 /* "Keur goed" vraagt af en toe heel even aandacht */

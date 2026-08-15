@@ -31,7 +31,7 @@ export function Services() {
               </p>
               <a
                 href={BOOKING_URL}
-                className="mt-7 inline-flex items-center gap-2 font-display text-[17px] font-600 text-accent transition-colors hover:text-accent-dark"
+                className="mt-7 inline-flex items-center gap-2 text-[15px] font-600 text-accent transition-colors hover:text-accent-dark"
                 style={{ fontWeight: 600 }}
               >
                 Plan een kennismaking

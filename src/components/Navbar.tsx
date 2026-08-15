@@ -18,7 +18,7 @@ export function Navbar() {
     <header
       className="fixed inset-x-0 top-0 z-50 transition-all"
       style={{
-        background: scrolled ? "rgba(250, 246, 240, 0.92)" : "transparent",
+        background: scrolled ? "rgba(250, 250, 250, 0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(10px)" : "none",
         borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
       }}
@@ -26,7 +26,7 @@ export function Navbar() {
       <div className="container-x flex h-[72px] items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
           <BrandMark />
-          <span className="font-display text-[20px] font-700" style={{ fontWeight: 700 }}>
+          <span className="text-[19px] font-700 tracking-tight" style={{ fontWeight: 700 }}>
             fedde
           </span>
         </a>
