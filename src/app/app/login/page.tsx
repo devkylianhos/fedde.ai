@@ -32,7 +32,7 @@ export default async function LoginPage() {
             type="email"
             name="email"
             required
-            placeholder="jij@jouwshop.nl"
+            placeholder="jij@jouwbedrijf.nl"
             className="w-full rounded-full border border-border bg-background px-5 py-3.5 text-[15px] outline-none transition-colors focus:border-accent"
           />
           <button type="submit" className="btn-primary w-full">

@@ -31,7 +31,7 @@ export default async function PortalOverview() {
         <div className="flex-1">
           <div className="eyebrow">Volgende stap</div>
           <h2 className="mt-2 font-display text-[21px]" style={{ fontWeight: 700 }}>
-            Koppel je shop en je tools
+            Koppel je tools
           </h2>
           <p className="mt-1.5 text-[14px] leading-relaxed text-muted-fg">
             Eén klik per tool. Fedde gebruikt een koppeling alleen als het werk

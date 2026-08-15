@@ -23,11 +23,11 @@ export function Services() {
             <Reveal>
               <span className="eyebrow">Wat Fedde doet</span>
               <h2 className="display-2 mt-5">
-                Eén agent, een compleet ecommerce team.
+                Eén werknemer, een compleet team.
               </h2>
               <p className="lead mt-5 max-w-[420px]">
-                Zeven diensten die normaal bij losse mensen, bureaus en tools
-                liggen. Bij Fedde zitten ze in één agent, voor één bedrag.
+                Zeven taken die normaal bij losse mensen, bureaus en tools
+                liggen. Bij Fedde zitten ze in één werknemer, voor één bedrag.
               </p>
               <a
                 href={BOOKING_URL}
@@ -77,8 +77,8 @@ export function Services() {
                 <span className="font-600" style={{ fontWeight: 600 }}>
                   En alles wat we hierna nog bouwen.
                 </span>{" "}
-                Je agent groeit mee: nieuwe skills die elders werken, komen ook
-                bij jou binnen.
+                Je werknemer groeit mee: nieuwe skills die elders werken, komen
+                ook bij jou binnen.
               </div>
             </Reveal>
           </div>

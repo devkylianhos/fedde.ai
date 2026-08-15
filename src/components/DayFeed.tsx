@@ -16,43 +16,43 @@ const feed = [
   {
     time: "03:12",
     icon: RotateCcw,
-    text: "Retour geregistreerd en afgehandeld. De klant kreeg meteen een nette bevestiging.",
+    text: "De administratie van gisteren verwerkt en klaargezet voor vandaag.",
     badge: null,
   },
   {
     time: "06:58",
     icon: PenLine,
-    text: "SEO-blog geschreven en klaargezet: “Welke hardloopschoenen passen bij jouw voet”.",
+    text: "Blog geschreven en klaargezet, in jouw toon en op jouw onderwerp.",
     badge: { label: "wacht op jouw goedkeuring", tone: "amber" as const },
   },
   {
     time: "08:30",
     icon: LayoutDashboard,
-    text: "Dashboard bijgewerkt met de omzet, retouren en reviews van gisteren.",
+    text: "Dashboard bijgewerkt met de omzet en cijfers van gisteren.",
     badge: null,
   },
   {
     time: "09:15",
     icon: Receipt,
-    text: "Factuurherinnering verstuurd, in jouw toon.",
+    text: "Factuurherinnering verstuurd, persoonlijk en op tijd.",
     badge: { label: "door jou goedgekeurd", tone: "blue" as const },
   },
   {
     time: "11:40",
     icon: Star,
-    text: "Review-verzoek verstuurd naar veertien klanten van vorige week.",
+    text: "Veertien klantmails beantwoord in jouw toon. Twee gevoelige liggen voor jou klaar.",
     badge: null,
   },
   {
     time: "14:05",
     icon: AlertTriangle,
-    text: "Signaal: één product komt opvallend vaak terug. Fedde legt je uit waarom.",
+    text: "Signaal: één klacht komt deze week vaker terug. Fedde legt je uit waarom.",
     badge: { label: "signaal naar jou", tone: "amber" as const },
   },
   {
     time: "16:20",
     icon: Palette,
-    text: "Banner-set in je huisstijl klaargezet voor de actie van dit weekend.",
+    text: "Social-post en banner in je huisstijl klaargezet voor volgende week.",
     badge: { label: "wacht op jouw goedkeuring", tone: "amber" as const },
   },
 ];
@@ -68,8 +68,8 @@ export function DayFeed() {
               <span className="eyebrow warm">Terwijl jij wat anders doet</span>
               <h2 className="display-2 mt-5">Zo ziet een dinsdag met Fedde eruit.</h2>
               <p className="lead mt-5 max-w-[420px]">
-                Fedde werkt door als jouw shop dicht is en jij slaapt. Alles wat
-                naar buiten gaat en telt, komt eerst langs jou.
+                Fedde werkt door als je bedrijf dicht is en jij slaapt. Alles
+                wat naar buiten gaat en telt, komt eerst langs jou.
               </p>
               <p className="mt-6 text-[13px] text-muted-fg">
                 Voorbeeld van een doorsnee dag.

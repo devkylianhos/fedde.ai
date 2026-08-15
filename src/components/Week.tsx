@@ -11,10 +11,11 @@ export function Week() {
         <div className="mx-auto max-w-[680px]">
           <Reveal className="text-center">
             <span className="eyebrow">Hoe het werkt</span>
-            <h2 className="display-2 mt-5">Binnen een week live.</h2>
+            <h2 className="display-2 mt-5">Binnen een week aan het werk.</h2>
             <p className="lead mx-auto mt-5 max-w-[480px]">
-              Geen maandenlang traject. We leren je shop, bouwen je agent en
-              zetten hem live. Daarna wordt hij elke week scherper.
+              Geen maandenlang traject. We leren je bedrijf kennen, bouwen je
+              werknemer en zetten hem aan het werk. Daarna wordt hij elke week
+              scherper.
             </p>
           </Reveal>
 

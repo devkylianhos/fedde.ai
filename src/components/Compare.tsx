@@ -3,11 +3,11 @@ import { Check, Minus } from "lucide-react";
 
 const rows = [
   {
-    label: "SEO-blogs die scoren",
+    label: "Blogs en teksten die scoren",
     los: "tekstbureau of freelancer, per stuk betalen",
   },
   {
-    label: "Retouren bijhouden en afhandelen",
+    label: "Klantenmail bijhouden",
     los: "eigen uren of een medewerker",
   },
   {
@@ -15,20 +15,20 @@ const rows = [
     los: "designer inhuren, wachten op oplevering",
   },
   {
-    label: "Factuurherinneringen",
+    label: "Facturen en herinneringen",
     los: "zelf achteraan zitten, of het blijft liggen",
   },
   {
-    label: "Reviews verzamelen",
-    los: "losse review-tool met eigen abonnement",
+    label: "Rapportage en cijfers",
+    los: "losse rapportages uit losse tools",
   },
   {
-    label: "Product research",
+    label: "Research voor beslissingen",
     los: "zelf uitzoeken tussen de bedrijven door",
   },
   {
-    label: "Live dashboard",
-    los: "losse rapportages uit losse tools",
+    label: "Het terugkerende geregel",
+    los: "blijft op jouw bord liggen",
   },
 ];
 
@@ -38,7 +38,7 @@ export function Compare() {
       <div className="container-x">
         <Reveal className="mx-auto max-w-[620px] text-center">
           <span className="eyebrow">Reken het na</span>
-          <h2 className="display-2 mt-5">Wat je nu los regelt, zit bij Fedde in één agent.</h2>
+          <h2 className="display-2 mt-5">Wat je nu los regelt, doet straks één werknemer.</h2>
         </Reveal>
 
         <Reveal delay={0.08}>

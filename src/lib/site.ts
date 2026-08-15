@@ -1,4 +1,5 @@
 /* Fedde site content — single source of truth.
+   Positionering: een AI-werknemer voor elk bedrijf, 24/7.
    Placeholders flagged with TODO are the "nog invullen met echte gegevens" items. */
 
 export const BOOKING_URL = "https://cal.com/fedde/kennismaking"; // TODO: echte boekingslink
@@ -11,48 +12,48 @@ export const BETA_SEATS_TAKEN = 0; // TODO: bijwerken per verkochte plek
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
-  { label: "Diensten", href: "#diensten" },
+  { label: "Wat hij doet", href: "#diensten" },
   { label: "Hoe het werkt", href: "#hoe-het-werkt" },
   { label: "Vertrouwen", href: "#vertrouwen" },
   { label: "Prijzen", href: "#prijzen" },
 ];
 
-/* Zeven diensten */
+/* Zeven taken van je AI-werknemer */
 export const services = [
   {
-    tag: "SEO",
-    title: "SEO-blogs op ieder moment",
-    body: "Jij geeft het onderwerp, Fedde levert een af stuk dat scoort en klinkt als jouw merk.",
+    tag: "Content",
+    title: "Blogs en teksten die scoren",
+    body: "Jij geeft het onderwerp, Fedde levert een af stuk dat klinkt als jouw merk.",
   },
   {
-    tag: "Data",
-    title: "Dashboard met live data",
-    body: "Omzet, retouren, reviews en content op één scherm, realtime.",
+    tag: "Inbox",
+    title: "Klantenmail afgehandeld",
+    body: "Beantwoord in jouw toon. Wat gevoelig ligt, komt eerst langs jou.",
   },
   {
-    tag: "Retouren",
-    title: "Retouren automatisch afgehandeld",
-    body: "Bijgehouden en afgehandeld, met signaal als een product te vaak terugkomt.",
+    tag: "Facturen",
+    title: "Facturen en herinneringen",
+    body: "Persoonlijk verstuurd, op het juiste moment. Niks blijft liggen.",
   },
   {
     tag: "Design",
     title: "Design in jouw huisstijl",
-    body: "Voor socials, banners en productpagina's, altijd in jouw stijl.",
+    body: "Socials, banners en presentaties, altijd in jouw stijl.",
   },
   {
-    tag: "Facturen",
-    title: "Persoonlijke factuurherinneringen",
-    body: "In jouw toon, op het juiste moment verstuurd.",
-  },
-  {
-    tag: "Reviews",
-    title: "Reviews die vanzelf binnenlopen",
-    body: "Na elke bestelling, zonder dat jij erachteraan zit.",
+    tag: "Data",
+    title: "Dashboard met live cijfers",
+    body: "Omzet, taken en content op één scherm, realtime.",
   },
   {
     tag: "Research",
-    title: "Product research op jouw merk",
-    body: "Gericht op jouw doelgroep en waar jij naartoe wilt.",
+    title: "Research voor je beslissingen",
+    body: "Markt, concurrentie en leveranciers, uitgezocht op jouw vraag.",
+  },
+  {
+    tag: "Routine",
+    title: "Het terugkerende geregel",
+    body: "Bestellingen, retouren, afspraken: het werk dat elke week terugkomt.",
   },
 ];
 
@@ -61,12 +62,12 @@ export const week = [
   {
     day: "Dag 1",
     title: "Kennismaking",
-    body: "We leren je shop en nemen de call op als leerbasis voor je agent.",
+    body: "We leren je bedrijf kennen en nemen de call op als leerbasis voor je werknemer.",
   },
   {
     day: "Dag 2 tot 4",
     title: "Bouwen en trainen",
-    body: "We trainen je agent op catalogus, toon en branding tot het klopt.",
+    body: "We trainen je werknemer op jouw diensten, toon en branding tot het klopt.",
   },
   {
     day: "Dag 4",
@@ -75,34 +76,36 @@ export const week = [
   },
   {
     day: "Dag 5",
-    title: "Live",
-    body: "Je agent draait en jij ziet alles terug in je dashboard.",
+    title: "Aan het werk",
+    body: "Je werknemer draait en jij ziet alles terug in je dashboard.",
   },
   {
     day: "Doorlopend",
     title: "Slimmer worden",
-    body: "Elke klantcall maakt de agent scherper op jouw merk.",
+    body: "Elke call en elke werkweek maakt hem scherper op jouw bedrijf.",
   },
 ];
 
 /* Koppelingen om te tonen */
 export const integrations = [
+  "Gmail",
+  "Slack",
+  "Notion",
   "Shopify",
   "WooCommerce",
   "Klaviyo",
   "Mollie",
   "Meta",
-  "TikTok",
   "Instagram",
-  "Gmail",
+  "TikTok",
 ];
 
-/* Techniek en vertrouwen (spine section) */
+/* Techniek en vertrouwen */
 export const trust = [
   {
     eyebrow: "Gekoppeld aan je tools",
     title: "Alles in één brein, altijd actueel",
-    body: "Fedde plugt in op je shop, je e-mail en je kanalen. Shopify, WooCommerce, Klaviyo, Mollie, Meta, TikTok, Instagram en Gmail komen samen in één agent.",
+    body: "Fedde plugt in op je e-mail, je kanalen en de tools waar je bedrijf al op draait. Van Gmail en Slack tot Shopify en Mollie, samen in één werknemer.",
     align: "left" as const,
   },
   {
@@ -113,8 +116,8 @@ export const trust = [
   },
   {
     eyebrow: "Gehost door ons · 24/7",
-    title: "Eigen agent, afgeschermde omgeving",
-    body: "Elke klant krijgt een eigen agent in een afgeschermde omgeving. Een aparte bewakingsbot vanuit ons team houdt alle agents in de gaten, dag en nacht.",
+    title: "Eigen werknemer, afgeschermde omgeving",
+    body: "Elke klant krijgt een eigen werknemer in een afgeschermde omgeving. Een aparte bewakingsbot vanuit ons team houdt alles in de gaten, dag en nacht.",
     align: "left" as const,
   },
 ];
@@ -123,19 +126,23 @@ export const trust = [
 export const faq = [
   {
     q: "Wat kan Fedde op dag één?",
-    a: "Vanaf dag vijf draait je agent op je catalogus, toon en branding. In de dagen ervoor leren we je shop kennen en trainen we de agent. Je begint dus niet met een leeg vel, maar met een agent die jouw merk al kent.",
+    a: "Vanaf dag vijf draait je werknemer op jouw diensten, toon en branding. In de dagen ervoor leren we je bedrijf kennen en trainen we hem. Je begint dus niet met een leeg vel, maar met een werknemer die jouw zaak al kent.",
   },
   {
     q: "Is Fedde een chatbot?",
     a: "Nee. Een chatbot wacht tot jij iets vraagt. Fedde doet het werk waar je nu losse mensen, bureaus en tools voor betaalt, voor één bedrag. Jij keurt goed wat telt.",
   },
   {
+    q: "Vervangt Fedde mijn mensen?",
+    a: "Fedde neemt het terugkerende werk over: content, mail, facturen, geregel. Zo komen jij en je team toe aan het werk dat echt aandacht verdient. Jij bepaalt wat hij doet en jij keurt goed wat telt.",
+  },
+  {
     q: "Moet ik technisch zijn om dit op te zetten?",
-    a: "Nee. Wij regelen de hosting, de koppelingen en de afgeschermde omgeving. Jij levert je shop en je merk aan, wij bouwen de rest.",
+    a: "Nee. Wij regelen de hosting, de koppelingen en de afgeschermde omgeving. Jij vertelt over je bedrijf en je merk, wij bouwen de rest.",
   },
   {
     q: "Hoe zit het met mijn data en veiligheid?",
-    a: "Je krijgt een eigen agent in een eigen afgeschermde omgeving. Een aparte bewakingsbot houdt alle agents in de gaten. Alles wordt gelogd en is omkeerbaar.",
+    a: "Je krijgt een eigen werknemer in een eigen afgeschermde omgeving. Een aparte bewakingsbot houdt alles in de gaten. Alles wordt gelogd en is omkeerbaar.",
   },
   {
     q: "Wat kost het?",
@@ -146,7 +153,7 @@ export const faq = [
     a: "Levert Fedde in de eerste 14 dagen niet meer op dan je betaalt, dan krijg je je geld terug.",
   },
   {
-    q: "Wordt de agent slimmer over tijd?",
-    a: "Ja. Elke klantcall en elke week draaien maakt de agent scherper op jouw merk en jouw doelgroep.",
+    q: "Wordt hij slimmer over tijd?",
+    a: "Ja. Elke call en elke week draaien maakt je werknemer scherper op jouw bedrijf en jouw klanten.",
   },
 ];

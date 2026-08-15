@@ -14,7 +14,7 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-[240px] text-[14px] leading-[1.55] text-muted-fg">
-              De AI-agent die de hele achterkant van je webshop runt.
+              De AI-werknemer die 24/7 doorwerkt voor je bedrijf.
             </p>
           </div>
 

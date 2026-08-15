@@ -21,15 +21,15 @@ export function Hero() {
 
             <Reveal delay={0.06}>
               <h1 className="display-1 mt-7 text-white">
-                Fedde runt de achterkant van je webshop.
+                Je nieuwe werknemer werkt 24/7.
               </h1>
             </Reveal>
 
             <Reveal delay={0.12}>
               <p className="lead mx-auto mt-6 max-w-[560px] text-white/85">
-                Geen chatbot maar een compleet ecommerce team in één agent.
-                Fedde doet het werk waar je nu losse mensen, bureaus en tools
-                voor betaalt. Jij keurt goed wat telt.
+                Fedde is een AI-werknemer die het terugkerende werk van je
+                bedrijf overneemt: content, klantenmail, facturen, design en
+                research. Voor één bedrag per maand. Jij keurt goed wat telt.
               </p>
             </Reveal>
 

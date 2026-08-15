@@ -17,13 +17,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fedde — de AI-agent die je webshop runt",
+  title: "Fedde — de AI-werknemer die 24/7 doorwerkt",
   description:
-    "Fedde is geen chatbot maar een compleet ecommerce team in één agent. SEO-blogs, dashboard, retouren, design, facturen, reviews en research. Binnen een week live.",
+    "Fedde neemt het terugkerende werk van je bedrijf over: content, klantenmail, facturen, design, research en rapportage. Binnen een week aan het werk. Jij keurt goed wat telt.",
   openGraph: {
-    title: "Fedde — de AI-agent die je webshop runt",
+    title: "Fedde — de AI-werknemer die 24/7 doorwerkt",
     description:
-      "Een compleet ecommerce team in één agent. Binnen een week live. Jij keurt goed wat telt.",
+      "Eén werknemer die je content, mail, facturen en research doet. Binnen een week aan het werk. Jij keurt goed wat telt.",
     url: "https://fedde.ai",
     siteName: "Fedde",
     locale: "nl_NL",

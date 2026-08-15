@@ -2,7 +2,7 @@
    Built as real UI (not a placeholder image) so it stays crisp at any size.
    TODO: vervang de voorbeeldcijfers door een echte screenshot of live data. */
 
-import { TrendingUp, RotateCcw, Star, FileText } from "lucide-react";
+import { TrendingUp, Mail, CircleCheck, FileText } from "lucide-react";
 import { CountUp, GrowBars } from "./DashboardBits";
 
 function Stat({
@@ -62,8 +62,8 @@ export function DashboardMock() {
             value={<CountUp to={4812} prefix="€ " />}
             delta="+12,4%"
           />
-          <Stat icon={<RotateCcw size={15} />} label="Retouren" value="3,1%" delta="-0,6%" />
-          <Stat icon={<Star size={15} />} label="Reviews" value="4,8" delta="+18 deze week" />
+          <Stat icon={<Mail size={15} />} label="Mails afgehandeld" value="32" delta="+14 vandaag" />
+          <Stat icon={<CircleCheck size={15} />} label="Taken afgerond" value="23" delta="3 wachten op jou" />
           <Stat icon={<FileText size={15} />} label="Content live" value="6" delta="+2 blogs" />
         </div>
 

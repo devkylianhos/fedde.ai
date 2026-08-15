@@ -13,8 +13,8 @@ export function Showcase() {
                 Je ziet alles. Realtime.
               </h2>
               <p className="lead mx-auto mt-5 max-w-[500px]">
-                Omzet, retouren, reviews en content op één scherm. Je ziet wat
-                Fedde doet en zet met één klik de laatste stap.
+                Omzet, taken, mail en content op één scherm. Je ziet wat je
+                werknemer doet en zet met één klik de laatste stap.
               </p>
             </div>
 
