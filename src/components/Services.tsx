@@ -2,16 +2,16 @@ import { Reveal } from "./Reveal";
 import { services, BOOKING_URL } from "@/lib/site";
 import {
   PenLine,
-  LayoutDashboard,
-  RotateCcw,
-  Palette,
+  Mail,
   Receipt,
-  Star,
+  Palette,
+  LayoutDashboard,
   Search,
+  Repeat,
   ArrowRight,
 } from "lucide-react";
 
-const icons = [PenLine, LayoutDashboard, RotateCcw, Palette, Receipt, Star, Search];
+const icons = [PenLine, Mail, Receipt, Palette, LayoutDashboard, Search, Repeat];
 
 export function Services() {
   return (
@@ -21,8 +21,7 @@ export function Services() {
           {/* linkerkant: blijft hangen tijdens scrollen */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <span className="eyebrow">Wat Tibbe doet</span>
-              <h2 className="display-2 mt-5">
+              <h2 className="display-2">
                 Eén werknemer, een compleet team.
               </h2>
               <p className="lead mt-5 max-w-[420px]">
@@ -47,12 +46,6 @@ export function Services() {
               return (
                 <Reveal key={s.title} delay={Math.min(i * 0.04, 0.2)}>
                   <div className="group flex gap-5 rounded-[3px] border-b border-border px-4 py-7 transition-colors last:border-b-0 hover:bg-white sm:gap-7 sm:px-6">
-                    <span
-                      className="font-display text-[15px] font-600 text-muted-fg/60 pt-1.5"
-                      style={{ fontWeight: 600 }}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     <span className="grid h-12 w-12 flex-none place-items-center rounded-[3px] bg-accent-soft text-accent transition-colors group-hover:bg-accent group-hover:text-white">
                       <Icon size={21} />
                     </span>

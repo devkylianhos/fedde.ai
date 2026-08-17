@@ -46,10 +46,10 @@ export function CookieBanner() {
         </p>
         <div className="flex flex-none gap-2.5">
           <button onClick={() => setConsent("essential")} className="btn-secondary sm">
-            Alleen noodzakelijk
+            Noodzakelijk
           </button>
           <button onClick={() => setConsent("all")} className="btn-primary sm">
-            Alles accepteren
+            Accepteren
           </button>
         </div>
       </div>

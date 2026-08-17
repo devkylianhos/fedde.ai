@@ -37,8 +37,7 @@ export function Compare() {
     <section className="py-20 sm:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[620px] text-center">
-          <span className="eyebrow">Reken het na</span>
-          <h2 className="display-2 mt-5">Wat je nu los regelt, doet straks één werknemer.</h2>
+          <h2 className="display-2">Wat je nu los regelt, doet straks één werknemer.</h2>
         </Reveal>
 
         <Reveal delay={0.08}>

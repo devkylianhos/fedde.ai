@@ -65,7 +65,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
 }
+
+/* Browser-oppervlakken dragen het merk mee: selectie, caret, focus, scrollbar */
+::selection { background: var(--kobalt); color: #fff; }
+::-moz-selection { background: var(--kobalt); color: #fff; }
+:root { caret-color: var(--kobalt); scrollbar-color: #b9b3a8 var(--paper); }
+:focus-visible {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+a { text-underline-offset: 0.16em; text-decoration-thickness: 1px; }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: #b9b3a8; border: 3px solid var(--paper); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #9d968a; }
 
 /* Source Serif 4 SemiBold voor naam en koppen */
 h1, h2, h3, h4, .font-display {

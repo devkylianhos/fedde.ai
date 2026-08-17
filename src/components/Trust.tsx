@@ -9,8 +9,7 @@ export function Trust() {
     <section id="vertrouwen" className="py-20 sm:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[620px] text-center">
-          <span className="eyebrow">Techniek en vertrouwen</span>
-          <h2 className="display-2 mt-5">Jij houdt de regie.</h2>
+          <h2 className="display-2">Jij houdt de regie.</h2>
           <p className="lead mx-auto mt-5 max-w-[480px]">
             Tibbe doet het werk, jij zet de laatste stap. Zo is dat geregeld.
           </p>

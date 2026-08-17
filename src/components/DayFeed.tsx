@@ -65,8 +65,7 @@ export function DayFeed() {
           {/* kop links, blijft hangen */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <span className="eyebrow warm">Terwijl jij wat anders doet</span>
-              <h2 className="display-2 mt-5">Zo ziet een dinsdag met Tibbe eruit.</h2>
+              <h2 className="display-2">Zo ziet een dinsdag met Tibbe eruit.</h2>
               <p className="lead mt-5 max-w-[420px]">
                 Tibbe werkt door als je bedrijf dicht is en jij slaapt. Alles
                 wat naar buiten gaat en telt, komt eerst langs jou.

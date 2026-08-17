@@ -13,8 +13,7 @@ export function Faq() {
     <section className="py-20 sm:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[620px] text-center">
-          <span className="eyebrow">Veelgestelde vragen</span>
-          <h2 className="display-2 mt-5">Je hebt vragen. Logisch.</h2>
+          <h2 className="display-2">Je hebt vragen. Logisch.</h2>
         </Reveal>
 
         <div className="mx-auto mt-12 flex max-w-[720px] flex-col gap-3">

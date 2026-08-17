@@ -31,9 +31,9 @@ export const BETA_SEATS_TAKEN = 3; // TODO: bijwerken per verkochte plek
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
-  { label: "Voor wie", href: "/#voor-wie" },
   { label: "Wat hij doet", href: "/#diensten" },
   { label: "Hoe het werkt", href: "/#hoe-het-werkt" },
+  { label: "Vertrouwen", href: "/#vertrouwen" },
   { label: "Prijzen", href: "/#prijzen" },
 ];
 

@@ -13,8 +13,7 @@ export function HowItWorks() {
           {/* kop links, blijft hangen */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <span className="eyebrow">Zo werkt het</span>
-              <h2 className="display-2 mt-5">Je zegt wat er moet gebeuren. Tibbe regelt het.</h2>
+              <h2 className="display-2">Je zegt wat er moet gebeuren. Tibbe regelt het.</h2>
               <p className="lead mt-5 max-w-[420px]">
                 Geen software die je zelf moet bedienen. Je vertelt Tibbe in
                 gewone taal wat er moet lopen, en hij automatiseert het werk dat

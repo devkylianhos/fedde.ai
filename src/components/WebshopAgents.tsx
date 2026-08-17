@@ -16,8 +16,7 @@ export function WebshopAgents() {
     <section id="agents" className="py-20 sm:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[640px] text-center">
-          <span className="eyebrow">De agents</span>
-          <h2 className="display-2 mt-5">Elke taak krijgt zijn eigen agent.</h2>
+          <h2 className="display-2">Elke taak krijgt zijn eigen agent.</h2>
           <p className="lead mx-auto mt-5 max-w-[520px]">
             Onder je Tibbe werken gespecialiseerde agents samen. Elk goed in één
             ding, allemaal in jouw stem, en altijd met jouw goedkeuring.

@@ -1,16 +1,13 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Trust } from "@/components/Trust";
-import { WhyTrust } from "@/components/WhyTrust";
-import { FounderNote } from "@/components/FounderNote";
 import { IntegrationsStats } from "@/components/IntegrationsStats";
 import { Audiences } from "@/components/Audiences";
 import { Services } from "@/components/Services";
 import { HowItWorks } from "@/components/HowItWorks";
 import { DayFeed } from "@/components/DayFeed";
+import { WhyTrust } from "@/components/WhyTrust";
 import { Compare } from "@/components/Compare";
-import { Showcase } from "@/components/Showcase";
-import { Week } from "@/components/Week";
+import { FounderNote } from "@/components/FounderNote";
 import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
@@ -27,6 +24,9 @@ const faqJsonLd = {
   })),
 };
 
+/* Verhaallijn in 10 secties, elk één boodschap:
+   wie (hero) -> waarmee (koppelingen) -> voor wie -> wat -> hoe -> een dag
+   -> waarom vertrouwen -> wat het scheelt -> wie erachter zit -> prijs -> vragen */
 export default function Home() {
   return (
     <main>
@@ -41,11 +41,8 @@ export default function Home() {
       <Services />
       <HowItWorks />
       <DayFeed />
-      <Showcase />
-      <Week />
-      <Trust />
-      <Compare />
       <WhyTrust />
+      <Compare />
       <FounderNote />
       <Pricing />
       <Faq />

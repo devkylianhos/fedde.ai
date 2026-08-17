@@ -15,7 +15,6 @@ export function FounderNote() {
       <div className="container-x">
         <Reveal className="mx-auto max-w-[720px]">
           <div className="rounded-[3px] border border-border bg-white p-8 shadow-[var(--shadow-surface)] sm:p-10">
-            <p className="eyebrow">Even voorstellen</p>
             <blockquote className="mt-6 font-display text-[24px] leading-[1.32] text-foreground sm:text-[28px]">
               &ldquo;Ik run zelf een bedrijf, dus ik weet hoe het geregel je
               avonden opeet. Tibbe is de werknemer die ik zelf wilde hebben. In de

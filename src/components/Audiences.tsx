@@ -18,8 +18,7 @@ export function Audiences() {
     <section id="voor-wie" className="py-20 sm:py-24">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[640px] text-center">
-          <span className="eyebrow">Voor wie</span>
-          <h2 className="display-2 mt-5">Elk bedrijf heeft terugkerend werk. Tibbe neemt het over.</h2>
+          <h2 className="display-2">Elk bedrijf heeft terugkerend werk. Tibbe neemt het over.</h2>
           <p className="lead mx-auto mt-5 max-w-[520px]">
             Of je nu producten verkoopt, klanten begeleidt of een praktijk runt,
             het geregel is overal hetzelfde. En dat is precies wat Tibbe doet.

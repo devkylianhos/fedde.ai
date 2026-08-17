@@ -8,8 +8,7 @@ export function Showcase() {
         <Reveal>
           <div className="overflow-hidden rounded-[3px] bg-sand px-6 pt-12 sm:px-14 sm:pt-16">
             <div className="mx-auto max-w-[620px] text-center">
-              <span className="eyebrow">Dashboard</span>
-              <h2 className="display-2 mt-5">
+              <h2 className="display-2">
                 Je ziet alles. Realtime.
               </h2>
               <p className="lead mx-auto mt-5 max-w-[500px]">
