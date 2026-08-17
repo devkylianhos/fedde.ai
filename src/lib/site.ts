@@ -12,10 +12,10 @@ export const BETA_SEATS_TAKEN = 3; // TODO: bijwerken per verkochte plek
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
-  { label: "Voor wie", href: "#voor-wie" },
-  { label: "Wat hij doet", href: "#diensten" },
-  { label: "Hoe het werkt", href: "#hoe-het-werkt" },
-  { label: "Prijzen", href: "#prijzen" },
+  { label: "Voor wie", href: "/#voor-wie" },
+  { label: "Wat hij doet", href: "/#diensten" },
+  { label: "Hoe het werkt", href: "/#hoe-het-werkt" },
+  { label: "Prijzen", href: "/#prijzen" },
 ];
 
 /* Zeven taken van je AI-werknemer */
@@ -102,6 +102,40 @@ export const howSteps = [
   {
     title: "Het wordt een vaste routine",
     body: "Wat één keer goed ging, doet Fedde voortaan vanzelf. Elke week neemt hij meer van je bord.",
+  },
+];
+
+/* Webshop-pagina: gespecialiseerde agents per rol */
+export const webshopAgents = [
+  {
+    role: "Site Agent",
+    title: "Past je live site direct aan",
+    body: "Gekoppeld aan je platform past hij prijzen, banners, productteksten en kortingscodes aan op je live shop. Elke wijziging eerst langs jou.",
+    visual: "site" as const,
+  },
+  {
+    role: "Lead Agent",
+    title: "Wint verlaten winkelwagens terug",
+    body: "Klant laat zijn mandje staan, kort daarna volgt een persoonlijke follow-up met een unieke kortingscode. Geen handwerk, wel omzet terug.",
+    visual: "cart" as const,
+  },
+  {
+    role: "Review Agent",
+    title: "Haalt reviews vanzelf binnen",
+    body: "Na elke levering een reviewverzoek op het juiste moment en in jouw toon. Negatieve reviews escaleren intern voordat ze publiek gaan.",
+    visual: "review" as const,
+  },
+  {
+    role: "Creative Agent",
+    title: "Maakt beeld en video uit je catalogus",
+    body: "Banners, productfoto-varianten, story-creatives en korte video-ads, gegenereerd uit je bestaande producten. Klaar om te plaatsen.",
+    visual: "creative" as const,
+  },
+  {
+    role: "Service Agent",
+    title: "Doet je klantenservice, dag en nacht",
+    body: "Standaardvragen, retouren en beschikbaarheid via WhatsApp, mail en chat. In jouw stem, en alleen wat menselijk oordeel vraagt komt bij jou.",
+    visual: "service" as const,
   },
 ];
 

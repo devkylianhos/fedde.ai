@@ -30,6 +30,11 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a href="/webshops" className="text-[15px] text-foreground/80 hover:text-accent">
+                  Voor webshops
+                </a>
+              </li>
             </ul>
           </div>
 
