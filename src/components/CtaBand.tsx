@@ -7,10 +7,10 @@ export function CtaBand() {
       <Reveal>
         <div className="sky-panel rounded-[3px] px-8 py-16 text-center sm:py-20">
           <div className="relative">
-            <h2 className="display-2 text-white">Nog een vraag?</h2>
+            <h2 className="display-2 text-white">Benieuwd wat hij voor jou kan doen?</h2>
             <p className="lead mx-auto mt-4 max-w-[460px] text-white/85">
-              Stel hem in de kennismaking. We laten je in dertig minuten zien
-              wat Tibbe voor jouw bedrijf doet.
+              Stuur een appje. In een half uur laten we zien wat Tibbe morgen al
+              voor je regelt. Geen verkooppraatje, gewoon even kijken.
             </p>
             <a href={BOOKING_URL} className="btn-inverse mt-8">
               Plan een kennismaking

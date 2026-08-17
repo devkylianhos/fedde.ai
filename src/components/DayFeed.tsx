@@ -16,44 +16,44 @@ const feed = [
   {
     time: "03:12",
     icon: RotateCcw,
-    text: "De administratie van gisteren verwerkt en klaargezet voor vandaag.",
+    text: "De bestellingen van gisteren verwerkt en de administratie bijgewerkt.",
     badge: null,
   },
   {
     time: "06:58",
     icon: PenLine,
-    text: "Blog geschreven en klaargezet, in jouw toon en op jouw onderwerp.",
-    badge: { label: "wacht op jouw goedkeuring", tone: "amber" as const },
+    text: "Een blog geschreven over het onderwerp dat jij gisteren noemde.",
+    badge: { label: "wacht op jouw ja", tone: "amber" as const },
   },
   {
     time: "08:30",
     icon: LayoutDashboard,
-    text: "Dashboard bijgewerkt met de omzet en cijfers van gisteren.",
+    text: "Je overzicht bijgewerkt: omzet van gisteren en wat er vandaag speelt.",
     badge: null,
   },
   {
     time: "09:15",
     icon: Receipt,
-    text: "Factuurherinnering verstuurd, persoonlijk en op tijd.",
-    badge: { label: "door jou goedgekeurd", tone: "blue" as const },
+    text: "Vriendelijke herinnering gestuurd naar een klant die nog niet betaald had.",
+    badge: { label: "jij zei ja", tone: "blue" as const },
   },
   {
     time: "11:40",
     icon: Star,
-    text: "Veertien klantmails beantwoord in jouw toon. Twee gevoelige liggen voor jou klaar.",
+    text: "Veertien klantmails beantwoord. Twee lastige heeft hij voor jou apart gelegd.",
     badge: null,
   },
   {
     time: "14:05",
     icon: AlertTriangle,
-    text: "Signaal: één klacht komt deze week vaker terug. Tibbe legt je uit waarom.",
-    badge: { label: "signaal naar jou", tone: "amber" as const },
+    text: "Opgevallen: dezelfde klacht komt deze week drie keer terug. Hij legt je uit wat er speelt.",
+    badge: { label: "even naar jou", tone: "amber" as const },
   },
   {
     time: "16:20",
     icon: Palette,
-    text: "Social-post en banner in je huisstijl klaargezet voor volgende week.",
-    badge: { label: "wacht op jouw goedkeuring", tone: "amber" as const },
+    text: "Twee social media posts klaargezet voor volgende week. Jij hoeft alleen nog ja te zeggen.",
+    badge: { label: "wacht op jouw ja", tone: "amber" as const },
   },
 ];
 
@@ -65,13 +65,13 @@ export function DayFeed() {
           {/* kop links, blijft hangen */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <h2 className="display-2">Zo ziet een dinsdag met Tibbe eruit.</h2>
+              <h2 className="display-2">Een gewone dinsdag, terwijl jij wat anders doet.</h2>
               <p className="lead mt-5 max-w-[420px]">
-                Tibbe werkt door als je bedrijf dicht is en jij slaapt. Alles
-                wat naar buiten gaat en telt, komt eerst langs jou.
+                Dit deed Tibbe op een doorsnee dag. Ook 's nachts en in het weekend.
+                Alles wat naar een klant gaat, ziet jij eerst.
               </p>
               <p className="mt-6 text-[13px] text-muted-fg">
-                Voorbeeld van een doorsnee dag.
+                Voorbeeld. Bij jou ziet de dag er anders uit, maar zo werkt het.
               </p>
             </Reveal>
           </div>

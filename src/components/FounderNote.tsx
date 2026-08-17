@@ -16,10 +16,10 @@ export function FounderNote() {
         <Reveal className="mx-auto max-w-[720px]">
           <div className="rounded-[3px] border border-border bg-white p-8 shadow-[var(--shadow-surface)] sm:p-10">
             <blockquote className="mt-6 font-display text-[24px] leading-[1.32] text-foreground sm:text-[28px]">
-              &ldquo;Ik run zelf een bedrijf, dus ik weet hoe het geregel je
-              avonden opeet. Tibbe is de werknemer die ik zelf wilde hebben. In de
-              beta zit ik bij elke kennismaking, en ik bouw hem samen met de
-              eerste tien klanten. Bel me gerust met je rommeligste proces.&rdquo;
+              &ldquo;Ik heb zelf een bedrijf, dus ik weet hoe je avonden opgaan aan
+              mail en facturen. Tibbe is de collega die ik zelf altijd wilde. De
+              eerste tien klanten help ik persoonlijk, en ik zit bij elk gesprek.
+              App me gerust met het werk dat bij jou altijd blijft liggen.&rdquo;
             </blockquote>
 
             <div className="mt-8 flex items-center gap-4">

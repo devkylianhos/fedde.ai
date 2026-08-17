@@ -6,23 +6,23 @@ import { Reveal } from "./Reveal";
 const facts = [
   {
     title: "Een echt bedrijf, geen anonieme tool",
-    body: "Gebouwd door het team achter Kitchen Royal. Een naam, een adres en een KvK-nummer. Je weet met wie je te maken hebt.",
+    body: "Gemaakt door het team achter Kitchen Royal, in Alkmaar. Met een naam, een adres en een KvK-nummer. Je weet gewoon met wie je te maken hebt.",
   },
   {
     title: "Jij keurt goed wat telt",
-    body: "Wat naar buiten gaat of gevoelig ligt, komt eerst langs jou. Alles is gelogd en omkeerbaar. Je ziet precies wat er gebeurt en draait het terug als je wilt.",
+    body: "Gaat er iets naar een klant of gaat het om geld, dan vraagt hij het eerst aan jou. Alles wat hij doet kun je teruglezen, en terugdraaien als je wilt.",
   },
   {
-    title: "Eigen medewerker, afgeschermde omgeving",
-    body: "Elke klant krijgt een eigen omgeving die wij hosten en bewaken, dag en nacht. Niks wordt gedeeld tussen bedrijven. Onder de motorkap draait Claude van Anthropic.",
+    title: "Jouw gegevens blijven van jou",
+    body: "Jouw Tibbe draait op een eigen plek die alleen van jou is. Niks wordt gedeeld met andere bedrijven, en wij houden het dag en nacht in de gaten. Hij is gebouwd op Claude, een van de beste AI-modellen die er is.",
   },
   {
     title: "Je loopt geen risico",
-    body: "14 dagen garantie, maandelijks opzegbaar en je data gaat altijd met je mee. Bevalt het niet, dan stop je zonder gedoe.",
+    body: "Bevalt het niet? Dan stop je gewoon, elke maand kan dat. En levert hij je in de eerste twee weken niks op, dan krijg je je geld terug.",
   },
   {
     title: "We zijn net begonnen, en daar zijn we eerlijk over",
-    body: "Daarom nu 10 betaplekken met een vaste prijs en persoonlijke begeleiding van de oprichter zelf. Je bouwt Tibbe mee vanaf het eerste uur.",
+    body: "Daarom beginnen we met tien klanten, voor een lage vaste prijs, en help ik je persoonlijk. Jij denkt mee over hoe Tibbe wordt, vanaf het eerste uur.",
   },
 ];
 

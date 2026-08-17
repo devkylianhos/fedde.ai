@@ -7,14 +7,18 @@ export function Footer() {
       <div className="container-x py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <a href="#top" className="flex items-center gap-2.5">
-              <BrandMark />
-              <span className="font-display text-[20px]" style={{ fontWeight: 600 }}>
+            <a href="#top" className="flex items-center gap-3">
+              {/* Geanimeerd merkteken uit het pakket: de tik-draai loader (rustige 4.8s-variant) */}
+              <span className="tibbe-loader slow inline-flex" aria-hidden>
+                <BrandMark size={40} />
+              </span>
+              <span className="font-display text-[22px]" style={{ fontWeight: 600 }}>
                 Tibbe
               </span>
             </a>
             <p className="mt-4 max-w-[240px] text-[14px] leading-[1.55] text-muted-fg">
-              De AI-werknemer die 24/7 doorwerkt voor je bedrijf.
+              De medewerker die nooit stopt. Hij doet je mail, je facturen en
+              het geregel, terwijl jij het echte werk doet.
             </p>
           </div>
 

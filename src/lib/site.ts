@@ -18,7 +18,7 @@ export const BOOKING_URL = waLink();
 /* Oprichter — vul je naam in, dan verschijnt hij overal.
    Foto komt later; zolang photo leeg is tonen we een initialen-avatar. */
 export const FOUNDER = {
-  name: "", // TODO: vul je naam in, bv. "Kylian Hos"
+  name: "Kylian",
   role: "Oprichter van Tibbe, partner van Kitchen Royal",
   photo: "", // TODO: pad naar foto, bv. "/images/oprichter.jpg"
 };
@@ -41,38 +41,38 @@ export const nav = [
 export const services = [
   {
     tag: "Content",
-    title: "Blogs en teksten die scoren",
-    body: "Jij geeft het onderwerp, Tibbe levert een af stuk dat klinkt als jouw merk.",
+    title: "Schrijft je teksten",
+    body: "Blogs, productteksten, nieuwsbrieven. Jij noemt het onderwerp, Tibbe schrijft het in jouw woorden.",
   },
   {
     tag: "Inbox",
-    title: "Klantenmail afgehandeld",
-    body: "Beantwoord in jouw toon. Wat gevoelig ligt, komt eerst langs jou.",
+    title: "Beantwoordt je klantenmail",
+    body: "Vragen over levertijd, openingstijden of retouren beantwoordt hij zelf. Lastige mails legt hij eerst aan jou voor.",
   },
   {
     tag: "Facturen",
-    title: "Facturen en herinneringen",
-    body: "Persoonlijk verstuurd, op het juiste moment. Niks blijft liggen.",
+    title: "Stuurt facturen en herinneringen",
+    body: "Netjes en op tijd. Betaalt iemand niet, dan stuurt hij een vriendelijke herinnering. Jij hoeft er niet meer achteraan.",
   },
   {
     tag: "Design",
-    title: "Design in jouw huisstijl",
-    body: "Socials, banners en presentaties, altijd in jouw stijl.",
+    title: "Maakt je social media posts",
+    body: "Plaatjes en teksten voor Instagram, Facebook of LinkedIn, in jouw huisstijl. Jij hoeft alleen nog ja te zeggen.",
   },
   {
     tag: "Data",
-    title: "Dashboard met live cijfers",
-    body: "Omzet, taken en content op één scherm, realtime.",
+    title: "Laat zien hoe je zaak ervoor staat",
+    body: "Eén overzicht met je omzet, wat er vandaag gedaan is en wat er nog op je wacht. Altijd actueel.",
   },
   {
     tag: "Research",
-    title: "Research voor je beslissingen",
-    body: "Markt, concurrentie en leveranciers, uitgezocht op jouw vraag.",
+    title: "Zoekt dingen voor je uit",
+    body: "Wat vraagt de concurrent? Welke leverancier is goedkoper? Jij stelt de vraag, hij komt met een helder antwoord.",
   },
   {
     tag: "Routine",
-    title: "Het terugkerende geregel",
-    body: "Bestellingen, retouren, afspraken: het werk dat elke week terugkomt.",
+    title: "Regelt het terugkerende werk",
+    body: "Afspraken bevestigen, bestellingen verwerken, retouren afhandelen. Het werk dat elke week terugkomt, doet hij voortaan.",
   },
 ];
 
@@ -80,47 +80,47 @@ export const services = [
 export const audiences = [
   {
     label: "Webshops",
-    body: "Content, retouren, reviews en klantmail. De hele achterkant draait door.",
+    body: "Klantvragen, retouren en reviews worden afgehandeld terwijl jij verkoopt.",
   },
   {
     label: "Bureaus",
-    body: "Rapportages, socials en klantupdates, klaar voordat je klant erom vraagt.",
+    body: "Klantupdates en rapportjes staan klaar voordat iemand erom vraagt.",
   },
   {
     label: "Coaches en consultants",
-    body: "Content, facturen en je inbox bijgehouden terwijl jij met klanten werkt.",
+    body: "Je mail en facturen zijn geregeld terwijl jij met klanten bezig bent.",
   },
   {
     label: "Praktijken",
-    body: "Afspraken, herinneringen en administratie, zonder dat het blijft liggen.",
+    body: "Afspraken bevestigd, herinneringen verstuurd, administratie bij. Niks blijft liggen.",
   },
   {
     label: "Horeca en retail",
-    body: "Reserveringen, reviews en socials, ook als jij op de vloer staat.",
+    body: "Reserveringen en berichten beantwoord, ook als jij op de vloer staat.",
   },
   {
     label: "Zzp en klein team",
-    body: "Al het geregel dat jouw avonden opeet, overgenomen door één werknemer.",
+    body: "Het geregel dat je avonden opeet, uit handen. Zodat je weer aan je werk toekomt.",
   },
 ];
 
 /* Zo werkt het — het automatiseringsverhaal */
 export const howSteps = [
   {
-    title: "Vertel wat er moet gebeuren",
-    body: "In gewone taal. \"Stuur elke maandag een weekupdate naar mijn klanten\" of \"beantwoord mail over openingstijden zelf\". Geen flowcharts, geen technische taal.",
+    title: "Jij zegt wat er moet gebeuren",
+    body: "Gewoon zoals je het tegen een collega zou zeggen. \"Stuur elke maandag een update naar mijn klanten.\" Meer is het niet.",
   },
   {
-    title: "Tibbe doet het automatisch",
-    body: "Hij werkt op je tools, dag en nacht. Terugkerende taken lopen vanzelf, nieuwe vragen pakt hij op zodra ze binnenkomen.",
+    title: "Tibbe gaat aan de slag",
+    body: "Ook 's avonds en in het weekend. Wat elke week terugkomt, doet hij vanzelf. Komt er iets nieuws binnen, dan pakt hij het meteen op.",
   },
   {
-    title: "Jij keurt goed wat telt",
-    body: "Wat naar buiten gaat of gevoelig ligt, komt eerst langs jou. De rest handelt hij zelf af. Alles is gelogd en omkeerbaar.",
+    title: "Jij zegt ja of nee",
+    body: "Gaat er iets naar een klant of gaat het om geld, dan vraagt hij het eerst aan jou. Alles wat hij doet kun je teruglezen en terugdraaien.",
   },
   {
-    title: "Het wordt een vaste routine",
-    body: "Wat één keer goed ging, doet Tibbe voortaan vanzelf. Elke week neemt hij meer van je bord.",
+    title: "Elke week doet hij meer",
+    body: "Wat één keer goed ging, doet hij voortaan uit zichzelf. Zo neemt hij steeds meer van je bord.",
   },
 ];
 
@@ -223,42 +223,46 @@ export const trust = [
   },
 ];
 
-/* FAQ */
+/* FAQ — elke vraag zoals iemand hem echt stelt, elk antwoord zonder vaktaal */
 export const faq = [
   {
-    q: "Wat doet Tibbe op dag één?",
-    a: "In de kennismaking koppelen we je tools: e-mail, WhatsApp, agenda en je documenten. Daarna pakt Tibbe diezelfde dag zijn eerste echte taken op. Inbox opschonen, klanten opvolgen, research, facturen achterna. Je ziet de eerste output binnen uren, niet weken.",
+    q: "Wat is Tibbe nou precies?",
+    a: "Een medewerker die op de computer werkt, maar dan eentje die nooit naar huis gaat. Hij beantwoordt je mail, stuurt je facturen, schrijft je teksten en regelt het werk dat elke week terugkomt. Jij zegt wat er moet gebeuren, hij doet het.",
   },
   {
-    q: "Ik ben niet technisch. Hoeveel werk is het opzetten?",
-    a: "Eén call. We zetten alles samen met je op, live: je systemen, je software, jouw manier van werken. Jij praat, wij koppelen. Is er ergens een wachtwoord nodig, dan typ jij het, wij zien het nooit.",
+    q: "Wat doet hij op de eerste dag al?",
+    a: "In de kennismaking koppelen we samen je mail, je agenda en je WhatsApp. Diezelfde dag pakt hij zijn eerste taken op: je inbox opschonen, klanten opvolgen, een factuur achterna. Je ziet binnen een paar uur al resultaat, niet pas over weken.",
   },
   {
-    q: "Mijn bedrijfsdata op een AI. Hoe veilig is dat?",
-    a: "Je Tibbe draait op een eigen afgeschermde machine die wij hosten. Niks wordt gedeeld tussen bedrijven. Alles wat hij doet is gelogd, terug te lezen en omkeerbaar, en hij vraagt het eerst als een actie zwaar telt. Jouw omgeving, jouw regels.",
+    q: "Ik ben niet technisch. Is dat een probleem?",
+    a: "Nee. Je hoeft niks te installeren en niks in te stellen. In één gesprek zetten wij alles voor je klaar, live, terwijl jij meekijkt. Moet er ergens een wachtwoord in, dan typ jij dat zelf. Wij zien het nooit.",
   },
   {
-    q: "Ik gebruik al ChatGPT en Claude. Wat is anders?",
-    a: "Dat zijn briljante breinen die wachten tot jij typt. Tibbe is een werknemer: hij werkt 24/7 op zijn eigen machine, op je echte tools, of je laptop nu open staat of niet. Een chatbot antwoordt. Tibbe werkt.",
+    q: "Is mijn bedrijfsinformatie wel veilig?",
+    a: "Ja. Jouw Tibbe draait op een eigen plek die alleen van jou is. Niks wordt gedeeld met andere bedrijven. Alles wat hij doet kun je teruglezen en terugdraaien, en gaat er iets naar een klant of om geld, dan vraagt hij het eerst aan jou.",
   },
   {
-    q: "Vervangt Tibbe mijn mensen?",
-    a: "Tibbe neemt het terugkerende werk over: content, mail, facturen, geregel. Zo komen jij en je team toe aan het werk dat echt aandacht verdient. Jij bepaalt wat hij doet en jij keurt goed wat telt.",
+    q: "Ik gebruik al ChatGPT. Wat is het verschil?",
+    a: "ChatGPT wacht tot jij iets typt en geeft dan antwoord. Tibbe werkt zelf door, ook als je laptop dicht is. Hij zit in je mail en je agenda en handelt dingen af. Een chatbot antwoordt. Tibbe werkt.",
+  },
+  {
+    q: "Neemt hij mijn mensen hun werk af?",
+    a: "Hij neemt het saaie, terugkerende werk over: mail, facturen, geregel. Zo houden jij en je team tijd over voor het werk dat echt aandacht verdient. Jij bepaalt wat hij doet, en jij zegt overal ja of nee tegen.",
   },
   {
     q: "Wat kost het?",
-    a: "Tijdens de beta betaal je 250 euro excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Bij de volledige launch wordt de instap 500 euro per maand. Alles zit erin: je eigen gehoste Tibbe, persoonlijke onboarding, het dashboard en elke tool die we hierna nog bouwen. Token usage en het Claude-abonnement komen er nog bij. Geen prijs per gebruiker, maandelijks opzegbaar.",
+    a: "Tijdens de beta 250 euro per maand (zonder btw), en die prijs blijft, zolang je klant blijft. Later wordt het 500 euro per maand. De kosten van de AI zelf komen daar nog bij. Je zit nergens aan vast: elke maand opzegbaar.",
   },
   {
-    q: "En als het zichzelf niet terugverdient?",
-    a: "We blijven op de kennismakingscall tot je eerste winst echt is, en we bouwen met je door tot Tibbe zijn geld waard is. Levert hij in de eerste 14 dagen niet meer op dan je betaalt, dan krijg je je geld terug.",
+    q: "En als het me niks oplevert?",
+    a: "Dan krijg je je geld terug. Levert Tibbe je in de eerste 14 dagen niet meer op dan hij kost, dan betaal je niks. Zo simpel.",
   },
   {
-    q: "Groeit het mee als mijn bedrijf verandert?",
-    a: "Ja. Tibbe bouwt met je mee: nieuwe workflows, nieuwe koppelingen, nieuwe dashboards als je bedrijf van vorm verandert. Skills die elders bewezen werken, komen ook bij jou binnen. Je data, bestanden en gesprekken verhuizen nooit tussen bedrijven.",
+    q: "Groeit hij mee als mijn bedrijf verandert?",
+    a: "Ja. Krijg je nieuwe klanten, nieuwe taken of een nieuwe manier van werken, dan leert hij dat erbij. En wat bij andere bedrijven goed werkt, komt ook bij jou terecht. Jouw gegevens blijven wel altijd bij jou.",
   },
   {
-    q: "Oké. Wat gebeurt er in de kennismaking?",
-    a: "Dertig minuten. We brengen je achterkant in kaart, koppelen je systemen live en kiezen de eerste winst die Tibbe diezelfde dag levert. Plan hem hieronder en kom met je rommeligste proces.",
+    q: "Oké. Wat gebeurt er in zo'n kennismaking?",
+    a: "Een half uur, via WhatsApp of een belletje. Je vertelt wat er nu blijft liggen, we koppelen live je mail en agenda, en we kiezen samen de eerste klus die Tibbe diezelfde dag voor je doet. Kom met je rommeligste proces.",
   },
 ];

@@ -10,11 +10,11 @@ import {
 import { Check, BadgeEuro } from "lucide-react";
 
 const betaIncluded = [
-  "Je eigen Tibbe, 24/7 in een afgeschermde omgeving",
-  "Persoonlijke onboarding, koppelingen met je samen gezet",
-  "Dashboard, alle zeven diensten en alles wat we hierna bouwen",
-  "Nieuwe skills die elders werken, komen ook bij jou binnen",
-  "Maandelijks opzegbaar. Je data gaat met je mee.",
+  "Je eigen Tibbe, die dag en nacht voor je werkt",
+  "We zetten alles samen met je op, in één gesprek",
+  "Alle zeven taken, plus alles wat we er later bij bouwen",
+  "Wat bij anderen goed werkt, krijg jij er ook bij",
+  "Elke maand opzegbaar. Je gegevens blijven van jou.",
 ];
 
 function remaining(targetIso: string) {
@@ -43,14 +43,14 @@ export function Pricing() {
         <Reveal className="mx-auto max-w-[620px] text-center">
           <BrandMark size={34} />
           <p className="mt-4 text-[13px] font-600 uppercase tracking-[0.16em] text-muted-fg" style={{ fontWeight: 600 }}>
-            Volledige launch
+            Binnenkort voor iedereen
           </p>
           <h2 className="display-2 mt-3">Binnenkort live.</h2>
           <p className="mt-3 text-[15px] text-muted-fg">
             <span className="font-600 text-foreground" style={{ fontWeight: 600 }}>
               € 500
             </span>{" "}
-            per maand vanaf {launchDay}. Wie nu instapt, houdt de betaprijs.
+            per maand vanaf {launchDay}. Stap je nu in, dan blijf je de lage prijs betalen.
           </p>
           {!left.done && (
             <div className="mt-7 flex justify-center">
@@ -67,7 +67,7 @@ export function Pricing() {
               style={{ borderColor: "var(--accent)" }}
             >
               <div className="flex flex-wrap items-center gap-2">
-                <span className="eyebrow">Beta · {BETA_SEATS_TOTAL} plekken · alles erin</span>
+                <span className="eyebrow">Eerste {BETA_SEATS_TOTAL} klanten</span>
               </div>
 
               <div className="mt-5 flex items-baseline gap-2">
@@ -77,9 +77,9 @@ export function Pricing() {
                 <span className="text-[15px] text-muted-fg">/ maand</span>
               </div>
               <div className="mt-1.5 text-[13px] text-muted-fg">
-                excl. btw · excl. token usage en Claude-abonnement ·{" "}
+                zonder btw · de kosten van de AI zelf komen erbij ·{" "}
                 <span className="font-600 text-foreground" style={{ fontWeight: 600 }}>
-                  deze prijs blijft staan zolang je blijft
+                  deze prijs houd je, zolang je klant blijft
                 </span>
               </div>
 
@@ -96,14 +96,14 @@ export function Pricing() {
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a href={BOOKING_URL} className="btn-primary">
-                  Meld je aan voor een betaplek
+                  Ik wil erbij
                 </a>
                 <a
                   href={BOOKING_URL}
                   className="text-center text-[15px] font-600 text-accent hover:text-accent-dark sm:text-left"
                   style={{ fontWeight: 600 }}
                 >
-                  Liever eerst praten? Plan een call
+                  Eerst even praten? Stuur een appje
                 </a>
               </div>
 
@@ -127,7 +127,7 @@ export function Pricing() {
             <Reveal delay={0.08}>
               <div className="card">
                 <div className="text-[14px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
-                  Na de beta
+                  Daarna
                 </div>
                 <div className="mt-2 flex items-baseline gap-2">
                   <span className="font-display text-[34px] leading-none" style={{ fontWeight: 700 }}>
@@ -136,8 +136,8 @@ export function Pricing() {
                   <span className="text-[14px] text-muted-fg">/ maand</span>
                 </div>
                 <p className="mt-3 text-[14px] leading-relaxed text-muted-fg">
-                  Dezelfde agent, dezelfde diensten. Wie in de beta instapt, houdt
-                  de betaprijs.
+                  Precies hetzelfde. Wie er nu bij komt, blijft de lage prijs
+                  betalen.
                 </p>
               </div>
             </Reveal>
@@ -148,16 +148,16 @@ export function Pricing() {
                   <BadgeEuro size={20} />
                 </span>
                 <h3 className="mt-4 font-display text-[19px]" style={{ fontWeight: 700 }}>
-                  Werk op maat
+                  Iets speciaals nodig?
                 </h3>
                 <p className="mt-2 text-[14px] leading-relaxed text-muted-fg">
-                  Custom dashboards en maatwerk bovenop je agent.
+                  Een eigen overzicht of iets dat precies bij jouw bedrijf past. Dat bouwen we erbij.
                 </p>
                 <div className="mt-auto pt-4">
                   <span className="font-display text-[24px] leading-none" style={{ fontWeight: 700 }}>
                     vanaf € 1.500
                   </span>
-                  <div className="mt-1 text-[13px] text-muted-fg">excl. btw, eenmalig</div>
+                  <div className="mt-1 text-[13px] text-muted-fg">zonder btw, eenmalig</div>
                 </div>
               </div>
             </Reveal>
@@ -181,8 +181,8 @@ export function Pricing() {
               <span className="font-600" style={{ fontWeight: 600 }}>
                 14 dagen garantie.
               </span>{" "}
-              Levert Tibbe in de eerste twee weken niet meer op dan je betaalt,
-              dan krijg je je geld terug.
+              Levert Tibbe je in de eerste twee weken niet meer op dan hij
+              kost, dan krijg je je geld terug.
             </p>
           </div>
         </Reveal>

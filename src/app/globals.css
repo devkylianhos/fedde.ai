@@ -250,6 +250,20 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
+/* Tibbe loader uit het merkpakket: tik-draai, verspringt per 120 graden
+   (drievoudige symmetrie, klikt in zichzelf). Cyclus 2.4s. Exact overgenomen. */
+@keyframes tibbe-tick {
+  0% { transform: rotate(0deg); }
+  27% { transform: rotate(120deg); }
+  33.34% { transform: rotate(120deg); }
+  60.3% { transform: rotate(240deg); }
+  66.67% { transform: rotate(240deg); }
+  93.6% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+.tibbe-loader { animation: tibbe-tick 2.4s infinite; will-change: transform; transform-origin: 50% 50%; }
+.tibbe-loader.slow { animation-duration: 4.8s; }
+
 /* "Keur goed" vraagt af en toe heel even aandacht */
 @keyframes nudge {
   0%, 86%, 100% { transform: scale(1); }

@@ -13,11 +13,10 @@ export function HowItWorks() {
           {/* kop links, blijft hangen */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
-              <h2 className="display-2">Je zegt wat er moet gebeuren. Tibbe regelt het.</h2>
+              <h2 className="display-2">Zo werkt het. Simpeler kan niet.</h2>
               <p className="lead mt-5 max-w-[420px]">
-                Geen software die je zelf moet bedienen. Je vertelt Tibbe in
-                gewone taal wat er moet lopen, en hij automatiseert het werk dat
-                elke dag terugkomt.
+                Je hoeft niks te leren en niks in te stellen. Je zegt gewoon wat er
+                moet gebeuren, zoals tegen een collega. Tibbe doet de rest.
               </p>
 
               {/* mini automatiseringsvoorbeeld */}
@@ -30,7 +29,7 @@ export function HowItWorks() {
                     Jij
                   </span>
                   <p className="text-[14px] leading-relaxed">
-                    &ldquo;Stuur klanten twee dagen na hun aankoop een bedankje.&rdquo;
+                    &ldquo;Stuur elke klant twee dagen na de bestelling een bedankje.&rdquo;
                   </p>
                 </div>
                 <div className="my-3 ml-3 h-4 w-px bg-border" />
@@ -39,8 +38,7 @@ export function HowItWorks() {
                     F
                   </span>
                   <p className="text-[14px] leading-relaxed text-muted-fg">
-                    Tibbe doet dit voortaan vanzelf, in jouw toon, voor elke nieuwe
-                    klant.
+                    Vanaf nu gebeurt dat vanzelf. Voor elke klant, in jouw woorden.
                   </p>
                 </div>
               </div>

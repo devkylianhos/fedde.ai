@@ -22,11 +22,11 @@ export function Services() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <h2 className="display-2">
-                Eén werknemer, een compleet team.
+                Wat hij allemaal voor je doet.
               </h2>
               <p className="lead mt-5 max-w-[420px]">
-                Zeven taken die normaal bij losse mensen, bureaus en tools
-                liggen. Bij Tibbe zitten ze in één werknemer, voor één bedrag.
+                Zeven dingen waar je nu losse mensen of programma's voor nodig
+                hebt. Tibbe doet ze allemaal, voor één vast bedrag per maand.
               </p>
               <a
                 href={BOOKING_URL}

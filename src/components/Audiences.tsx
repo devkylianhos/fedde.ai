@@ -18,10 +18,10 @@ export function Audiences() {
     <section id="voor-wie" className="py-20 sm:py-24">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[640px] text-center">
-          <h2 className="display-2">Elk bedrijf heeft terugkerend werk. Tibbe neemt het over.</h2>
+          <h2 className="display-2">Voor iedereen die te veel tijd kwijt is aan geregel.</h2>
           <p className="lead mx-auto mt-5 max-w-[520px]">
-            Of je nu producten verkoopt, klanten begeleidt of een praktijk runt,
-            het geregel is overal hetzelfde. En dat is precies wat Tibbe doet.
+            Webshop, praktijk of bureau: overal blijft hetzelfde werk liggen.
+            Mail, facturen, afspraken. Dat is precies wat Tibbe voor je doet.
           </p>
         </Reveal>
 
@@ -40,7 +40,7 @@ export function Audiences() {
                 </p>
                 {href && (
                   <span className="mt-3 inline-flex items-center gap-1 text-[14px] font-600 text-accent" style={{ fontWeight: 600 }}>
-                    Bekijk de webshop-agents
+                    Kijk wat hij voor webshops doet
                     <ArrowRight size={15} />
                   </span>
                 )}

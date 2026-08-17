@@ -2,10 +2,10 @@ import { Reveal } from "./Reveal";
 import { integrations } from "@/lib/site";
 
 const stats = [
-  { value: "7", label: "diensten in 1 agent" },
-  { value: "1 week", label: "tot je live bent" },
-  { value: "24/7", label: "gehost en bewaakt" },
-  { value: "€ 250", label: "per maand in de beta, excl. gebruikskosten" },
+  { value: "7", label: "taken, één medewerker" },
+  { value: "1 week", label: "en hij is aan het werk" },
+  { value: "24/7", label: "aan het werk, ook 's nachts" },
+  { value: "€ 250", label: "per maand, tijdens de beta" },
 ];
 
 export function IntegrationsStats() {
@@ -15,7 +15,7 @@ export function IntegrationsStats() {
         <Reveal>
           <div className="rounded-[3px] bg-sand px-6 py-10 sm:px-12 sm:py-12">
             <p className="text-center text-[14px] font-500 text-muted-fg" style={{ fontWeight: 500 }}>
-              Koppelt met de tools die je al gebruikt
+              Werkt met de programma's die je nu al gebruikt
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">

@@ -3,28 +3,28 @@ import { Check, Minus } from "lucide-react";
 
 const rows = [
   {
-    label: "Blogs en teksten die scoren",
-    los: "tekstbureau of freelancer, per stuk betalen",
+    label: "Teksten schrijven",
+    los: "een tekstschrijver inhuren, per stuk betalen",
   },
   {
-    label: "Klantenmail bijhouden",
-    los: "eigen uren of een medewerker",
+    label: "Klantenmail beantwoorden",
+    los: "zelf doen, of iemand aannemen",
   },
   {
-    label: "Design in je huisstijl",
-    los: "designer inhuren, wachten op oplevering",
+    label: "Social media posts maken",
+    los: "een ontwerper inhuren en wachten",
   },
   {
-    label: "Facturen en herinneringen",
+    label: "Facturen en herinneringen sturen",
     los: "zelf achteraan zitten, of het blijft liggen",
   },
   {
-    label: "Rapportage en cijfers",
-    los: "losse rapportages uit losse tools",
+    label: "Overzicht van je cijfers",
+    los: "bij elkaar sprokkelen uit losse programma's",
   },
   {
-    label: "Research voor beslissingen",
-    los: "zelf uitzoeken tussen de bedrijven door",
+    label: "Dingen uitzoeken",
+    los: "zelf googelen tussen de bedrijven door",
   },
   {
     label: "Het terugkerende geregel",
@@ -37,7 +37,7 @@ export function Compare() {
     <section className="py-20 sm:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[620px] text-center">
-          <h2 className="display-2">Wat je nu los regelt, doet straks één werknemer.</h2>
+          <h2 className="display-2">Wat je nu allemaal apart regelt, doet straks één iemand.</h2>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -45,10 +45,10 @@ export function Compare() {
             {/* kopregel */}
             <div className="hidden grid-cols-[1.1fr_1fr_0.9fr] items-center border-b border-border bg-sand px-6 py-4 sm:grid sm:px-8">
               <span className="text-[13px] font-600 uppercase tracking-[0.06em] text-muted-fg" style={{ fontWeight: 600 }}>
-                Het werk
+                Wat er moet gebeuren
               </span>
               <span className="text-[13px] font-600 uppercase tracking-[0.06em] text-muted-fg" style={{ fontWeight: 600 }}>
-                Los geregeld
+                Zoals het nu gaat
               </span>
               <span className="text-[13px] font-600 uppercase tracking-[0.06em] text-accent" style={{ fontWeight: 600 }}>
                 Met Tibbe
@@ -71,7 +71,7 @@ export function Compare() {
                   <span className="grid h-5 w-5 flex-none place-items-center rounded-full bg-accent-soft">
                     <Check size={13} />
                   </span>
-                  zit erin
+                  doet hij
                 </span>
               </div>
             ))}
@@ -82,7 +82,7 @@ export function Compare() {
                 Wat het kost
               </span>
               <span className="pr-4 text-[13.5px] leading-snug text-muted-fg">
-                losse facturen, per uur en per tool
+                losse rekeningen, per uur en per programma
               </span>
               <span className="font-display text-[17px] text-accent" style={{ fontWeight: 700 }}>
                 vanaf € 250 per maand
@@ -93,7 +93,7 @@ export function Compare() {
 
         <Reveal delay={0.12}>
           <p className="mx-auto mt-5 max-w-[600px] text-center text-[13px] text-muted-fg">
-            En één aanspreekpunt in plaats van vijf. Jij keurt goed wat telt.
+            Eén vast bedrag, één aanspreekpunt. En jij zegt overal ja of nee tegen.
           </p>
         </Reveal>
       </div>
