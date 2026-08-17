@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Trust } from "@/components/Trust";
+import { WhyTrust } from "@/components/WhyTrust";
 import { IntegrationsStats } from "@/components/IntegrationsStats";
 import { Audiences } from "@/components/Audiences";
 import { Services } from "@/components/Services";
@@ -43,6 +44,7 @@ export default function Home() {
       <Week />
       <Trust />
       <Compare />
+      <WhyTrust />
       <Pricing />
       <Faq />
       <CtaBand />
