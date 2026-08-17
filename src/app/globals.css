@@ -209,6 +209,43 @@ h1, h2, h3, h4, .font-display {
     box-shadow: var(--shadow-surface);
   }
 
+  /* Juridische pagina's — leesbare prose */
+  .legal-prose { color: var(--muted-fg); font-size: 16px; line-height: 1.7; }
+  .legal-prose h2 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    color: var(--foreground);
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+  .legal-prose h2:first-child { margin-top: 0; }
+  .legal-prose h3 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--foreground);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+  .legal-prose p { margin-bottom: 16px; }
+  .legal-prose ul { margin: 0 0 16px; padding-left: 20px; list-style: disc; }
+  .legal-prose li { margin-bottom: 8px; }
+  .legal-prose a { color: var(--accent); text-decoration: underline; }
+  .legal-prose strong { color: var(--foreground); font-weight: 600; }
+  .legal-prose table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 15px; }
+  .legal-prose th, .legal-prose td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+  .legal-prose th { background: var(--sand); font-weight: 600; color: var(--foreground); }
+  .legal-note {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
 }
 
 /* "Keur goed" vraagt af en toe heel even aandacht */

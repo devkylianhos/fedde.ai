@@ -70,20 +70,21 @@ export function Footer() {
             <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg/70">
               Bedrijf
             </div>
-            {/* TODO: echte bedrijfsgegevens en oprichter invullen */}
-            <ul className="mt-4 space-y-2.5 text-[15px] text-muted-fg">
-              <li>fedde.ai</li>
-              <li>KvK — nog invullen</li>
-              <li>Nederland</li>
-            </ul>
+            <address className="mt-4 space-y-1 text-[15px] not-italic leading-relaxed text-muted-fg">
+              <div className="text-foreground/90">Fedde.ai, partner van Kitchen Royal</div>
+              <div>Parelweg 11</div>
+              <div>1812 RS Alkmaar, NL</div>
+              <div>KvK 80015298</div>
+            </address>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-[13px] text-muted-fg sm:flex-row sm:items-center">
           <span>© {new Date().getFullYear()} Fedde</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-accent">Privacy</a>
-            <a href="#" className="hover:text-accent">Voorwaarden</a>
+            <a href="/privacy" className="hover:text-accent">Privacy</a>
+            <a href="/voorwaarden" className="hover:text-accent">Voorwaarden</a>
+            <a href="/cookies" className="hover:text-accent">Cookies</a>
           </div>
         </div>
       </div>

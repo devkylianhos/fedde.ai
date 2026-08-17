@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Inter } from "next/font/google";
 import { Providers } from "@/components/Providers";
+import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
 const instrument = Instrument_Serif({
@@ -39,6 +40,7 @@ export default function RootLayout({
     <html lang="nl" className={`${instrument.variable} ${inter.variable}`}>
       <body className="min-h-screen antialiased">
         <Providers>{children}</Providers>
+        <CookieBanner />
       </body>
     </html>
   );
