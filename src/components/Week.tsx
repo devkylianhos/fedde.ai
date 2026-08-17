@@ -6,7 +6,7 @@ const badges = ["1", "2-4", "4", "5", "∞"];
 
 export function Week() {
   return (
-    <section id="hoe-het-werkt" className="py-20 sm:py-28">
+    <section id="in-een-week" className="py-20 sm:py-28">
       <div className="container-x">
         <div className="mx-auto max-w-[680px]">
           <Reveal className="text-center">

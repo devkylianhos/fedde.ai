@@ -2,7 +2,9 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Trust } from "@/components/Trust";
 import { IntegrationsStats } from "@/components/IntegrationsStats";
+import { Audiences } from "@/components/Audiences";
 import { Services } from "@/components/Services";
+import { HowItWorks } from "@/components/HowItWorks";
 import { DayFeed } from "@/components/DayFeed";
 import { Compare } from "@/components/Compare";
 import { Showcase } from "@/components/Showcase";
@@ -33,10 +35,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <IntegrationsStats />
+      <Audiences />
       <Services />
+      <HowItWorks />
       <DayFeed />
-      <Week />
       <Showcase />
+      <Week />
       <Trust />
       <Compare />
       <Pricing />

@@ -12,9 +12,9 @@ export const BETA_SEATS_TAKEN = 0; // TODO: bijwerken per verkochte plek
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
+  { label: "Voor wie", href: "#voor-wie" },
   { label: "Wat hij doet", href: "#diensten" },
   { label: "Hoe het werkt", href: "#hoe-het-werkt" },
-  { label: "Vertrouwen", href: "#vertrouwen" },
   { label: "Prijzen", href: "#prijzen" },
 ];
 
@@ -54,6 +54,54 @@ export const services = [
     tag: "Routine",
     title: "Het terugkerende geregel",
     body: "Bestellingen, retouren, afspraken: het werk dat elke week terugkomt.",
+  },
+];
+
+/* Voor wie — laat verschillende bedrijven zich herkennen */
+export const audiences = [
+  {
+    label: "Webshops",
+    body: "Content, retouren, reviews en klantmail. De hele achterkant draait door.",
+  },
+  {
+    label: "Bureaus",
+    body: "Rapportages, socials en klantupdates, klaar voordat je klant erom vraagt.",
+  },
+  {
+    label: "Coaches en consultants",
+    body: "Content, facturen en je inbox bijgehouden terwijl jij met klanten werkt.",
+  },
+  {
+    label: "Praktijken",
+    body: "Afspraken, herinneringen en administratie, zonder dat het blijft liggen.",
+  },
+  {
+    label: "Horeca en retail",
+    body: "Reserveringen, reviews en socials, ook als jij op de vloer staat.",
+  },
+  {
+    label: "Zzp en klein team",
+    body: "Al het geregel dat jouw avonden opeet, overgenomen door één werknemer.",
+  },
+];
+
+/* Zo werkt het — het automatiseringsverhaal */
+export const howSteps = [
+  {
+    title: "Vertel wat er moet gebeuren",
+    body: "In gewone taal. \"Stuur elke maandag een weekupdate naar mijn klanten\" of \"beantwoord mail over openingstijden zelf\". Geen flowcharts, geen technische taal.",
+  },
+  {
+    title: "Fedde doet het automatisch",
+    body: "Hij werkt op je tools, dag en nacht. Terugkerende taken lopen vanzelf, nieuwe vragen pakt hij op zodra ze binnenkomen.",
+  },
+  {
+    title: "Jij keurt goed wat telt",
+    body: "Wat naar buiten gaat of gevoelig ligt, komt eerst langs jou. De rest handelt hij zelf af. Alles is gelogd en omkeerbaar.",
+  },
+  {
+    title: "Het wordt een vaste routine",
+    body: "Wat één keer goed ging, doet Fedde voortaan vanzelf. Elke week neemt hij meer van je bord.",
   },
 ];
 
