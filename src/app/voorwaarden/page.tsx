@@ -13,7 +13,7 @@ export default function VoorwaardenPage() {
         Deze voorwaarden gelden voor de dienst Tibbe, geleverd door{" "}
         <strong>Tibbe, partner van Kitchen Royal</strong>, Parelweg 11,
         1812 RS Alkmaar, KvK 80015298. Vragen? Mail{" "}
-        <a href="mailto:hallo@tibbe.nl">hallo@tibbe.nl</a>.
+        <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20de%20voorwaarden%20van%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a>.
       </div>
 
       <h2>1. De dienst</h2>

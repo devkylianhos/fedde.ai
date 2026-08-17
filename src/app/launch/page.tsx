@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 import { Check } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { Countdown } from "@/components/Countdown";
@@ -8,6 +7,7 @@ import {
   LAUNCH_DATE,
   BETA_SEATS_TOTAL,
   BETA_SEATS_TAKEN,
+  waLink,
 } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -29,40 +29,10 @@ function remaining(targetIso: string) {
   };
 }
 
-async function waitlistSignup(formData: FormData) {
-  "use server";
-  const email = String(formData.get("email") ?? "").trim();
-  if (!email.includes("@")) redirect("/launch?fout=email");
-
-  const key = process.env.RESEND_API_KEY;
-  if (key) {
-    await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${key}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: process.env.WAITLIST_FROM ?? "Tibbe <onboarding@resend.dev>",
-        to: [process.env.WAITLIST_TO ?? "hallo@tibbe.nl"],
-        subject: "Nieuwe aanmelding launchlijst",
-        text: `Launchlijst-aanmelding: ${email}`,
-      }),
-    }).catch(() => {});
-  }
-  redirect("/launch?ok=1");
-}
-
-export default async function LaunchPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ ok?: string; fout?: string }>;
-}) {
-  const params = await searchParams;
+export default async function LaunchPage() {
   const seatsLeft = BETA_SEATS_TOTAL - BETA_SEATS_TAKEN;
   const betaOpen = seatsLeft > 0;
   const left = remaining(LAUNCH_DATE);
-  const canStoreSignups = Boolean(process.env.RESEND_API_KEY);
 
   const launchDay = new Date(LAUNCH_DATE).toLocaleDateString("nl-NL", {
     day: "numeric",
@@ -120,7 +90,7 @@ export default async function LaunchPage({
             <p className="lead mt-6 max-w-[520px]">
               {betaOpen
                 ? `Tot de launch stap je in voor 250 euro per maand, en die prijs blijft staan zolang je blijft. Vanaf ${launchDay} wordt de instap 500 euro.`
-                : `Op ${launchDay} gaat Tibbe open voor iedereen, voor 500 euro per maand. Laat je e-mailadres achter en je hoort het als eerste.`}
+                : `Op ${launchDay} gaat Tibbe open voor iedereen, voor 500 euro per maand. Stuur een appje en je hoort het als eerste.`}
             </p>
 
             <div className="mt-9">
@@ -183,23 +153,6 @@ export default async function LaunchPage({
                   Eerst kijken wat Tibbe doet
                 </a>
               </>
-            ) : params.ok ? (
-              <div className="py-6 text-center">
-                <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-soft text-accent">
-                  <Check size={26} />
-                </span>
-                <h2 className="mt-5 font-display text-[24px]" style={{ fontWeight: 700 }}>
-                  Je staat op de lijst.
-                </h2>
-                <p className="mt-2 text-[14px] leading-relaxed text-muted-fg">
-                  Zodra Tibbe opengaat, hoor je het als eerste. Liever nu al
-                  praten?{" "}
-                  <a href={BOOKING_URL} className="font-600 text-accent" style={{ fontWeight: 600 }}>
-                    Plan een call
-                  </a>
-                  .
-                </p>
-              </div>
             ) : (
               <>
                 <p className="eyebrow">Launchlijst</p>
@@ -207,35 +160,17 @@ export default async function LaunchPage({
                   Hoor het als eerste zodra Tibbe opengaat.
                 </h2>
                 <p className="mt-3 text-[14px] leading-relaxed text-muted-fg">
-                  Alleen je e-mailadres, meer vragen we niet. Geen nieuwsbrief,
+                  Stuur een appje en je staat op de lijst. Geen nieuwsbrief,
                   alleen bericht bij de launch.
                 </p>
-                {canStoreSignups ? (
-                  <form action={waitlistSignup} className="mt-6 flex flex-col gap-3">
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="jij@jouwbedrijf.nl"
-                      className="w-full rounded-full border border-border bg-background px-5 py-3.5 text-[15px] outline-none transition-colors focus:border-accent"
-                    />
-                    <button type="submit" className="btn-primary w-full">
-                      Zet me op de lijst
-                    </button>
-                    {params.fout && (
-                      <p className="text-center text-[13px] text-[#c2410c]">
-                        Dat lijkt geen geldig e-mailadres. Probeer het even opnieuw.
-                      </p>
-                    )}
-                  </form>
-                ) : (
-                  <a
-                    href="mailto:hallo@tibbe.nl?subject=Zet%20mij%20op%20de%20launchlijst"
-                    className="btn-primary mt-6 w-full"
-                  >
-                    Zet me op de lijst
-                  </a>
-                )}
+                <a
+                  href={waLink("Hoi, zet mij op de launchlijst van Tibbe.")}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn-primary mt-6 w-full"
+                >
+                  Zet me op de lijst via WhatsApp
+                </a>
                 <a
                   href={BOOKING_URL}
                   className="mt-4 block text-center text-[14px] font-600 text-accent hover:text-accent-dark"

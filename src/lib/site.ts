@@ -2,7 +2,18 @@
    Positionering: een AI-werknemer voor elk bedrijf, 24/7.
    Placeholders flagged with TODO are the "nog invullen met echte gegevens" items. */
 
-export const BOOKING_URL = "https://cal.com/tibbe/kennismaking"; // TODO: echte boekingslink
+/* Contact loopt via WhatsApp (nog geen mail).
+   Nummer in internationaal formaat zonder + of spaties. */
+export const WHATSAPP_NUMBER = "31683127504";
+
+export function waLink(
+  text = "Hoi, ik ben geïnteresseerd in Tibbe en wil graag kennismaken.",
+): string {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+/* Primaire CTA "Plan een kennismaking" gaat naar WhatsApp */
+export const BOOKING_URL = waLink();
 
 /* Oprichter — vul je naam in, dan verschijnt hij overal.
    Foto komt later; zolang photo leeg is tonen we een initialen-avatar. */

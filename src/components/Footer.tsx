@@ -1,5 +1,5 @@
 import { BrandMark } from "./BrandMark";
-import { nav, BOOKING_URL } from "@/lib/site";
+import { nav, BOOKING_URL, waLink } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -49,8 +49,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hallo@tibbe.nl" className="text-[15px] text-foreground/80 hover:text-accent">
-                  hallo@tibbe.nl
+                <a
+                  href={waLink()}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-[15px] text-foreground/80 hover:text-accent"
+                >
+                  WhatsApp
                 </a>
               </li>
               <li>
