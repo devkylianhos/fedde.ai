@@ -13,7 +13,7 @@ export function IntegrationsStats() {
     <section className="py-14 sm:py-20">
       <div className="container-x">
         <Reveal>
-          <div className="rounded-[32px] bg-sand px-6 py-10 sm:px-12 sm:py-12">
+          <div className="rounded-[3px] bg-sand px-6 py-10 sm:px-12 sm:py-12">
             <p className="text-center text-[14px] font-500 text-muted-fg" style={{ fontWeight: 500 }}>
               Koppelt met de tools die je al gebruikt
             </p>

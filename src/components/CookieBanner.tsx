@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const KEY = "fedde-cookie-consent"; // "essential" | "all"
+const KEY = "tibbe-cookie-consent"; // "essential" | "all"
 
 function readConsent(): string | null {
   if (typeof window === "undefined") return null;
@@ -19,7 +19,7 @@ function setConsent(value: "essential" | "all") {
   } catch {
     /* localStorage geblokkeerd: dan tonen we de banner elke keer, geen tracking */
   }
-  window.dispatchEvent(new Event("fedde-consent-change"));
+  window.dispatchEvent(new Event("tibbe-consent-change"));
 }
 
 export function CookieBanner() {
@@ -28,15 +28,15 @@ export function CookieBanner() {
   useEffect(() => {
     const sync = () => setVisible(readConsent() === null);
     sync();
-    window.addEventListener("fedde-consent-change", sync);
-    return () => window.removeEventListener("fedde-consent-change", sync);
+    window.addEventListener("tibbe-consent-change", sync);
+    return () => window.removeEventListener("tibbe-consent-change", sync);
   }, []);
 
   if (!visible) return null;
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-[60] px-3 pb-3 sm:px-4 sm:pb-4">
-      <div className="mx-auto flex max-w-[720px] flex-col gap-4 rounded-[20px] border border-border bg-white p-5 shadow-[var(--shadow-floating)] sm:flex-row sm:items-center sm:gap-6">
+      <div className="mx-auto flex max-w-[720px] flex-col gap-4 rounded-[3px] border border-border bg-white p-5 shadow-[var(--shadow-floating)] sm:flex-row sm:items-center sm:gap-6">
         <p className="flex-1 text-[14px] leading-relaxed text-muted-fg">
           We gebruiken alleen noodzakelijke cookies, plus optioneel een cookie om
           te meten hoe de site gebruikt wordt. Jij kiest.{" "}
@@ -66,7 +66,7 @@ export function CookieSettingsButton() {
         } catch {
           /* ignore */
         }
-        window.dispatchEvent(new Event("fedde-consent-change"));
+        window.dispatchEvent(new Event("tibbe-consent-change"));
       }}
       className="btn-secondary sm"
     >

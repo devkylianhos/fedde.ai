@@ -19,10 +19,10 @@ export function Audiences() {
       <div className="container-x">
         <Reveal className="mx-auto max-w-[640px] text-center">
           <span className="eyebrow">Voor wie</span>
-          <h2 className="display-2 mt-5">Elk bedrijf heeft terugkerend werk. Fedde neemt het over.</h2>
+          <h2 className="display-2 mt-5">Elk bedrijf heeft terugkerend werk. Tibbe neemt het over.</h2>
           <p className="lead mx-auto mt-5 max-w-[520px]">
             Of je nu producten verkoopt, klanten begeleidt of een praktijk runt,
-            het geregel is overal hetzelfde. En dat is precies wat Fedde doet.
+            het geregel is overal hetzelfde. En dat is precies wat Tibbe doet.
           </p>
         </Reveal>
 
@@ -32,7 +32,7 @@ export function Audiences() {
             const href = audience.label === "Webshops" ? "/webshops" : undefined;
             const inner = (
               <div className={cn("card h-full", href && "transition-colors hover:border-accent/40")}>
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-accent-soft text-accent">
+                <span className="grid h-11 w-11 place-items-center rounded-[3px] bg-accent-soft text-accent">
                   <Icon size={19} />
                 </span>
                 <h3 className="mt-4 font-display text-[21px]">{audience.label}</h3>

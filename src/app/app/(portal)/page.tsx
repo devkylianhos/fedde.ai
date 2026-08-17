@@ -23,18 +23,18 @@ export default async function PortalOverview() {
         Goedendag, <span className="text-accent">{name}</span>
       </h1>
       <p className="mt-2 text-[15px] text-muted-fg">
-        Dit is de status van jouw Fedde.
+        Dit is de status van jouw Tibbe.
       </p>
 
       {/* volgende stap */}
-      <div className="mt-8 flex flex-col items-start gap-4 rounded-[24px] border-2 border-accent bg-white p-6 sm:flex-row sm:items-center">
+      <div className="mt-8 flex flex-col items-start gap-4 rounded-[3px] border-2 border-accent bg-white p-6 sm:flex-row sm:items-center">
         <div className="flex-1">
           <div className="eyebrow">Volgende stap</div>
           <h2 className="mt-2 font-display text-[21px]" style={{ fontWeight: 700 }}>
             Koppel je tools
           </h2>
           <p className="mt-1.5 text-[14px] leading-relaxed text-muted-fg">
-            Eén klik per tool. Fedde gebruikt een koppeling alleen als het werk
+            Eén klik per tool. Tibbe gebruikt een koppeling alleen als het werk
             erom vraagt.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default async function PortalOverview() {
         </div>
         <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="card">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent-soft text-accent">
+            <span className="grid h-10 w-10 place-items-center rounded-[3px] bg-accent-soft text-accent">
               <Bot size={18} />
             </span>
             <div className="mt-4 text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
@@ -62,7 +62,7 @@ export default async function PortalOverview() {
             </div>
           </div>
           <div className="card">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent-soft text-accent">
+            <span className="grid h-10 w-10 place-items-center rounded-[3px] bg-accent-soft text-accent">
               <Plug size={18} />
             </span>
             <div className="mt-4 text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
@@ -73,7 +73,7 @@ export default async function PortalOverview() {
             </div>
           </div>
           <div className="card">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent-soft text-accent">
+            <span className="grid h-10 w-10 place-items-center rounded-[3px] bg-accent-soft text-accent">
               <LayoutDashboard size={18} />
             </span>
             <div className="mt-4 text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
@@ -87,7 +87,7 @@ export default async function PortalOverview() {
       </div>
 
       {!composioConfigured() && (
-        <p className="mt-8 rounded-[20px] bg-amber-soft px-5 py-4 text-[14px] leading-relaxed text-[#7a4a0e]">
+        <p className="mt-8 rounded-[3px] bg-amber-soft px-5 py-4 text-[14px] leading-relaxed text-[#7a4a0e]">
           De koppelingenlaag is nog niet geconfigureerd: er ontbreekt een
           COMPOSIO_API_KEY in de omgeving. Zie .env.example in de repo.
         </p>

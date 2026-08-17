@@ -6,7 +6,7 @@ export function Showcase() {
     <section className="py-16 sm:py-20">
       <div className="container-x">
         <Reveal>
-          <div className="overflow-hidden rounded-[36px] bg-sand px-6 pt-12 sm:px-14 sm:pt-16">
+          <div className="overflow-hidden rounded-[3px] bg-sand px-6 pt-12 sm:px-14 sm:pt-16">
             <div className="mx-auto max-w-[620px] text-center">
               <span className="eyebrow">Dashboard</span>
               <h2 className="display-2 mt-5">

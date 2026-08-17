@@ -6,12 +6,12 @@ import { Check } from "lucide-react";
 export function Hero() {
   return (
     <section id="top" className="px-3 pt-20 sm:px-4 sm:pt-[88px]">
-      <div className="sky-panel mx-auto max-w-[1400px] rounded-[28px]">
+      <div className="sky-panel mx-auto max-w-[1400px] rounded-[3px]">
         <div className="container-x relative pb-16 pt-16 sm:pb-20 sm:pt-24">
           <div className="mx-auto max-w-[840px] text-center">
             <Reveal>
               <span
-                className="inline-flex items-center gap-2 rounded-[10px] px-3.5 py-1.5 text-[13px] font-600 text-white"
+                className="inline-flex items-center gap-2 rounded-[3px] px-3.5 py-1.5 text-[13px] font-600 text-white"
                 style={{ fontWeight: 600, background: "rgba(255,255,255,0.16)" }}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
@@ -27,7 +27,7 @@ export function Hero() {
 
             <Reveal delay={0.12}>
               <p className="lead mx-auto mt-6 max-w-[560px] text-white/85">
-                Fedde is een AI-werknemer die het terugkerende werk van je
+                Tibbe is een AI-werknemer die het terugkerende werk van je
                 bedrijf overneemt: content, klantenmail, facturen, design en
                 research. Voor één bedrag per maand. Jij keurt goed wat telt.
               </p>
@@ -39,7 +39,7 @@ export function Hero() {
                   Plan een kennismaking
                 </a>
                 <a href="#diensten" className="btn-ghost-light">
-                  Bekijk wat Fedde doet
+                  Bekijk wat Tibbe doet
                 </a>
               </div>
             </Reveal>
@@ -58,7 +58,7 @@ export function Hero() {
             </Reveal>
           </div>
 
-          {/* IMAGE NEEDED (optioneel): MacBook met Fedde-dashboard. Voor nu echte HTML-mockup. */}
+          {/* IMAGE NEEDED (optioneel): MacBook met Tibbe-dashboard. Voor nu echte HTML-mockup. */}
           <Reveal delay={0.28} y={30}>
             <div className="mx-auto mt-14 max-w-[920px]">
               <DashboardMock />

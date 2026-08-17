@@ -20,7 +20,7 @@ export default async function KoppelingenPage() {
       <p className="mt-3 max-w-[560px] text-[15px] leading-relaxed text-muted-fg">
         Eén klik per tool. Je keurt de koppeling goed op het scherm van de
         aanbieder zelf, dus geen API-sleutels plakken en je inloggegevens raken
-        dit dashboard nooit. Fedde gebruikt een koppeling alleen als het werk
+        dit dashboard nooit. Tibbe gebruikt een koppeling alleen als het werk
         erom vraagt.
       </p>
 
@@ -35,7 +35,7 @@ export default async function KoppelingenPage() {
           return (
             <div key={toolkit.slug} className="card flex flex-col">
               <div className="flex items-start justify-between">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-accent-soft text-accent">
+                <span className="grid h-11 w-11 place-items-center rounded-[3px] bg-accent-soft text-accent">
                   <Plug size={19} />
                 </span>
                 {isActive && (

@@ -24,7 +24,7 @@ export function Faq() {
               <div
                 key={item.q}
                 className={cn(
-                  "rounded-[22px] border bg-white transition-colors",
+                  "rounded-[3px] border bg-white transition-colors",
                   isOpen ? "border-accent/30" : "border-border",
                 )}
               >

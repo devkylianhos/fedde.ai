@@ -9,8 +9,8 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <a href="#top" className="flex items-center gap-2.5">
               <BrandMark />
-              <span className="font-display text-[20px]" style={{ fontWeight: 700 }}>
-                fedde
+              <span className="font-display text-[20px]" style={{ fontWeight: 600 }}>
+                Tibbe
               </span>
             </a>
             <p className="mt-4 max-w-[240px] text-[14px] leading-[1.55] text-muted-fg">
@@ -49,8 +49,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hallo@fedde.ai" className="text-[15px] text-foreground/80 hover:text-accent">
-                  hallo@fedde.ai
+                <a href="mailto:hallo@tibbe.nl" className="text-[15px] text-foreground/80 hover:text-accent">
+                  hallo@tibbe.nl
                 </a>
               </li>
               <li>
@@ -71,7 +71,7 @@ export function Footer() {
               Bedrijf
             </div>
             <address className="mt-4 space-y-1 text-[15px] not-italic leading-relaxed text-muted-fg">
-              <div className="text-foreground/90">Fedde.ai, partner van Kitchen Royal</div>
+              <div className="text-foreground/90">Tibbe, partner van Kitchen Royal</div>
               <div>Parelweg 11</div>
               <div>1812 RS Alkmaar, NL</div>
               <div>KvK 80015298</div>
@@ -80,7 +80,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-[13px] text-muted-fg sm:flex-row sm:items-center">
-          <span>© {new Date().getFullYear()} Fedde</span>
+          <span>© {new Date().getFullYear()} Tibbe</span>
           <div className="flex gap-6">
             <a href="/privacy" className="hover:text-accent">Privacy</a>
             <a href="/voorwaarden" className="hover:text-accent">Voorwaarden</a>

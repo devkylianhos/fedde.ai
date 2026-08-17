@@ -14,20 +14,20 @@ export function HowItWorks() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <span className="eyebrow">Zo werkt het</span>
-              <h2 className="display-2 mt-5">Je zegt wat er moet gebeuren. Fedde regelt het.</h2>
+              <h2 className="display-2 mt-5">Je zegt wat er moet gebeuren. Tibbe regelt het.</h2>
               <p className="lead mt-5 max-w-[420px]">
-                Geen software die je zelf moet bedienen. Je vertelt Fedde in
+                Geen software die je zelf moet bedienen. Je vertelt Tibbe in
                 gewone taal wat er moet lopen, en hij automatiseert het werk dat
                 elke dag terugkomt.
               </p>
 
               {/* mini automatiseringsvoorbeeld */}
-              <div className="mt-8 max-w-[380px] rounded-[20px] border border-border bg-white p-5 shadow-[var(--shadow-surface)]">
+              <div className="mt-8 max-w-[380px] rounded-[3px] border border-border bg-white p-5 shadow-[var(--shadow-surface)]">
                 <div className="text-[12px] font-600 uppercase tracking-[0.1em] text-muted-fg" style={{ fontWeight: 600 }}>
                   Voorbeeld
                 </div>
                 <div className="mt-3 flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-lg bg-accent-soft text-accent text-[12px] font-700" style={{ fontWeight: 700 }}>
+                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-[2px] bg-accent-soft text-accent text-[12px] font-700" style={{ fontWeight: 700 }}>
                     Jij
                   </span>
                   <p className="text-[14px] leading-relaxed">
@@ -36,11 +36,11 @@ export function HowItWorks() {
                 </div>
                 <div className="my-3 ml-3 h-4 w-px bg-border" />
                 <div className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-lg bg-accent text-white text-[12px] font-700" style={{ fontWeight: 700 }}>
+                  <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-[2px] bg-accent text-white text-[12px] font-700" style={{ fontWeight: 700 }}>
                     F
                   </span>
                   <p className="text-[14px] leading-relaxed text-muted-fg">
-                    Fedde doet dit voortaan vanzelf, in jouw toon, voor elke nieuwe
+                    Tibbe doet dit voortaan vanzelf, in jouw toon, voor elke nieuwe
                     klant.
                   </p>
                 </div>
@@ -56,10 +56,10 @@ export function HowItWorks() {
                 const Icon = icons[i];
                 return (
                   <Reveal key={step.title} delay={Math.min(i * 0.06, 0.24)}>
-                    <div className="relative flex gap-6 rounded-[22px] border border-border bg-white p-6 shadow-[var(--shadow-surface)]">
+                    <div className="relative flex gap-6 rounded-[3px] border border-border bg-white p-6 shadow-[var(--shadow-surface)]">
                       <div className="relative z-10 flex flex-col items-center gap-2">
                         <span
-                          className="grid h-14 w-14 flex-none place-items-center rounded-2xl text-white"
+                          className="grid h-14 w-14 flex-none place-items-center rounded-[3px] text-white"
                           style={{ background: i === howSteps.length - 1 ? "var(--amber)" : "var(--accent)" }}
                         >
                           <Icon size={20} />

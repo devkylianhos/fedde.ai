@@ -12,7 +12,7 @@ export function Trust() {
           <span className="eyebrow">Techniek en vertrouwen</span>
           <h2 className="display-2 mt-5">Jij houdt de regie.</h2>
           <p className="lead mx-auto mt-5 max-w-[480px]">
-            Fedde doet het werk, jij zet de laatste stap. Zo is dat geregeld.
+            Tibbe doet het werk, jij zet de laatste stap. Zo is dat geregeld.
           </p>
         </Reveal>
 
@@ -22,7 +22,7 @@ export function Trust() {
             return (
               <Reveal key={item.title} delay={i * 0.07}>
                 <div className="card h-full">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-accent-soft text-accent">
+                  <span className="grid h-12 w-12 place-items-center rounded-[3px] bg-accent-soft text-accent">
                     <Icon size={21} />
                   </span>
                   <div

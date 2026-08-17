@@ -1,36 +1,37 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Fedde design system — helder en editorial
-   Richting overgenomen van multica.ai (eigen invulling):
-   Instrument Serif display + Inter, blauw luchtpaneel in de hero,
-   koel zinc-palet, subtiele gelaagde schaduwen, radius 12/20.
+   Tibbe design system — merkidentiteit-handoff
+   Kobalt / inkt / papier. Source Serif 4 + Instrument Sans.
+   Scherpe hoeken (2px). Geen gradients, geen schaduwen, geen glans.
    ============================================================ */
 
 :root {
-  --background: #fafafa;        /* zinc-50 canvas */
-  --foreground: #18181b;        /* zinc-900 */
-  --muted-fg: #52525b;          /* zinc-600 */
-  --card: #ffffff;
-  --border: #e7e7ea;            /* zinc-200 */
-  --sand: #f1f1f3;              /* koele getinte band (naam blijft voor compat) */
-  --accent: #2563eb;            /* helder koningsblauw */
-  --accent-dark: #1d4ed8;
-  --accent-soft: rgba(37, 99, 235, 0.08);
-  --amber: #d97706;             /* alleen voor statusbadges */
-  --amber-soft: rgba(217, 119, 6, 0.12);
+  --ink: #14181a;            /* primaire donkere kleur */
+  --kobalt: #2b5fd9;         /* merkteken en accent op licht */
+  --kobalt-licht: #5b85e8;   /* uitsluitend op donker */
+  --paper: #f2efea;          /* lichte achtergrond */
 
-  /* het lucht-canvas van de hero en de CTA-band */
-  --sky-top: #3b82f6;
-  --sky-mid: #2f6fe8;
-  --sky-deep: #1e4fd6;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --muted-fg: #5b6166;       /* rustig grijs, past bij inkt */
+  --card: #ffffff;
+  --border: #e0dcd4;         /* zachte rand op papier */
+  --border-ink: #2a3033;     /* rand op inkt-vlakken */
+  --sand: #eae6df;           /* iets getinte band op papier */
+  --accent: var(--kobalt);
+  --accent-dark: #234fb3;
+  --accent-soft: rgba(43, 95, 217, 0.08);
+  --amber: #b06d12;          /* alleen voor statusbadges, ingetogen */
+  --amber-soft: rgba(176, 109, 18, 0.12);
 
   --maxw: 1160px;
   --gutter: 24px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 
-  --shadow-surface: 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 1px rgba(15, 23, 42, 0.03);
-  --shadow-floating: 0 16px 40px rgba(15, 23, 42, 0.14), 0 3px 10px rgba(15, 23, 42, 0.08);
+  /* Merk schrijft geen schaduwen voor; oude verwijzingen vallen terug op none */
+  --shadow-surface: none;
+  --shadow-floating: none;
 }
 
 @theme inline {
@@ -40,20 +41,23 @@
   --color-card: var(--card);
   --color-border: var(--border);
   --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-kobalt: var(--kobalt);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-accent-soft: var(--accent-soft);
   --color-amber: var(--amber);
   --color-amber-soft: var(--amber-soft);
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-instrument), Georgia, serif;
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-source-serif), Georgia, serif;
 
-  --radius-sm: 8px;
-  --radius: 10px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-sm: 2px;
+  --radius: 3px;
+  --radius-md: 3px;
+  --radius-lg: 3px;
+  --radius-xl: 4px;
 }
 
 body {
@@ -63,20 +67,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Instrument Serif bestaat alleen in gewicht 400; dit normaliseert ook
-   oudere inline font-weights op koppen zodat er geen nep-vet ontstaat. */
+/* Source Serif 4 SemiBold voor naam en koppen */
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
-  font-weight: 400 !important;
-  letter-spacing: -0.02em;
-  line-height: 1.02;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
 }
 
 @layer components {
-  /* Display-schaal — groot en editorial */
-  .display-1 { font-size: clamp(48px, 7.4vw, 96px); line-height: 0.98; letter-spacing: -0.035em; }
-  .display-2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; }
-  .display-3 { font-size: clamp(26px, 3.2vw, 38px); line-height: 1.08; letter-spacing: -0.02em; }
+  /* Display-schaal — volwassen, niet schreeuwerig */
+  .display-1 { font-size: clamp(40px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.015em; }
+  .display-2 { font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spacing: -0.012em; }
+  .display-3 { font-size: clamp(23px, 2.8vw, 32px); line-height: 1.12; }
 
   .eyebrow {
     display: inline-flex;
@@ -84,21 +87,22 @@ h1, h2, h3, h4, .font-display {
     gap: 8px;
     font-family: var(--font-sans);
     font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.01em;
-    color: var(--accent);
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--kobalt);
     background: var(--accent-soft);
-    border-radius: 10px;
-    padding: 6px 12px;
+    border-radius: 3px;
+    padding: 5px 10px;
   }
   .eyebrow.warm {
-    color: #92580a;
+    color: #8a550e;
     background: var(--amber-soft);
   }
 
   .lead {
     font-size: 18px;
-    line-height: 1.65;
+    line-height: 1.62;
     color: var(--muted-fg);
   }
 
@@ -109,18 +113,14 @@ h1, h2, h3, h4, .font-display {
     padding-inline: var(--gutter);
   }
 
-  /* Lucht-canvas: het geschilderde-hemel-gevoel in puur CSS */
+  /* Donker inkt-vlak (voorheen het gradient-luchtpaneel). Vlak, geen gradient. */
   .sky-panel {
     position: relative;
     overflow: hidden;
-    background:
-      radial-gradient(52% 44% at 18% 96%, rgba(255, 205, 178, 0.5) 0%, rgba(255, 205, 178, 0) 62%),
-      radial-gradient(46% 40% at 86% 90%, rgba(244, 178, 200, 0.38) 0%, rgba(244, 178, 200, 0) 60%),
-      radial-gradient(70% 55% at 68% 12%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 55%),
-      linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 55%, var(--sky-deep) 100%);
+    background: var(--ink);
   }
 
-  /* Knoppen — hoekiger en direct, Inter in plaats van serif */
+  /* Knoppen — strak, scherpe hoeken, geen schaduw */
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -130,17 +130,12 @@ h1, h2, h3, h4, .font-display {
     font-weight: 600;
     font-size: 15px;
     color: #fff;
-    border-radius: 12px;
-    padding: 13px 22px;
-    background: var(--accent);
-    box-shadow: var(--shadow-surface);
-    transition: transform 0.14s var(--ease), background 0.18s var(--ease), box-shadow 0.18s var(--ease);
+    border-radius: 3px;
+    padding: 12px 22px;
+    background: var(--kobalt);
+    transition: background 0.16s var(--ease), transform 0.16s var(--ease);
   }
-  .btn-primary:hover {
-    background: var(--accent-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.5);
-  }
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
   .btn-primary.sm { padding: 9px 16px; font-size: 14px; }
 
   .btn-secondary {
@@ -152,20 +147,15 @@ h1, h2, h3, h4, .font-display {
     font-weight: 600;
     font-size: 15px;
     color: var(--foreground);
-    border-radius: 12px;
-    padding: 13px 22px;
+    border-radius: 3px;
+    padding: 12px 22px;
     background: var(--card);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow-surface);
-    transition: transform 0.14s var(--ease), border-color 0.18s var(--ease), background 0.18s var(--ease);
+    transition: border-color 0.16s var(--ease), transform 0.16s var(--ease);
   }
-  .btn-secondary:hover {
-    transform: translateY(-1px);
-    border-color: #d4d4d8;
-    background: #fcfcfd;
-  }
+  .btn-secondary:hover { transform: translateY(-1px); border-color: #cfc9bf; }
 
-  /* Witte knop voor op het blauwe luchtpaneel */
+  /* Knop op inkt: papier-vlak */
   .btn-inverse {
     display: inline-flex;
     align-items: center;
@@ -174,16 +164,13 @@ h1, h2, h3, h4, .font-display {
     font-family: var(--font-sans);
     font-weight: 600;
     font-size: 15px;
-    color: #0a0d12;
-    border-radius: 12px;
-    padding: 13px 22px;
-    background: #fff;
-    transition: transform 0.14s var(--ease), box-shadow 0.18s var(--ease);
+    color: var(--ink);
+    border-radius: 3px;
+    padding: 12px 22px;
+    background: var(--paper);
+    transition: transform 0.16s var(--ease), background 0.16s var(--ease);
   }
-  .btn-inverse:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 24px -10px rgba(15, 23, 42, 0.45);
-  }
+  .btn-inverse:hover { transform: translateY(-1px); background: #fff; }
 
   .btn-ghost-light {
     display: inline-flex;
@@ -193,28 +180,28 @@ h1, h2, h3, h4, .font-display {
     font-family: var(--font-sans);
     font-weight: 600;
     font-size: 15px;
-    color: #fff;
-    border-radius: 12px;
-    padding: 13px 22px;
-    background: rgba(255, 255, 255, 0.16);
-    transition: transform 0.14s var(--ease), background 0.18s var(--ease);
+    color: var(--paper);
+    border-radius: 3px;
+    padding: 12px 22px;
+    background: transparent;
+    border: 1px solid rgba(242, 239, 234, 0.28);
+    transition: background 0.16s var(--ease), transform 0.16s var(--ease);
   }
-  .btn-ghost-light:hover { background: rgba(255, 255, 255, 0.24); transform: translateY(-1px); }
+  .btn-ghost-light:hover { background: rgba(242, 239, 234, 0.1); transform: translateY(-1px); }
 
   .card {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 20px;
+    border-radius: 3px;
     padding: 24px;
-    box-shadow: var(--shadow-surface);
   }
 
   /* Juridische pagina's — leesbare prose */
   .legal-prose { color: var(--muted-fg); font-size: 16px; line-height: 1.7; }
   .legal-prose h2 {
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 20px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 22px;
     letter-spacing: -0.01em;
     color: var(--foreground);
     margin-top: 40px;
@@ -240,24 +227,20 @@ h1, h2, h3, h4, .font-display {
   .legal-note {
     border: 1px solid var(--border);
     background: var(--card);
-    border-radius: 16px;
+    border-radius: 3px;
     padding: 16px 20px;
     font-size: 14px;
     margin-bottom: 24px;
   }
-
 }
 
 /* "Keur goed" vraagt af en toe heel even aandacht */
 @keyframes nudge {
   0%, 86%, 100% { transform: scale(1); }
-  90% { transform: scale(1.06); }
-  94% { transform: scale(0.98); }
+  90% { transform: scale(1.05); }
+  94% { transform: scale(0.99); }
 }
-.nudge {
-  display: inline-block;
-  animation: nudge 7s var(--ease) 3s infinite;
-}
+.nudge { display: inline-block; animation: nudge 7s var(--ease) 3s infinite; }
 
 /* Animaties uit voor wie dat in het systeem heeft ingesteld */
 @media (prefers-reduced-motion: reduce) {

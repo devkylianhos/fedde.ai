@@ -10,7 +10,7 @@ import {
 import { Check, BadgeEuro } from "lucide-react";
 
 const betaIncluded = [
-  "Je eigen Fedde, 24/7 in een afgeschermde omgeving",
+  "Je eigen Tibbe, 24/7 in een afgeschermde omgeving",
   "Persoonlijke onboarding, koppelingen met je samen gezet",
   "Dashboard, alle zeven diensten en alles wat we hierna bouwen",
   "Nieuwe skills die elders werken, komen ook bij jou binnen",
@@ -63,7 +63,7 @@ export function Pricing() {
           {/* betakaart, uitgelicht */}
           <Reveal>
             <div
-              className="relative h-full rounded-[28px] border-2 bg-white p-7 sm:p-8"
+              className="relative h-full rounded-[3px] border-2 bg-white p-7 sm:p-8"
               style={{ borderColor: "var(--accent)" }}
             >
               <div className="flex flex-wrap items-center gap-2">
@@ -143,8 +143,8 @@ export function Pricing() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <div className="flex flex-1 flex-col rounded-[28px] bg-sand p-7">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white text-accent">
+              <div className="flex flex-1 flex-col rounded-[3px] bg-sand p-7">
+                <span className="grid h-11 w-11 place-items-center rounded-[3px] bg-white text-accent">
                   <BadgeEuro size={20} />
                 </span>
                 <h3 className="mt-4 font-display text-[19px]" style={{ fontWeight: 700 }}>
@@ -168,11 +168,11 @@ export function Pricing() {
         {/* TODO: alleen tonen als je dit kunt waarmaken */}
         <Reveal delay={0.18}>
           <div
-            className="mx-auto mt-4 flex max-w-[1040px] flex-col items-start gap-3 rounded-[28px] px-7 py-6 sm:flex-row sm:items-center"
+            className="mx-auto mt-4 flex max-w-[1040px] flex-col items-start gap-3 rounded-[3px] px-7 py-6 sm:flex-row sm:items-center"
             style={{ background: "var(--amber-soft)" }}
           >
             <span
-              className="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-white font-display text-[17px] text-[#a05e12]"
+              className="grid h-11 w-11 flex-none place-items-center rounded-[3px] bg-white font-display text-[17px] text-[#a05e12]"
               style={{ fontWeight: 700 }}
             >
               14
@@ -181,7 +181,7 @@ export function Pricing() {
               <span className="font-600" style={{ fontWeight: 600 }}>
                 14 dagen garantie.
               </span>{" "}
-              Levert Fedde in de eerste twee weken niet meer op dan je betaalt,
+              Levert Tibbe in de eerste twee weken niet meer op dan je betaalt,
               dan krijg je je geld terug.
             </p>
           </div>

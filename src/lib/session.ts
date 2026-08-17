@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
    De e-mail is ook het user_id richting Composio, zodat koppelingen
    meeverhuizen zodra echte auth er is. */
 
-const COOKIE = "fedde_uid";
+const COOKIE = "tibbe_uid";
 
 export async function currentUser(): Promise<string | null> {
   const jar = await cookies();

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Algemene voorwaarden — Fedde",
+  title: "Algemene voorwaarden — Tibbe",
   robots: { index: true, follow: true },
 };
 
@@ -10,15 +10,15 @@ export default function VoorwaardenPage() {
   return (
     <LegalShell title="Algemene voorwaarden" updated="12 juli 2026">
       <div className="legal-note">
-        Deze voorwaarden gelden voor de dienst Fedde, geleverd door{" "}
-        <strong>Fedde.ai, partner van Kitchen Royal</strong>, Parelweg 11,
+        Deze voorwaarden gelden voor de dienst Tibbe, geleverd door{" "}
+        <strong>Tibbe, partner van Kitchen Royal</strong>, Parelweg 11,
         1812 RS Alkmaar, KvK 80015298. Vragen? Mail{" "}
-        <a href="mailto:hallo@fedde.ai">hallo@fedde.ai</a>.
+        <a href="mailto:hallo@tibbe.nl">hallo@tibbe.nl</a>.
       </div>
 
       <h2>1. De dienst</h2>
       <p>
-        Fedde is een AI-werknemer die terugkerend werk voor je bedrijf overneemt.
+        Tibbe is een AI-werknemer die terugkerend werk voor je bedrijf overneemt.
         Je krijgt een eigen agent in een afgeschermde omgeving die wij hosten. Wat
         naar buiten gaat of zwaar telt, gebeurt met jouw goedkeuring.
       </p>
@@ -34,16 +34,16 @@ export default function VoorwaardenPage() {
 
       <h2>3. Garantie</h2>
       <p>
-        Levert Fedde in de eerste 14 dagen niet meer op dan je betaalt, dan krijg
+        Levert Tibbe in de eerste 14 dagen niet meer op dan je betaalt, dan krijg
         je je geld terug. We spreken vooraf samen af wat een resultaat is, zodat
         dit voor ons allebei helder is.
       </p>
 
       <h2>4. Jouw verantwoordelijkheid</h2>
       <ul>
-        <li>Je zorgt dat je de tools mag koppelen die je aan Fedde verbindt.</li>
+        <li>Je zorgt dat je de tools mag koppelen die je aan Tibbe verbindt.</li>
         <li>Je keurt goed wat naar buiten gaat; je blijft verantwoordelijk voor je eigen communicatie en verplichtingen.</li>
-        <li>Je gebruikt Fedde niet voor onwettige doeleinden.</li>
+        <li>Je gebruikt Tibbe niet voor onwettige doeleinden.</li>
       </ul>
 
       <h2>5. Onze verantwoordelijkheid</h2>

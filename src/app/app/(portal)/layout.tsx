@@ -14,7 +14,7 @@ async function logout() {
   redirect("/app/login");
 }
 
-export const metadata = { title: "Dashboard — Fedde" };
+export const metadata = { title: "Dashboard — Tibbe" };
 
 export default async function PortalLayout({
   children,
@@ -30,8 +30,8 @@ export default async function PortalLayout({
       <aside className="hidden w-[230px] flex-none flex-col border-r border-border bg-white/60 p-6 md:flex">
         <Link href="/" className="flex items-center gap-2.5">
           <BrandMark />
-          <span className="font-display text-[19px]" style={{ fontWeight: 700 }}>
-            fedde
+          <span className="font-display text-[20px]" style={{ fontWeight: 600 }}>
+            Tibbe
           </span>
         </Link>
         <nav className="mt-10 flex flex-col gap-1">
@@ -39,16 +39,16 @@ export default async function PortalLayout({
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-xl px-3.5 py-2.5 text-[15px] font-500 text-muted-fg transition-colors hover:bg-sand hover:text-foreground"
+              className="rounded-[3px] px-3.5 py-2.5 text-[15px] font-500 text-muted-fg transition-colors hover:bg-sand hover:text-foreground"
               style={{ fontWeight: 500 }}
             >
               {item.label}
             </Link>
           ))}
-          <span className="cursor-default rounded-xl px-3.5 py-2.5 text-[15px] text-muted-fg/50">
+          <span className="cursor-default rounded-[3px] px-3.5 py-2.5 text-[15px] text-muted-fg/50">
             Facturatie · later
           </span>
-          <span className="cursor-default rounded-xl px-3.5 py-2.5 text-[15px] text-muted-fg/50">
+          <span className="cursor-default rounded-[3px] px-3.5 py-2.5 text-[15px] text-muted-fg/50">
             Instellingen · later
           </span>
         </nav>

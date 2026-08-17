@@ -10,7 +10,7 @@ async function login(formData: FormData) {
   redirect("/app");
 }
 
-export const metadata = { title: "Inloggen — Fedde" };
+export const metadata = { title: "Inloggen — Tibbe" };
 
 export default async function LoginPage() {
   const user = await currentUser();
@@ -18,11 +18,11 @@ export default async function LoginPage() {
 
   return (
     <main className="flex min-h-screen items-center justify-center px-4">
-      <div className="w-full max-w-[420px] rounded-[28px] border border-border bg-white p-8">
+      <div className="w-full max-w-[420px] rounded-[3px] border border-border bg-white p-8">
         <BrandMark size={34} />
         <p className="eyebrow mt-6">Inloggen</p>
         <h1 className="mt-3 font-display text-[28px] leading-[1.1]" style={{ fontWeight: 700 }}>
-          Open je Fedde-dashboard
+          Open je Tibbe-dashboard
         </h1>
         <p className="mt-3 text-[15px] leading-relaxed text-muted-fg">
           Vul je e-mailadres in om verder te gaan.
@@ -40,7 +40,7 @@ export default async function LoginPage() {
           </button>
         </form>
         <p className="mt-5 text-center text-[13px] text-muted-fg">
-          Nog geen Fedde?{" "}
+          Nog geen Tibbe?{" "}
           <a href="/#prijzen" className="font-600 text-accent" style={{ fontWeight: 600 }}>
             Meld je aan voor een betaplek
           </a>

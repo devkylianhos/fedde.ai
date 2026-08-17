@@ -19,7 +19,7 @@ export function WebshopAgents() {
           <span className="eyebrow">De agents</span>
           <h2 className="display-2 mt-5">Elke taak krijgt zijn eigen agent.</h2>
           <p className="lead mx-auto mt-5 max-w-[520px]">
-            Onder je Fedde werken gespecialiseerde agents samen. Elk goed in één
+            Onder je Tibbe werken gespecialiseerde agents samen. Elk goed in één
             ding, allemaal in jouw stem, en altijd met jouw goedkeuring.
           </p>
         </Reveal>
@@ -56,7 +56,7 @@ export function WebshopAgents() {
 
 function Frame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="overflow-hidden rounded-[24px] border border-border bg-white p-5 shadow-[var(--shadow-floating)] sm:p-6">
+    <div className="overflow-hidden rounded-[3px] border border-border bg-white p-5 shadow-[var(--shadow-floating)] sm:p-6">
       {children}
     </div>
   );
@@ -69,7 +69,7 @@ function AgentVisual({ type }: { type: string }) {
         <div className="text-[12px] font-600 uppercase tracking-[0.1em] text-muted-fg" style={{ fontWeight: 600 }}>
           Wijziging klaar voor jou
         </div>
-        <div className="mt-4 rounded-2xl border border-border bg-background/60 p-4">
+        <div className="mt-4 rounded-[3px] border border-border bg-background/60 p-4">
           <div className="text-[13px] font-600" style={{ fontWeight: 600 }}>Zomerjas — productpagina</div>
           <div className="mt-3 flex items-center gap-3">
             <span className="text-[15px] text-muted-fg line-through">€ 129,00</span>
@@ -78,8 +78,8 @@ function AgentVisual({ type }: { type: string }) {
           </div>
         </div>
         <div className="mt-4 flex gap-2">
-          <span className="flex-1 rounded-xl bg-accent px-4 py-2.5 text-center text-[13px] font-600 text-white" style={{ fontWeight: 600 }}>Zet live</span>
-          <span className="rounded-xl border border-border px-4 py-2.5 text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>Nog even niet</span>
+          <span className="flex-1 rounded-[3px] bg-accent px-4 py-2.5 text-center text-[13px] font-600 text-white" style={{ fontWeight: 600 }}>Zet live</span>
+          <span className="rounded-[3px] border border-border px-4 py-2.5 text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>Nog even niet</span>
         </div>
       </Frame>
     );
@@ -92,11 +92,11 @@ function AgentVisual({ type }: { type: string }) {
           <span className="h-2 w-2 rounded-full bg-[#25D366]" />
           WhatsApp · 20 min na verlaten mandje
         </div>
-        <div className="mt-4 max-w-[86%] rounded-2xl rounded-tl-md bg-background/70 p-3.5 text-[14px] leading-relaxed">
+        <div className="mt-4 max-w-[86%] rounded-[3px] rounded-tl-md bg-background/70 p-3.5 text-[14px] leading-relaxed">
           Hoi Sanne, je hebt je sneakers nog in je mandje staan. Hij is bijna
           uitverkocht in maat 39. Met <span className="font-700 text-accent" style={{ fontWeight: 700 }}>WELKOM10</span> krijg je 10% korting, alleen voor jou.
         </div>
-        <div className="mt-3 ml-auto max-w-[70%] rounded-2xl rounded-tr-md bg-accent p-3.5 text-[14px] leading-relaxed text-white">
+        <div className="mt-3 ml-auto max-w-[70%] rounded-[3px] rounded-tr-md bg-accent p-3.5 text-[14px] leading-relaxed text-white">
           Oh top, doe maar!
         </div>
       </Frame>
@@ -109,7 +109,7 @@ function AgentVisual({ type }: { type: string }) {
         <div className="text-[12px] font-600 uppercase tracking-[0.1em] text-muted-fg" style={{ fontWeight: 600 }}>
           Reviewverzoek · 2 dagen na levering
         </div>
-        <div className="mt-4 rounded-2xl border border-border bg-background/60 p-4">
+        <div className="mt-4 rounded-[3px] border border-border bg-background/60 p-4">
           <div className="text-[14px] leading-relaxed">Hoe bevalt je bestelling? Eén tik en je bent klaar.</div>
           <div className="mt-3 flex gap-1.5 text-accent">
             {[0, 1, 2, 3, 4].map((s) => (
@@ -117,7 +117,7 @@ function AgentVisual({ type }: { type: string }) {
             ))}
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-2 rounded-xl bg-amber-soft px-3.5 py-2.5 text-[12.5px] text-[#7a4a0e]">
+        <div className="mt-3 flex items-center gap-2 rounded-[3px] bg-amber-soft px-3.5 py-2.5 text-[12.5px] text-[#7a4a0e]">
           <span className="font-600" style={{ fontWeight: 600 }}>1 review van 2 sterren gezien.</span> Eerst naar jou, niet naar de webshop.
         </div>
       </Frame>
@@ -137,7 +137,7 @@ function AgentVisual({ type }: { type: string }) {
             { label: "Banner", ratio: "aspect-[16/9]" },
             { label: "Video", ratio: "aspect-square" },
           ].map((v, i) => (
-            <div key={v.label} className={cn("relative overflow-hidden rounded-xl", v.ratio)}
+            <div key={v.label} className={cn("relative overflow-hidden rounded-[3px]", v.ratio)}
               style={{ background: i % 2 ? "linear-gradient(135deg,#2f6fe8,#1e4fd6)" : "linear-gradient(135deg,#93b4f5,#2563eb)" }}>
               <span className="absolute bottom-2 left-2.5 text-[11px] font-600 text-white/95" style={{ fontWeight: 600 }}>{v.label}</span>
               {v.label === "Video" && (
@@ -157,10 +157,10 @@ function AgentVisual({ type }: { type: string }) {
         <span className="h-2 w-2 rounded-full bg-[#25D366]" />
         Klantenservice · WhatsApp
       </div>
-      <div className="mt-4 max-w-[82%] rounded-2xl rounded-tl-md bg-background/70 p-3 text-[14px] leading-relaxed">
+      <div className="mt-4 max-w-[82%] rounded-[3px] rounded-tl-md bg-background/70 p-3 text-[14px] leading-relaxed">
         Kan ik mijn broek nog ruilen? Zit een maatje te klein.
       </div>
-      <div className="mt-3 ml-auto max-w-[82%] rounded-2xl rounded-tr-md bg-accent p-3 text-[14px] leading-relaxed text-white">
+      <div className="mt-3 ml-auto max-w-[82%] rounded-[3px] rounded-tr-md bg-accent p-3 text-[14px] leading-relaxed text-white">
         Natuurlijk, ik heb een gratis retourlabel voor je klaargezet en maat L
         alvast gereserveerd. Je hebt hem uiterlijk woensdag.
       </div>

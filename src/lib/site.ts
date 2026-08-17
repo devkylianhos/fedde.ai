@@ -1,14 +1,14 @@
-/* Fedde site content — single source of truth.
+/* Tibbe site content — single source of truth.
    Positionering: een AI-werknemer voor elk bedrijf, 24/7.
    Placeholders flagged with TODO are the "nog invullen met echte gegevens" items. */
 
-export const BOOKING_URL = "https://cal.com/fedde/kennismaking"; // TODO: echte boekingslink
+export const BOOKING_URL = "https://cal.com/tibbe/kennismaking"; // TODO: echte boekingslink
 
 /* Oprichter — vul je naam in, dan verschijnt hij overal.
    Foto komt later; zolang photo leeg is tonen we een initialen-avatar. */
 export const FOUNDER = {
   name: "", // TODO: vul je naam in, bv. "Kylian Hos"
-  role: "Oprichter van Fedde, partner van Kitchen Royal",
+  role: "Oprichter van Tibbe, partner van Kitchen Royal",
   photo: "", // TODO: pad naar foto, bv. "/images/oprichter.jpg"
 };
 
@@ -31,7 +31,7 @@ export const services = [
   {
     tag: "Content",
     title: "Blogs en teksten die scoren",
-    body: "Jij geeft het onderwerp, Fedde levert een af stuk dat klinkt als jouw merk.",
+    body: "Jij geeft het onderwerp, Tibbe levert een af stuk dat klinkt als jouw merk.",
   },
   {
     tag: "Inbox",
@@ -100,7 +100,7 @@ export const howSteps = [
     body: "In gewone taal. \"Stuur elke maandag een weekupdate naar mijn klanten\" of \"beantwoord mail over openingstijden zelf\". Geen flowcharts, geen technische taal.",
   },
   {
-    title: "Fedde doet het automatisch",
+    title: "Tibbe doet het automatisch",
     body: "Hij werkt op je tools, dag en nacht. Terugkerende taken lopen vanzelf, nieuwe vragen pakt hij op zodra ze binnenkomen.",
   },
   {
@@ -109,7 +109,7 @@ export const howSteps = [
   },
   {
     title: "Het wordt een vaste routine",
-    body: "Wat één keer goed ging, doet Fedde voortaan vanzelf. Elke week neemt hij meer van je bord.",
+    body: "Wat één keer goed ging, doet Tibbe voortaan vanzelf. Elke week neemt hij meer van je bord.",
   },
 ];
 
@@ -195,13 +195,13 @@ export const trust = [
   {
     eyebrow: "Gekoppeld aan je tools",
     title: "Alles in één brein, altijd actueel",
-    body: "Fedde plugt in op je e-mail, je kanalen en de tools waar je bedrijf al op draait. Van Gmail en Slack tot Shopify en Mollie, samen in één werknemer.",
+    body: "Tibbe plugt in op je e-mail, je kanalen en de tools waar je bedrijf al op draait. Van Gmail en Slack tot Shopify en Mollie, samen in één werknemer.",
     align: "left" as const,
   },
   {
     eyebrow: "Jij houdt de regie",
     title: "Jij keurt goed wat telt",
-    body: "Fedde doet het werk, jij zet de laatste stap. Alles is gelogd en omkeerbaar, dus je ziet precies wat er gebeurt en draait het terug als je wilt.",
+    body: "Tibbe doet het werk, jij zet de laatste stap. Alles is gelogd en omkeerbaar, dus je ziet precies wat er gebeurt en draait het terug als je wilt.",
     align: "right" as const,
   },
   {
@@ -215,8 +215,8 @@ export const trust = [
 /* FAQ */
 export const faq = [
   {
-    q: "Wat doet Fedde op dag één?",
-    a: "In de kennismaking koppelen we je tools: e-mail, WhatsApp, agenda en je documenten. Daarna pakt Fedde diezelfde dag zijn eerste echte taken op. Inbox opschonen, klanten opvolgen, research, facturen achterna. Je ziet de eerste output binnen uren, niet weken.",
+    q: "Wat doet Tibbe op dag één?",
+    a: "In de kennismaking koppelen we je tools: e-mail, WhatsApp, agenda en je documenten. Daarna pakt Tibbe diezelfde dag zijn eerste echte taken op. Inbox opschonen, klanten opvolgen, research, facturen achterna. Je ziet de eerste output binnen uren, niet weken.",
   },
   {
     q: "Ik ben niet technisch. Hoeveel werk is het opzetten?",
@@ -224,30 +224,30 @@ export const faq = [
   },
   {
     q: "Mijn bedrijfsdata op een AI. Hoe veilig is dat?",
-    a: "Je Fedde draait op een eigen afgeschermde machine die wij hosten. Niks wordt gedeeld tussen bedrijven. Alles wat hij doet is gelogd, terug te lezen en omkeerbaar, en hij vraagt het eerst als een actie zwaar telt. Jouw omgeving, jouw regels.",
+    a: "Je Tibbe draait op een eigen afgeschermde machine die wij hosten. Niks wordt gedeeld tussen bedrijven. Alles wat hij doet is gelogd, terug te lezen en omkeerbaar, en hij vraagt het eerst als een actie zwaar telt. Jouw omgeving, jouw regels.",
   },
   {
     q: "Ik gebruik al ChatGPT en Claude. Wat is anders?",
-    a: "Dat zijn briljante breinen die wachten tot jij typt. Fedde is een werknemer: hij werkt 24/7 op zijn eigen machine, op je echte tools, of je laptop nu open staat of niet. Een chatbot antwoordt. Fedde werkt.",
+    a: "Dat zijn briljante breinen die wachten tot jij typt. Tibbe is een werknemer: hij werkt 24/7 op zijn eigen machine, op je echte tools, of je laptop nu open staat of niet. Een chatbot antwoordt. Tibbe werkt.",
   },
   {
-    q: "Vervangt Fedde mijn mensen?",
-    a: "Fedde neemt het terugkerende werk over: content, mail, facturen, geregel. Zo komen jij en je team toe aan het werk dat echt aandacht verdient. Jij bepaalt wat hij doet en jij keurt goed wat telt.",
+    q: "Vervangt Tibbe mijn mensen?",
+    a: "Tibbe neemt het terugkerende werk over: content, mail, facturen, geregel. Zo komen jij en je team toe aan het werk dat echt aandacht verdient. Jij bepaalt wat hij doet en jij keurt goed wat telt.",
   },
   {
     q: "Wat kost het?",
-    a: "Tijdens de beta betaal je 250 euro excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Bij de volledige launch wordt de instap 500 euro per maand. Alles zit erin: je eigen gehoste Fedde, persoonlijke onboarding, het dashboard en elke tool die we hierna nog bouwen. Token usage en het Claude-abonnement komen er nog bij. Geen prijs per gebruiker, maandelijks opzegbaar.",
+    a: "Tijdens de beta betaal je 250 euro excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Bij de volledige launch wordt de instap 500 euro per maand. Alles zit erin: je eigen gehoste Tibbe, persoonlijke onboarding, het dashboard en elke tool die we hierna nog bouwen. Token usage en het Claude-abonnement komen er nog bij. Geen prijs per gebruiker, maandelijks opzegbaar.",
   },
   {
     q: "En als het zichzelf niet terugverdient?",
-    a: "We blijven op de kennismakingscall tot je eerste winst echt is, en we bouwen met je door tot Fedde zijn geld waard is. Levert hij in de eerste 14 dagen niet meer op dan je betaalt, dan krijg je je geld terug.",
+    a: "We blijven op de kennismakingscall tot je eerste winst echt is, en we bouwen met je door tot Tibbe zijn geld waard is. Levert hij in de eerste 14 dagen niet meer op dan je betaalt, dan krijg je je geld terug.",
   },
   {
     q: "Groeit het mee als mijn bedrijf verandert?",
-    a: "Ja. Fedde bouwt met je mee: nieuwe workflows, nieuwe koppelingen, nieuwe dashboards als je bedrijf van vorm verandert. Skills die elders bewezen werken, komen ook bij jou binnen. Je data, bestanden en gesprekken verhuizen nooit tussen bedrijven.",
+    a: "Ja. Tibbe bouwt met je mee: nieuwe workflows, nieuwe koppelingen, nieuwe dashboards als je bedrijf van vorm verandert. Skills die elders bewezen werken, komen ook bij jou binnen. Je data, bestanden en gesprekken verhuizen nooit tussen bedrijven.",
   },
   {
     q: "Oké. Wat gebeurt er in de kennismaking?",
-    a: "Dertig minuten. We brengen je achterkant in kaart, koppelen je systemen live en kiezen de eerste winst die Fedde diezelfde dag levert. Plan hem hieronder en kom met je rommeligste proces.",
+    a: "Dertig minuten. We brengen je achterkant in kaart, koppelen je systemen live en kiezen de eerste winst die Tibbe diezelfde dag levert. Plan hem hieronder en kom met je rommeligste proces.",
   },
 ];

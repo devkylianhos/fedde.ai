@@ -47,7 +47,7 @@ export function Countdown({
       {cells.map((cell) => (
         <div
           key={cell.label}
-          className="flex w-[76px] flex-col items-center rounded-2xl border border-border bg-white py-3.5"
+          className="flex w-[76px] flex-col items-center rounded-[3px] border border-border bg-white py-3.5"
         >
           <span
             className="font-display text-[28px] leading-none tabular-nums"

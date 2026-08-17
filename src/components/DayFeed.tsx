@@ -46,7 +46,7 @@ const feed = [
   {
     time: "14:05",
     icon: AlertTriangle,
-    text: "Signaal: één klacht komt deze week vaker terug. Fedde legt je uit waarom.",
+    text: "Signaal: één klacht komt deze week vaker terug. Tibbe legt je uit waarom.",
     badge: { label: "signaal naar jou", tone: "amber" as const },
   },
   {
@@ -66,9 +66,9 @@ export function DayFeed() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <span className="eyebrow warm">Terwijl jij wat anders doet</span>
-              <h2 className="display-2 mt-5">Zo ziet een dinsdag met Fedde eruit.</h2>
+              <h2 className="display-2 mt-5">Zo ziet een dinsdag met Tibbe eruit.</h2>
               <p className="lead mt-5 max-w-[420px]">
-                Fedde werkt door als je bedrijf dicht is en jij slaapt. Alles
+                Tibbe werkt door als je bedrijf dicht is en jij slaapt. Alles
                 wat naar buiten gaat en telt, komt eerst langs jou.
               </p>
               <p className="mt-6 text-[13px] text-muted-fg">
@@ -85,8 +85,8 @@ export function DayFeed() {
                 const Icon = item.icon;
                 return (
                   <Reveal key={item.time} delay={Math.min(i * 0.05, 0.25)}>
-                    <div className="relative flex items-start gap-5 rounded-[22px] border border-border bg-white p-5">
-                      <span className="relative z-10 grid h-11 w-11 flex-none place-items-center rounded-2xl bg-accent-soft text-accent">
+                    <div className="relative flex items-start gap-5 rounded-[3px] border border-border bg-white p-5">
+                      <span className="relative z-10 grid h-11 w-11 flex-none place-items-center rounded-[3px] bg-accent-soft text-accent">
                         <Icon size={19} />
                       </span>
                       <div className="min-w-0">

@@ -11,7 +11,7 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Fedde launch — sta vooraan",
+  title: "Tibbe launch — sta vooraan",
   description:
     "Bij de launch gaat de instap van 250 naar 500 euro per maand. Wie er in de beta bij is, houdt de betaprijs zolang die blijft.",
 };
@@ -43,8 +43,8 @@ async function waitlistSignup(formData: FormData) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.WAITLIST_FROM ?? "Fedde <onboarding@resend.dev>",
-        to: [process.env.WAITLIST_TO ?? "hallo@fedde.ai"],
+        from: process.env.WAITLIST_FROM ?? "Tibbe <onboarding@resend.dev>",
+        to: [process.env.WAITLIST_TO ?? "hallo@tibbe.nl"],
         subject: "Nieuwe aanmelding launchlijst",
         text: `Launchlijst-aanmelding: ${email}`,
       }),
@@ -80,15 +80,15 @@ export default async function LaunchPage({
       <div className="container-x relative py-10">
         <a href="/" className="inline-flex items-center gap-2.5">
           <BrandMark />
-          <span className="font-display text-[20px]" style={{ fontWeight: 700 }}>
-            fedde
+          <span className="font-display text-[20px]" style={{ fontWeight: 600 }}>
+            Tibbe
           </span>
         </a>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
           {/* verhaalkant */}
           <div>
-            <span className="eyebrow">Fedde launch · {launchDay}</span>
+            <span className="eyebrow">Tibbe launch · {launchDay}</span>
 
             <div className="mt-4">
               <span
@@ -120,7 +120,7 @@ export default async function LaunchPage({
             <p className="lead mt-6 max-w-[520px]">
               {betaOpen
                 ? `Tot de launch stap je in voor 250 euro per maand, en die prijs blijft staan zolang je blijft. Vanaf ${launchDay} wordt de instap 500 euro.`
-                : `Op ${launchDay} gaat Fedde open voor iedereen, voor 500 euro per maand. Laat je e-mailadres achter en je hoort het als eerste.`}
+                : `Op ${launchDay} gaat Tibbe open voor iedereen, voor 500 euro per maand. Laat je e-mailadres achter en je hoort het als eerste.`}
             </p>
 
             <div className="mt-9">
@@ -142,7 +142,7 @@ export default async function LaunchPage({
           </div>
 
           {/* actiekant */}
-          <div className="rounded-[28px] border-2 border-accent bg-white p-7 sm:p-8">
+          <div className="rounded-[3px] border-2 border-accent bg-white p-7 sm:p-8">
             {betaOpen ? (
               <>
                 <p className="eyebrow">Nu instappen</p>
@@ -180,7 +180,7 @@ export default async function LaunchPage({
                   className="mt-4 block text-center text-[14px] font-600 text-accent hover:text-accent-dark"
                   style={{ fontWeight: 600 }}
                 >
-                  Eerst kijken wat Fedde doet
+                  Eerst kijken wat Tibbe doet
                 </a>
               </>
             ) : params.ok ? (
@@ -192,7 +192,7 @@ export default async function LaunchPage({
                   Je staat op de lijst.
                 </h2>
                 <p className="mt-2 text-[14px] leading-relaxed text-muted-fg">
-                  Zodra Fedde opengaat, hoor je het als eerste. Liever nu al
+                  Zodra Tibbe opengaat, hoor je het als eerste. Liever nu al
                   praten?{" "}
                   <a href={BOOKING_URL} className="font-600 text-accent" style={{ fontWeight: 600 }}>
                     Plan een call
@@ -204,7 +204,7 @@ export default async function LaunchPage({
               <>
                 <p className="eyebrow">Launchlijst</p>
                 <h2 className="mt-3 font-display text-[26px] leading-[1.1]" style={{ fontWeight: 700 }}>
-                  Hoor het als eerste zodra Fedde opengaat.
+                  Hoor het als eerste zodra Tibbe opengaat.
                 </h2>
                 <p className="mt-3 text-[14px] leading-relaxed text-muted-fg">
                   Alleen je e-mailadres, meer vragen we niet. Geen nieuwsbrief,
@@ -230,7 +230,7 @@ export default async function LaunchPage({
                   </form>
                 ) : (
                   <a
-                    href="mailto:hallo@fedde.ai?subject=Zet%20mij%20op%20de%20launchlijst"
+                    href="mailto:hallo@tibbe.nl?subject=Zet%20mij%20op%20de%20launchlijst"
                     className="btn-primary mt-6 w-full"
                   >
                     Zet me op de lijst

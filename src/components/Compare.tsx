@@ -42,7 +42,7 @@ export function Compare() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="mx-auto mt-12 max-w-[900px] overflow-hidden rounded-[28px] border border-border bg-white">
+          <div className="mx-auto mt-12 max-w-[900px] overflow-hidden rounded-[3px] border border-border bg-white">
             {/* kopregel */}
             <div className="hidden grid-cols-[1.1fr_1fr_0.9fr] items-center border-b border-border bg-sand px-6 py-4 sm:grid sm:px-8">
               <span className="text-[13px] font-600 uppercase tracking-[0.06em] text-muted-fg" style={{ fontWeight: 600 }}>
@@ -52,7 +52,7 @@ export function Compare() {
                 Los geregeld
               </span>
               <span className="text-[13px] font-600 uppercase tracking-[0.06em] text-accent" style={{ fontWeight: 600 }}>
-                Met Fedde
+                Met Tibbe
               </span>
             </div>
 

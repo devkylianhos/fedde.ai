@@ -25,9 +25,9 @@ export function Week() {
             <div className="flex flex-col gap-5">
               {week.map((step, i) => (
                 <Reveal key={step.title} delay={Math.min(i * 0.06, 0.24)}>
-                  <div className="relative flex gap-6 rounded-[24px] border border-border bg-white p-6">
+                  <div className="relative flex gap-6 rounded-[3px] border border-border bg-white p-6">
                     <span
-                      className="relative z-10 grid h-14 w-14 flex-none place-items-center rounded-2xl font-display text-[16px] text-white"
+                      className="relative z-10 grid h-14 w-14 flex-none place-items-center rounded-[3px] font-display text-[16px] text-white"
                       style={{
                         fontWeight: 700,
                         background: i === week.length - 1 ? "var(--amber)" : "var(--accent)",

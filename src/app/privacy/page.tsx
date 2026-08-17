@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Privacyverklaring — Fedde",
+  title: "Privacyverklaring — Tibbe",
   robots: { index: true, follow: true },
 };
 
@@ -10,9 +10,9 @@ export default function PrivacyPage() {
   return (
     <LegalShell title="Privacyverklaring" updated="12 juli 2026">
       <div className="legal-note">
-        Fedde is een dienst van <strong>Fedde.ai, partner van Kitchen Royal</strong>,
+        Tibbe is een dienst van <strong>Tibbe, partner van Kitchen Royal</strong>,
         Parelweg 11, 1812 RS Alkmaar, KvK 80015298. Vragen over je gegevens? Mail{" "}
-        <a href="mailto:privacy@fedde.ai">privacy@fedde.ai</a>.
+        <a href="mailto:privacy@tibbe.nl">privacy@tibbe.nl</a>.
       </div>
 
       <p>
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong>Accountgegevens.</strong> Het e-mailadres waarmee je inlogt op je
-          Fedde-dashboard.
+          Tibbe-dashboard.
         </li>
         <li>
           <strong>Koppelingen.</strong> Als je tools koppelt, verwerken we de
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
       <p>
         Je hebt het recht om je gegevens in te zien, te corrigeren of te laten
         verwijderen, en om bezwaar te maken tegen de verwerking. Stuur een mail
-        naar <a href="mailto:privacy@fedde.ai">privacy@fedde.ai</a> en we regelen
+        naar <a href="mailto:privacy@tibbe.nl">privacy@tibbe.nl</a> en we regelen
         het. Ben je het ergens niet mee eens, dan kun je een klacht indienen bij
         de Autoriteit Persoonsgegevens.
       </p>

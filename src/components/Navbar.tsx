@@ -26,8 +26,8 @@ export function Navbar() {
       <div className="container-x flex h-[72px] items-center justify-between">
         <a href="/" className="flex items-center gap-2.5">
           <BrandMark />
-          <span className="text-[19px] font-700 tracking-tight" style={{ fontWeight: 700 }}>
-            fedde
+          <span className="font-display text-[21px]" style={{ fontWeight: 600 }}>
+            Tibbe
           </span>
         </a>
 

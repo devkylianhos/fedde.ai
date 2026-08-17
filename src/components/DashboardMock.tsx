@@ -1,4 +1,4 @@
-/* Pure HTML/CSS reproduction of the Fedde dashboard — the hero visual.
+/* Pure HTML/CSS reproduction of the Tibbe dashboard — the hero visual.
    Built as real UI (not a placeholder image) so it stays crisp at any size.
    TODO: vervang de voorbeeldcijfers door een echte screenshot of live data. */
 
@@ -19,7 +19,7 @@ function Stat({
   positive?: boolean;
 }) {
   return (
-    <div className="rounded-2xl border border-border bg-background/60 p-4">
+    <div className="rounded-[3px] border border-border bg-background/60 p-4">
       <div className="flex items-center gap-2 text-[12px] font-500 text-muted-fg">
         <span className="text-accent">{icon}</span>
         {label}
@@ -39,14 +39,14 @@ function Stat({
 
 export function DashboardMock() {
   return (
-    <div className="overflow-hidden rounded-[28px] border border-border bg-white shadow-[0_34px_70px_-28px_rgba(35,32,27,0.28)]">
+    <div className="overflow-hidden rounded-[3px] border border-border bg-white shadow-[0_34px_70px_-28px_rgba(35,32,27,0.28)]">
       {/* window chrome */}
       <div className="flex items-center gap-2 border-b border-border px-4 py-3">
         <span className="h-3 w-3 rounded-full bg-[#eee5d8]" />
         <span className="h-3 w-3 rounded-full bg-[#eee5d8]" />
         <span className="h-3 w-3 rounded-full bg-[#eee5d8]" />
         <span className="ml-3 text-[12px] font-500 text-muted-fg">
-          Fedde · dashboard
+          Tibbe · dashboard
         </span>
         <span className="ml-auto flex items-center gap-1.5 text-[12px] font-500 text-accent">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
@@ -68,7 +68,7 @@ export function DashboardMock() {
         </div>
 
         {/* mini chart */}
-        <div className="mt-4 rounded-2xl border border-border bg-background/60 p-4">
+        <div className="mt-4 rounded-[3px] border border-border bg-background/60 p-4">
           <div className="mb-3 flex items-center justify-between">
             <span className="text-[12px] font-500 text-muted-fg">Omzet · 7 dagen</span>
             <span className="text-[12px] font-500 text-accent">+21%</span>
@@ -77,7 +77,7 @@ export function DashboardMock() {
         </div>
 
         {/* approval row */}
-        <div className="mt-4 flex items-center gap-3 rounded-2xl border border-border bg-background/60 p-3.5">
+        <div className="mt-4 flex items-center gap-3 rounded-[3px] border border-border bg-background/60 p-3.5">
           <span className="grid h-8 w-8 place-items-center rounded-full bg-accent-soft text-accent">
             <FileText size={15} />
           </span>

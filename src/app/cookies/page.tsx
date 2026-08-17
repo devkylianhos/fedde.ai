@@ -3,7 +3,7 @@ import { LegalShell } from "@/components/LegalShell";
 import { CookieSettingsButton } from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: "Cookiebeleid — Fedde",
+  title: "Cookiebeleid — Tibbe",
   robots: { index: true, follow: true },
 };
 
@@ -11,7 +11,7 @@ export default function CookiesPage() {
   return (
     <LegalShell title="Cookiebeleid" updated="12 juli 2026">
       <p>
-        We houden het simpel: Fedde volgt je niet over websites heen en verkoopt
+        We houden het simpel: Tibbe volgt je niet over websites heen en verkoopt
         je gegevens niet. We gebruiken alleen de cookies die nodig zijn om de site
         te laten werken, plus optioneel een cookie om te meten hoe de site
         gebruikt wordt. Die laatste zet je zelf aan of uit.

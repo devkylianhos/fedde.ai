@@ -1,35 +1,36 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { Source_Serif_4, Instrument_Sans } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
-const instrument = Instrument_Serif({
-  variable: "--font-instrument",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
+  weight: ["600"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Fedde — de AI-werknemer die 24/7 doorwerkt",
+  metadataBase: new URL("https://tibbe.nl"),
+  title: "Tibbe — de AI-medewerker die 24/7 doorwerkt",
   description:
-    "Fedde neemt het terugkerende werk van je bedrijf over: content, klantenmail, facturen, design, research en rapportage. Binnen een week aan het werk. Jij keurt goed wat telt.",
+    "Tibbe is een AI-operator voor het Nederlandse MKB. Neemt het terugkerende werk over: klantcontact, planning, facturen, offertes en administratie. Binnen een week aan het werk. Jij keurt goed wat telt.",
+  icons: { icon: "/brand/favicon.svg" },
   openGraph: {
-    title: "Fedde — de AI-werknemer die 24/7 doorwerkt",
+    title: "Tibbe — de AI-medewerker die 24/7 doorwerkt",
     description:
-      "Eén werknemer die je content, mail, facturen en research doet. Binnen een week aan het werk. Jij keurt goed wat telt.",
-    url: "https://fedde.ai",
-    siteName: "Fedde",
+      "Een betrouwbare AI-medewerker voor je bedrijf. Binnen een week aan het werk. Jij keurt goed wat telt.",
+    url: "https://tibbe.nl",
+    siteName: "Tibbe",
     locale: "nl_NL",
     type: "website",
-    /* IMAGE NEEDED: OG-deelplaatje 1200x630 -> /images/og.png */
+    images: ["/brand/tibbe-mark-512.png"],
   },
 };
 
@@ -37,7 +38,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="nl" className={`${instrument.variable} ${inter.variable}`}>
+    <html lang="nl" className={`${sourceSerif.variable} ${instrumentSans.variable}`}>
       <body className="min-h-screen antialiased">
         <Providers>{children}</Providers>
         <CookieBanner />

@@ -9,7 +9,7 @@ import { BOOKING_URL } from "@/lib/site";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fedde voor webshops — je AI-team voor de hele achterkant",
+  title: "Tibbe voor webshops — je AI-team voor de hele achterkant",
   description:
     "Site Agent, Lead Agent, Review Agent, Creative Agent en Service Agent. Gespecialiseerde agents die je live site, verlaten winkelwagens, reviews, creatives en klantenservice draaien. Altijd met jouw goedkeuring.",
 };
@@ -27,12 +27,12 @@ export default function WebshopsPage() {
 
       {/* hero */}
       <section className="px-3 pt-20 sm:px-4 sm:pt-[88px]">
-        <div className="sky-panel mx-auto max-w-[1400px] rounded-[28px]">
+        <div className="sky-panel mx-auto max-w-[1400px] rounded-[3px]">
           <div className="container-x relative py-16 sm:py-24">
             <div className="mx-auto max-w-[820px] text-center">
               <Reveal>
                 <span
-                  className="inline-flex items-center gap-2 rounded-[10px] px-3.5 py-1.5 text-[13px] font-600 text-white"
+                  className="inline-flex items-center gap-2 rounded-[3px] px-3.5 py-1.5 text-[13px] font-600 text-white"
                   style={{ fontWeight: 600, background: "rgba(255,255,255,0.16)" }}
                 >
                   Voor webshops
@@ -45,7 +45,7 @@ export default function WebshopsPage() {
               </Reveal>
               <Reveal delay={0.12}>
                 <p className="lead mx-auto mt-6 max-w-[560px] text-white/85">
-                  Fedde is een AI-team voor de hele achterkant van je webshop.
+                  Tibbe is een AI-team voor de hele achterkant van je webshop.
                   Gespecialiseerde agents voor je site, je winkelwagens, je
                   reviews, je creatives en je klantenservice. Jij keurt goed wat
                   telt.
