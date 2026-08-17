@@ -1,5 +1,12 @@
 import { Reveal } from "./Reveal";
-import { BOOKING_URL, BETA_SEATS_TOTAL, BETA_SEATS_TAKEN } from "@/lib/site";
+import { Countdown } from "./Countdown";
+import { BrandMark } from "./BrandMark";
+import {
+  BOOKING_URL,
+  BETA_SEATS_TOTAL,
+  BETA_SEATS_TAKEN,
+  LAUNCH_DATE,
+} from "@/lib/site";
 import { Check, BadgeEuro } from "lucide-react";
 
 const betaIncluded = [
@@ -10,15 +17,46 @@ const betaIncluded = [
   "Maandelijks opzegbaar. Je data gaat met je mee.",
 ];
 
+function remaining(targetIso: string) {
+  const diff = Math.max(0, new Date(targetIso).getTime() - Date.now());
+  return {
+    d: Math.floor(diff / 86_400_000),
+    h: Math.floor(diff / 3_600_000) % 24,
+    m: Math.floor(diff / 60_000) % 60,
+    s: Math.floor(diff / 1_000) % 60,
+    done: diff === 0,
+  };
+}
+
 export function Pricing() {
   const seatsLeft = BETA_SEATS_TOTAL - BETA_SEATS_TAKEN;
+  const left = remaining(LAUNCH_DATE);
+  const launchDay = new Date(LAUNCH_DATE).toLocaleDateString("nl-NL", {
+    day: "numeric",
+    month: "long",
+  });
 
   return (
     <section id="prijzen" className="py-20 sm:py-28">
       <div className="container-x">
+        {/* launch-blok */}
         <Reveal className="mx-auto max-w-[620px] text-center">
-          <span className="eyebrow">Prijzen</span>
-          <h2 className="display-2 mt-5">Eén vast bedrag per maand.</h2>
+          <BrandMark size={34} />
+          <p className="mt-4 text-[13px] font-600 uppercase tracking-[0.16em] text-muted-fg" style={{ fontWeight: 600 }}>
+            Volledige launch
+          </p>
+          <h2 className="display-2 mt-3">Binnenkort live.</h2>
+          <p className="mt-3 text-[15px] text-muted-fg">
+            <span className="font-600 text-foreground" style={{ fontWeight: 600 }}>
+              € 500
+            </span>{" "}
+            per maand vanaf {launchDay}. Wie nu instapt, houdt de betaprijs.
+          </p>
+          {!left.done && (
+            <div className="mt-7 flex justify-center">
+              <Countdown targetIso={LAUNCH_DATE} initial={left} />
+            </div>
+          )}
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-[1040px] grid-cols-1 gap-4 lg:grid-cols-[1.25fr_1fr]">
@@ -69,17 +107,17 @@ export function Pricing() {
                 </a>
               </div>
 
-              <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                {/* plekken-balkje */}
-                <div className="flex h-2 flex-1 overflow-hidden rounded-full bg-sand">
+              <div className="mt-6 border-t border-border pt-5">
+                <div className="flex items-center justify-between text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
+                  <span>{BETA_SEATS_TAKEN} van {BETA_SEATS_TOTAL} plekken bezet</span>
+                  <span className="text-accent">nog {seatsLeft} vrij</span>
+                </div>
+                <div className="mt-2 flex h-2 flex-1 overflow-hidden rounded-full bg-sand">
                   <div
-                    className="rounded-full bg-accent"
+                    className="rounded-full bg-accent transition-[width]"
                     style={{ width: `${(BETA_SEATS_TAKEN / BETA_SEATS_TOTAL) * 100}%` }}
                   />
                 </div>
-                <span className="text-[13px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
-                  nog {seatsLeft} van {BETA_SEATS_TOTAL} plekken vrij
-                </span>
               </div>
             </div>
           </Reveal>

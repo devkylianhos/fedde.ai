@@ -6,7 +6,7 @@ export const BOOKING_URL = "https://cal.com/fedde/kennismaking"; // TODO: echte 
 
 /* Betaplekken — houd dit eerlijk bij terwijl je verkoopt */
 export const BETA_SEATS_TOTAL = 10;
-export const BETA_SEATS_TAKEN = 0; // TODO: bijwerken per verkochte plek
+export const BETA_SEATS_TAKEN = 3; // TODO: bijwerken per verkochte plek
 
 /* Launchmoment — de dag dat de instap van 250 naar 500 euro gaat */
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
