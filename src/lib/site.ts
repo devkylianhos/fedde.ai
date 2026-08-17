@@ -173,35 +173,39 @@ export const trust = [
 /* FAQ */
 export const faq = [
   {
-    q: "Wat kan Fedde op dag één?",
-    a: "Vanaf dag vijf draait je werknemer op jouw diensten, toon en branding. In de dagen ervoor leren we je bedrijf kennen en trainen we hem. Je begint dus niet met een leeg vel, maar met een werknemer die jouw zaak al kent.",
+    q: "Wat doet Fedde op dag één?",
+    a: "In de kennismaking koppelen we je tools: e-mail, WhatsApp, agenda en je documenten. Daarna pakt Fedde diezelfde dag zijn eerste echte taken op. Inbox opschonen, klanten opvolgen, research, facturen achterna. Je ziet de eerste output binnen uren, niet weken.",
   },
   {
-    q: "Is Fedde een chatbot?",
-    a: "Nee. Een chatbot wacht tot jij iets vraagt. Fedde doet het werk waar je nu losse mensen, bureaus en tools voor betaalt, voor één bedrag. Jij keurt goed wat telt.",
+    q: "Ik ben niet technisch. Hoeveel werk is het opzetten?",
+    a: "Eén call. We zetten alles samen met je op, live: je systemen, je software, jouw manier van werken. Jij praat, wij koppelen. Is er ergens een wachtwoord nodig, dan typ jij het, wij zien het nooit.",
+  },
+  {
+    q: "Mijn bedrijfsdata op een AI. Hoe veilig is dat?",
+    a: "Je Fedde draait op een eigen afgeschermde machine die wij hosten. Niks wordt gedeeld tussen bedrijven. Alles wat hij doet is gelogd, terug te lezen en omkeerbaar, en hij vraagt het eerst als een actie zwaar telt. Jouw omgeving, jouw regels.",
+  },
+  {
+    q: "Ik gebruik al ChatGPT en Claude. Wat is anders?",
+    a: "Dat zijn briljante breinen die wachten tot jij typt. Fedde is een werknemer: hij werkt 24/7 op zijn eigen machine, op je echte tools, of je laptop nu open staat of niet. Een chatbot antwoordt. Fedde werkt.",
   },
   {
     q: "Vervangt Fedde mijn mensen?",
     a: "Fedde neemt het terugkerende werk over: content, mail, facturen, geregel. Zo komen jij en je team toe aan het werk dat echt aandacht verdient. Jij bepaalt wat hij doet en jij keurt goed wat telt.",
   },
   {
-    q: "Moet ik technisch zijn om dit op te zetten?",
-    a: "Nee. Wij regelen de hosting, de koppelingen en de afgeschermde omgeving. Jij vertelt over je bedrijf en je merk, wij bouwen de rest.",
-  },
-  {
-    q: "Hoe zit het met mijn data en veiligheid?",
-    a: "Je krijgt een eigen werknemer in een eigen afgeschermde omgeving. Een aparte bewakingsbot houdt alles in de gaten. Alles wordt gelogd en is omkeerbaar.",
-  },
-  {
     q: "Wat kost het?",
-    a: "Tijdens de beta betaal je 250 euro excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Daarna wordt de instap 500 euro excl. btw per maand. Token usage en het Claude-abonnement komen er nog bij. Custom dashboards en werk op maat starten vanaf 1500 euro excl. btw.",
+    a: "Tijdens de beta betaal je 250 euro excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Bij de volledige launch wordt de instap 500 euro per maand. Alles zit erin: je eigen gehoste Fedde, persoonlijke onboarding, het dashboard en elke tool die we hierna nog bouwen. Token usage en het Claude-abonnement komen er nog bij. Geen prijs per gebruiker, maandelijks opzegbaar.",
   },
   {
-    q: "En als het niks oplevert?",
-    a: "Levert Fedde in de eerste 14 dagen niet meer op dan je betaalt, dan krijg je je geld terug.",
+    q: "En als het zichzelf niet terugverdient?",
+    a: "We blijven op de kennismakingscall tot je eerste winst echt is, en we bouwen met je door tot Fedde zijn geld waard is. Levert hij in de eerste 14 dagen niet meer op dan je betaalt, dan krijg je je geld terug.",
   },
   {
-    q: "Wordt hij slimmer over tijd?",
-    a: "Ja. Elke call en elke week draaien maakt je werknemer scherper op jouw bedrijf en jouw klanten.",
+    q: "Groeit het mee als mijn bedrijf verandert?",
+    a: "Ja. Fedde bouwt met je mee: nieuwe workflows, nieuwe koppelingen, nieuwe dashboards als je bedrijf van vorm verandert. Skills die elders bewezen werken, komen ook bij jou binnen. Je data, bestanden en gesprekken verhuizen nooit tussen bedrijven.",
+  },
+  {
+    q: "Oké. Wat gebeurt er in de kennismaking?",
+    a: "Dertig minuten. We brengen je achterkant in kaart, koppelen je systemen live en kiezen de eerste winst die Fedde diezelfde dag levert. Plan hem hieronder en kom met je rommeligste proces.",
   },
 ];
