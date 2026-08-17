@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Trust } from "@/components/Trust";
 import { WhyTrust } from "@/components/WhyTrust";
+import { FounderNote } from "@/components/FounderNote";
 import { IntegrationsStats } from "@/components/IntegrationsStats";
 import { Audiences } from "@/components/Audiences";
 import { Services } from "@/components/Services";
@@ -45,6 +46,7 @@ export default function Home() {
       <Trust />
       <Compare />
       <WhyTrust />
+      <FounderNote />
       <Pricing />
       <Faq />
       <CtaBand />

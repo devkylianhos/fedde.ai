@@ -4,6 +4,14 @@
 
 export const BOOKING_URL = "https://cal.com/fedde/kennismaking"; // TODO: echte boekingslink
 
+/* Oprichter — vul je naam in, dan verschijnt hij overal.
+   Foto komt later; zolang photo leeg is tonen we een initialen-avatar. */
+export const FOUNDER = {
+  name: "", // TODO: vul je naam in, bv. "Kylian Hos"
+  role: "Oprichter van Fedde, partner van Kitchen Royal",
+  photo: "", // TODO: pad naar foto, bv. "/images/oprichter.jpg"
+};
+
 /* Betaplekken — houd dit eerlijk bij terwijl je verkoopt */
 export const BETA_SEATS_TOTAL = 10;
 export const BETA_SEATS_TAKEN = 3; // TODO: bijwerken per verkochte plek
