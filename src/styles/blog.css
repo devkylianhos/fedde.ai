@@ -73,6 +73,9 @@
   padding: 64px 0;
   text-align: center;
 }
+.blog-site .blog-note .web-label {
+  color: var(--color-lightwater);
+}
 .blog-note p:last-child {
   color: var(--web-dark-muted, #a5a29a);
   max-width: 560px;

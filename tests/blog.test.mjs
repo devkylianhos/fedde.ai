@@ -63,6 +63,10 @@ test("blog routes have usable navigation, modified metadata, sources and safe JS
   assert.match(read("src/app/sitemap.ts"), /post.updated \?\? post.published/);
 });
 
+test("AI authorship label has a scoped high-contrast color", () => {
+  assert.match(read("src/styles/blog.css"), /\.blog-site \.blog-note \.web-label\s*\{\s*color: var\(--color-lightwater\);\s*\}/);
+});
+
 test("fictitious cost example balances without claiming cash profit", () => {
   const p = getPost("wat-kost-ai-medewerker");
   assert.equal((20 - 5 - 2) * 60 - 300, 480);
