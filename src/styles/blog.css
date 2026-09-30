@@ -1,0 +1,165 @@
+/* Blog in de nieuwe Tibbe-huisstijl (web-* systeem). */
+.blog-hero {
+  padding: 140px 0 40px;
+}
+.blog-h1 {
+  font-size: clamp(38px, 5.2vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+  margin: 18px 0 0;
+}
+.blog-dim {
+  opacity: 0.3;
+}
+.blog-hero-sub {
+  color: var(--color-muted-fg);
+  font-size: 17px;
+  max-width: 560px;
+  margin-top: 18px;
+  line-height: 1.6;
+}
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  padding-top: 40px;
+  gap: 16px;
+  padding-bottom: 72px;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  color: var(--color-foreground);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.blog-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+}
+.blog-card-title {
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  font-weight: 600;
+}
+.blog-card p {
+  margin: 0;
+  color: var(--color-muted-fg);
+  font-size: 15px;
+  line-height: 1.6;
+  flex: 1;
+}
+.blog-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--color-muted-fg);
+}
+.blog-card-min {
+  white-space: nowrap;
+}
+.blog-note {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 64px 0;
+  text-align: center;
+}
+.blog-note p:last-child {
+  color: var(--web-dark-muted, #a5a29a);
+  max-width: 560px;
+  margin: 14px auto 0;
+  font-size: 15.5px;
+}
+/* Artikel-pagina */
+.blog-article {
+  max-width: 700px;
+  margin-inline: auto;
+  padding-bottom: 48px;
+}
+.blog-article h2 {
+  margin: 44px 0 0;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+.blog-article p {
+  margin: 18px 0 0;
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+.blog-article ul,
+.blog-article ol {
+  margin: 14px 0 0;
+  padding-left: 24px;
+  display: grid;
+  gap: 8px;
+  font-size: 16.5px;
+  line-height: 1.6;
+}
+.blog-cta {
+  margin-top: 40px;
+  display: inline-flex;
+}
+.blog-more {
+  padding-bottom: 80px;
+}
+.blog-more__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 14px;
+}
+
+/* Scope blog typography without changing the existing homepage. */
+.blog-site .blog-hero {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.blog-site .blog-hero .web-label {
+  color: var(--color-lightwater);
+  flex-wrap: wrap;
+}
+.blog-site .blog-hero-sub,
+.blog-site .blog-back {
+  color: var(--web-dark-muted);
+}
+.blog-site .blog-h1 {
+  margin-top: 18px;
+  letter-spacing: -0.015em;
+}
+.blog-site .blog-card-title {
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+}
+.blog-site .blog-article {
+  padding-top: 24px;
+}
+.blog-site .blog-article h2 {
+  margin-top: 44px;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.blog-site .blog-article ul {
+  list-style: disc;
+}
+.blog-sources a {
+  color: var(--color-deepwater);
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .blog-card { padding: 24px 20px; }
+  .blog-card__meta { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-card { transition: none; }
+  .blog-card:hover { transform: none; }
+}
