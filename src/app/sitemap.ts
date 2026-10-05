@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { posts, blogUrl, postUrl } from "@/content/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -8,6 +9,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: blogUrl,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...posts.map((post) => ({
+      url: postUrl(post),
+      lastModified: new Date(post.updated ?? post.published),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     {
       url: "https://tibbe.app/webshops",
       lastModified: new Date(),
