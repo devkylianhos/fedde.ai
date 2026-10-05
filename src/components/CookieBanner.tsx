@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import styles from "./CookieBanner.module.css";
+import { applyAnalyticsConsent, CONSENT_KEY, readAnalyticsConsent, saveAnalyticsConsent, type AnalyticsConsent } from "@/lib/analytics";
 
-const KEY = "tibbe-cookie-notice-v1";
 const OPEN = "tibbe-cookie-notice-open";
 
 export function CookieBanner() {
@@ -11,8 +11,9 @@ export function CookieBanner() {
   const returnFocus = useRef<HTMLElement | null>(null);
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      try { setVisible(localStorage.getItem(KEY) !== "dismissed"); }
-      catch { setVisible(true); }
+      const consent = readAnalyticsConsent();
+      applyAnalyticsConsent(consent);
+      setVisible(consent === null);
     }, 300);
     const open = () => {
       returnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -20,7 +21,11 @@ export function CookieBanner() {
       window.requestAnimationFrame(() => closeButton.current?.focus());
     };
     const sync = (event: StorageEvent) => {
-      if (event.key === KEY) setVisible(event.newValue !== "dismissed");
+      if (event.key === CONSENT_KEY || event.key === null) {
+        const consent = readAnalyticsConsent();
+        applyAnalyticsConsent(consent);
+        setVisible(consent === null);
+      }
     };
     window.addEventListener(OPEN, open);
     window.addEventListener("storage", sync);
@@ -30,25 +35,26 @@ export function CookieBanner() {
       window.removeEventListener("storage", sync);
     };
   }, []);
-  const dismiss = () => {
-    try { localStorage.setItem(KEY, "dismissed"); } catch { /* Close even when storage is unavailable. */ }
+  const choose = (consent: AnalyticsConsent) => {
+    saveAnalyticsConsent(consent);
     setVisible(false);
     returnFocus.current?.focus();
     returnFocus.current = null;
   };
   if (!visible) return null;
   return (
-    <section className={styles.banner} aria-labelledby="cookie-notice-title" onKeyDown={(event) => { if (event.key === "Escape") dismiss(); }}>
+    <section className={styles.banner} aria-labelledby="cookie-notice-title">
       <span className={styles.label}>COOKIES & PRIVACY</span>
-      <h2 id="cookie-notice-title">Alleen wat nodig is.</h2>
-      <p>We gebruiken functionele opslag voor je sessie en om deze melding te onthouden. Geen analytics- of marketingcookies.</p>
+      <h2 id="cookie-notice-title">Jij kiest wat je deelt.</h2>
+      <p>We gebruiken functionele opslag voor je sessie en je cookievoorkeur. Met jouw toestemming gebruiken we Google Analytics om te begrijpen hoe onze website wordt bezocht. We gebruiken geen advertentiecookies.</p>
       <div className={styles.actions}>
         <a href="/cookies">Meer informatie</a>
-        <button ref={closeButton} onClick={dismiss}>Begrepen</button>
+        <button ref={closeButton} onClick={() => choose("denied")}>Alleen noodzakelijk</button>
+        <button onClick={() => choose("granted")}>Analytics toestaan</button>
       </div>
     </section>
   );
 }
 export function CookieSettingsButton() {
-  return <button className="btn-secondary sm" onClick={() => window.dispatchEvent(new Event(OPEN))}>Cookiemelding bekijken</button>;
+  return <button className="btn-secondary sm" onClick={() => window.dispatchEvent(new Event(OPEN))}>Cookievoorkeuren wijzigen</button>;
 }

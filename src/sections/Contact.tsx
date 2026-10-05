@@ -167,7 +167,7 @@ export function Contact() {
           verstuurt, deel je de inhoud met de ontvanger.
         </p>
         <p>
-          Deze implementatie bevat geen analytics of trackingcookies. De interactieve voorbeelden
+          Google Analytics wordt alleen na jouw toestemming geladen. Je kunt je keuze wijzigen via de cookiepagina. De interactieve voorbeelden
           gebruiken fictieve gegevens en voeren geen externe acties uit.
         </p>
         <p>

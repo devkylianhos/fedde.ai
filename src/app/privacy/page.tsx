@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalShell title="Privacyverklaring" updated="12 juli 2026">
+    <LegalShell title="Privacyverklaring" updated="5 oktober 2026">
       <div className="legal-note">
         Tibbe is een dienst van <strong>Tibbe</strong>,
         Parelweg 11, 1812 RS Alkmaar, KvK 80015298. Vragen over je gegevens? Mail{" "}
@@ -51,6 +51,9 @@ export default function PrivacyPage() {
         </li>
       </ul>
 
+      <h2>Websitebezoek meten</h2>
+      <p>Met jouw toestemming gebruiken we Google Analytics om websitebezoek te meten en de website te verbeteren. Google ontvangt daarbij informatie over bezochte pagina’s, je browser en apparaat. Je kunt toestemming altijd intrekken via de <a href="/cookies">cookievoorkeuren</a>. Advertentiepersonalisatie en Google Signals staan in deze integratie uit.</p>
+
       <h2>Waarom we het verwerken</h2>
       <ul>
         <li>Om je aanvraag of kennismaking af te handelen.</li>
@@ -72,6 +75,7 @@ export default function PrivacyPage() {
           </tr>
         </thead>
         <tbody>
+          <tr><td>Google Analytics</td><td>Websiteanalyse na jouw toestemming</td></tr>
           <tr><td>Vercel</td><td>Hosting van de website</td></tr>
           <tr><td>Anthropic (Claude)</td><td>Het AI-model achter je agent</td></tr>
           <tr><td>Composio</td><td>Beveiligde koppelingen met je tools</td></tr>
